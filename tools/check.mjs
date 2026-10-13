@@ -396,6 +396,64 @@ function siteOf(host) {
   return parts.slice(-n).join(".");
 }
 
+// src/lib/posts/validate.ts
+var KINDS = ["guide", "explainer"];
+var BODY_MIN = 600;
+var BODY_MAX = 12e3;
+var isObj2 = (v) => typeof v === "object" && v !== null && !Array.isArray(v);
+var isStr2 = (v, min, max) => typeof v === "string" && v.trim().length >= min && v.length <= max;
+var isIsoTime = (v) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}T/.test(v) && !Number.isNaN(Date.parse(v));
+var strList = (v, max, min = 1, len = 80) => Array.isArray(v) && v.length <= max && v.every((x) => isStr2(x, min, len));
+function bodyLinks(body) {
+  return [...body.matchAll(/\[[^\]\n]*\]\(([^)\s]*)\)/g)].map((m) => m[1]);
+}
+function isAllowedLink(url) {
+  if (/^\/(?!\/)[^\s"'<>\\]*$/.test(url)) return true;
+  return /^https:\/\/[^\s"'<>\\]+$/.test(url) && isApplyUrl(url);
+}
+function validatePostDoc(raw, fileSlug) {
+  if (!isObj2(raw)) return { ok: false, errors: ["JSON \uAC1D\uCCB4\uAC00 \uC544\uB2D8"] };
+  const r = raw;
+  const e = [];
+  if (typeof r.slug !== "string" || !SLUG_RE.test(r.slug) || r.slug.length > 80) e.push("slug: \uC601\uBB38 \uC18C\uBB38\uC790\xB7\uC22B\uC790\xB7\uD558\uC774\uD508\uB9CC (80\uC790 \uC774\uD558)");
+  else if (r.slug !== fileSlug) e.push(`slug(${r.slug})\uAC00 \uD30C\uC77C \uC774\uB984(${fileSlug})\uACFC \uB2E4\uB984`);
+  if (!KINDS.includes(r.kind)) e.push("kind: guide | explainer");
+  if (!isStr2(r.title, 10, 60)) e.push("title: 10~60\uC790");
+  if (!isStr2(r.description, 50, 160)) e.push("description: 50~160\uC790");
+  if (!isStr2(r.topic, 2, 60)) e.push("topic: 2~60\uC790");
+  if (!strList(r.names, 5, 3, 40) || r.names.length < 1) e.push("names: 1~5\uAC1C, \uAC01 3~40\uC790");
+  if (!isObj2(r.related) || !strList(r.related.benefits, 5) || !strList(r.related.issues, 3)) {
+    e.push("related: { benefits: \uC9C0\uC6D0\uAE08 ID 5\uAC1C\uAE4C\uC9C0, issues: \uC774\uC288 slug 3\uAC1C\uAE4C\uC9C0 }");
+  } else if (r.kind === "explainer" && r.related.issues.length === 0) {
+    e.push("related.issues: \uD574\uC124 \uAE00(explainer)\uC740 \uAD00\uB828 \uC774\uC288 slug \uAC00 \uD558\uB098 \uC774\uC0C1 \uD544\uC694");
+  }
+  if (typeof r.body !== "string" || r.body.trim().length < BODY_MIN || r.body.length > BODY_MAX) {
+    e.push(`body: ${BODY_MIN}~${BODY_MAX}\uC790`);
+  } else {
+    if (/<\/?[a-z!][^>]*>/i.test(r.body)) e.push("body: HTML \uD0DC\uADF8\uB294 \uC4F8 \uC218 \uC5C6\uC74C (\uB9C8\uD06C\uB2E4\uC6B4 \uC77C\uBD80\uB9CC)");
+    const bad = bodyLinks(r.body).filter((u) => !isAllowedLink(u));
+    if (bad.length) e.push(`body: \uB9C1\uD06C\uB294 \uC0AC\uC774\uD2B8 \uC548(/\u2026) \uB610\uB294 \uACF5\uC2DD \uB204\uB9AC\uC9D1(https, *.go.kr\xB7korea.kr\xB7\uC9C0\uC815 \uACF5\uACF5\uAE30\uAD00)\uB9CC \u2014 ${bad.slice(0, 3).join(", ")}`);
+  }
+  const sources = Array.isArray(r.sources) ? r.sources : null;
+  if (!sources || sources.length < 1 || sources.length > 10) {
+    e.push("sources: 1~10\uAC1C");
+  } else {
+    sources.forEach((s, i) => {
+      if (!isObj2(s) || typeof s.url !== "string" || !/^https?:\/\//.test(s.url) || !isStr2(s.title, 1, 200) || !isStr2(s.publisher, 1, 60)) {
+        e.push(`sources[${i}]: { url(http/https), title, publisher }`);
+      }
+    });
+  }
+  const n = sources?.length ?? 0;
+  const factsOk = Array.isArray(r.facts) && r.facts.length <= 60 && r.facts.every((q) => isObj2(q) && typeof q.source === "number" && Number.isInteger(q.source) && q.source >= 0 && q.source < n && typeof q.quote === "string" && q.quote.trim().length >= 4 && q.quote.length <= 200);
+  if (!factsOk) e.push(`facts: [{ source: \uCD9C\uCC98 \uBC88\uD638(0~${Math.max(n - 1, 0)}), quote: 4~200\uC790 }] 60\uAC1C\uAE4C\uC9C0`);
+  if (typeof r.hidden !== "boolean") e.push("hidden: true | false");
+  for (const k of ["publishAt", "createdAt", "updatedAt"]) {
+    if (!isIsoTime(r[k])) e.push(`${k}: ISO \uC2DC\uAC01 (\uC608: 2026-10-14T00:00:00Z)`);
+  }
+  return e.length ? { ok: false, errors: e } : { ok: true, doc: r };
+}
+
 // src/lib/issues/phase.ts
 function computePhase(d, today) {
   if (d.applyEnd && d.applyEnd < today) return "closed";
@@ -531,6 +589,12 @@ async function verifyIssue(doc, fetchText2, today, now, prev = null) {
 
 // sync/radar/load.ts
 function loadIssueDocs(dir) {
+  return loadDocs(dir, validateIssueDoc);
+}
+function loadPostDocs(dir) {
+  return loadDocs(dir, validatePostDoc);
+}
+function loadDocs(dir, validate) {
   const out = { docs: [], errors: [] };
   if (!existsSync(dir)) return out;
   for (const file of readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
@@ -541,7 +605,7 @@ function loadIssueDocs(dir) {
       out.errors.push({ file, errors: [`JSON \uBB38\uBC95 \uC624\uB958: ${String(err).slice(0, 200)}`] });
       continue;
     }
-    const r = validateIssueDoc(raw, basename(file, ".json"));
+    const r = validate(raw, basename(file, ".json"));
     if (r.ok) out.docs.push(r.doc);
     else out.errors.push({ file, errors: r.errors });
   }
@@ -550,6 +614,73 @@ function loadIssueDocs(dir) {
 function offlineFetcher(dir) {
   const map = JSON.parse(readFileSync(join(dir, "pages.json"), "utf8"));
   return async (url) => map[url] ? htmlToText(readFileSync(join(dir, map[url]), "utf8")) : null;
+}
+
+// sync/radar/verify-post.ts
+var UNIT = "\uB9CC\\s*\uC6D0|\uC5B5\\s*\uC6D0|\uCC9C\\s*\uC6D0|\uC6D0|\uB9CC|\uC5B5|\uCC9C|%|\uD37C\uC13C\uD2B8|\uC138|\uC0B4|\uB144|\uAC1C\uC6D4|\uC6D4|\uC77C|\uC8FC|\uC2DC\uAC04|\uBA85|\uAC00\uAD6C|\uD68C|\uBC30|\uC778|\uACF3|\uAC74|\uAC1C|\uCC28|\uB4F1\uAE09|\uC21C\uC704";
+var NUMBER = new RegExp(`(\\d[\\d,.]*\\d|\\d)(\\s*(?:${UNIT}))?`, "g");
+function numberTokens(text) {
+  const visible = text.replace(/\]\([^)\s]*\)/g, "]").replace(/^\s*\d{1,2}[.)]\s+/gm, "");
+  return [...visible.matchAll(NUMBER)].map((m) => (m[1] + (m[2] ?? "")).replace(/\s+/g, ""));
+}
+var escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function quoteHas(quoteSquashed, token) {
+  const tail = /\d$/.test(token) ? "(?![\\d])" : "";
+  return new RegExp(`(?<![\\d.,])${escapeRe(token.toLowerCase())}${tail}`).test(quoteSquashed);
+}
+var COPY_SPAN = 50;
+var SHINGLE = 25;
+function copiedFrom(bodyFlat, sourceFlat) {
+  const blocks = /* @__PURE__ */ new Set();
+  for (let p = 0; p + SHINGLE <= sourceFlat.length; p += SHINGLE) blocks.add(sourceFlat.slice(p, p + SHINGLE));
+  for (let i = 0; i + SHINGLE <= bodyFlat.length; i++) {
+    if (!blocks.has(bodyFlat.slice(i, i + SHINGLE))) continue;
+    for (let s = Math.max(0, i - SHINGLE); s <= i; s++) {
+      const span = bodyFlat.slice(s, s + COPY_SPAN);
+      if (span.length === COPY_SPAN && sourceFlat.includes(span)) return span;
+    }
+  }
+  return null;
+}
+var AI_TRACE = ["\uC5B8\uC5B4\uBAA8\uB378", "AI\uBAA8\uB378\uB85C\uC11C", "asanai", "chatgpt", "\uB3C4\uC6C0\uC774\uB418\uC168", "\uAD81\uAE08\uD55C\uC810\uC774\uC788\uC73C\uC2DC\uBA74\uC5B8\uC81C\uB4E0", "\uC81C\uAC00\uC54C\uB824\uB4DC\uB9B4"];
+var HYPE_TITLE = ["!", "\uFF01", "\uBB34\uC870\uAC74", "\uCDA9\uACA9", "\uB300\uBC15", "\uBAA8\uB974\uBA74\uC190\uD574", "\uB193\uCE58\uBA74\uC190\uD574", "\uAF2D\uBC1B\uC73C\uC138\uC694", "100%"];
+var IMPERSONATE = ["\uC815\uBD80\uACF5\uC2DD\uC0AC\uC774\uD2B8", "\uC815\uBD80\uACF5\uC2DD\uBE14\uB85C\uADF8", "\uACF5\uC2DD\uC9C0\uC6D0\uAE08\uB2E4\uBAA8\uC544", "\uC815\uBD80\uAC00\uC6B4\uC601\uD558\uB294"];
+async function verifyPost(doc, fetchText2) {
+  const texts = await Promise.all(doc.sources.map((s) => fetchText2(s.url).catch(() => null)));
+  const sources = doc.sources.map((s) => ({ ...s, official: isOfficialUrl(s.url) }));
+  if (texts.every((t) => t === null)) return { status: "held", sources, notes: ["\uCD9C\uCC98\uB97C \uD558\uB098\uB3C4 \uC5F4\uC9C0 \uBABB\uD568 \u2014 \uB2E4\uC74C \uD68C\uCC28\uC5D0 \uB2E4\uC2DC \uD655\uC778"] };
+  const someDown = texts.some((t) => t === null);
+  const flat = texts.map((t) => t === null ? null : squash(t));
+  const names = doc.names.map(squash).filter((n) => n.length >= 3);
+  const relevant = flat.map((t) => t !== null && names.some((n) => t.includes(n)));
+  const notes = [];
+  if (!sources.some((s, i) => s.official && relevant[i])) {
+    notes.push(`\uACF5\uC2DD \uCD9C\uCC98(*.go.kr\xB7korea.kr) \uC911 \uBCF8\uBB38\uC5D0 '${doc.names.join("', '")}'\uAC00 \uB098\uC624\uB294 \uACF3\uC774 \uC5C6\uC74C`);
+  }
+  const verified = doc.facts.filter((f) => relevant[f.source] && flat[f.source].includes(squash(f.quote)) && squash(f.quote).length >= 4).map((f) => squash(f.quote));
+  const tokens = [...new Set(numberTokens(`${doc.title}
+${doc.description}
+${doc.body}`))];
+  const missing = tokens.filter((t) => !verified.some((q) => quoteHas(q, t)));
+  if (missing.length) notes.push(`\uCD9C\uCC98 \uC778\uC6A9(facts)\uC73C\uB85C \uD655\uC778\uB418\uC9C0 \uC54A\uC740 \uC22B\uC790: ${missing.slice(0, 10).join(", ")}${missing.length > 10 ? ` \uC678 ${missing.length - 10}\uAC1C` : ""}`);
+  const bodyFlat = squash(doc.body.replace(/\]\([^)\s]*\)/g, "]").replace(/[#*[\]()-]/g, ""));
+  for (const t of flat) {
+    const span = t && copiedFrom(bodyFlat, t);
+    if (span) {
+      notes.push(`\uCD9C\uCC98 \uBB38\uC7A5\uC744 \uADF8\uB300\uB85C \uC62E\uAE40: "${span.slice(0, 30)}\u2026" \u2014 \uC9C1\uC811 \uD480\uC5B4 \uC4F4\uB2E4`);
+      break;
+    }
+  }
+  const all = squash(`${doc.title} ${doc.description} ${doc.body}`);
+  const title = squash(doc.title);
+  const ai = AI_TRACE.filter((w) => all.includes(w));
+  if (ai.length) notes.push(`AI \uD754\uC801 \uBB38\uAD6C: ${ai.join(", ")}`);
+  const hype = HYPE_TITLE.filter((w) => title.includes(w.toLowerCase()));
+  if (hype.length) notes.push(`\uACFC\uC7A5\uB41C \uC81C\uBAA9: ${hype.join(", ")}`);
+  const imp = IMPERSONATE.filter((w) => all.includes(w));
+  if (imp.length) notes.push(`\uC815\uBD80 \uAE30\uAD00\uCC98\uB7FC \uBCF4\uC774\uB294 \uD45C\uD604: ${imp.join(", ")}`);
+  if (notes.length === 0) return { status: "ok", sources, notes };
+  return { status: someDown ? "held" : "rejected", sources, notes: someDown ? [...notes, "\uCD9C\uCC98 \uC77C\uBD80\uB97C \uC5F4\uC9C0 \uBABB\uD568 \u2014 \uB2E4\uC74C \uD68C\uCC28\uC5D0 \uB2E4\uC2DC \uD655\uC778"] : notes };
 }
 
 // sync/radar/fetch-page.ts
@@ -603,8 +734,9 @@ function todayKst() {
 
 // sync/radar/check.ts
 var defaultDir = true ? "issues" : "content/issues";
+var defaultPosts = true ? "posts" : "content/posts";
 var { values: args } = parseArgs({
-  options: { content: { type: "string", default: defaultDir }, pages: { type: "string" } }
+  options: { content: { type: "string", default: defaultDir }, posts: { type: "string", default: defaultPosts }, pages: { type: "string" } }
 });
 var { docs, errors } = loadIssueDocs(args.content);
 var fetchText = args.pages ? offlineFetcher(args.pages) : (url) => fetchPageText(url);
@@ -618,4 +750,19 @@ for (const doc of docs) {
   for (const n of r.notes) console.log(`  - ${n}`);
 }
 console.log(`\uD615\uC2DD \uC624\uB958 ${errors.length}\uAC74 \xB7 \uAC80\uC0AC ${docs.length}\uAC74 (\u2713 \uD1B5\uACFC, \u25B3 \uC77C\uBD80 \uBBF8\uC815\xB7\uC2E0\uCCAD \uB9C1\uD06C \uBE60\uC9D0, ! \uAC8C\uC2DC \uC548 \uB428/\uBCF4\uB958)`);
-if (errors.length) process.exitCode = 1;
+var posts = loadPostDocs(args.posts);
+for (const e of posts.errors) console.log(`\u2717 \uAE00 ${e.file}
+  - ${e.errors.join("\n  - ")}`);
+var postFails = 0;
+for (const doc of posts.docs) {
+  if (doc.hidden) {
+    console.log(`\xB7 \uAE00 ${doc.slug} \u2014 \uC228\uAE40`);
+    continue;
+  }
+  const r = await verifyPost(doc, fetchText);
+  if (r.status !== "ok") postFails++;
+  console.log(`${r.status === "ok" ? "\u2713" : "!"} \uAE00 ${doc.slug} \u2014 ${r.status === "ok" ? "\uAC8C\uC2DC \uAC00\uB2A5" : r.status === "held" ? "\uBCF4\uB958" : "\uAC8C\uC2DC \uC548 \uB428"}`);
+  for (const n of r.notes) console.log(`  - ${n}`);
+}
+console.log(`\uAE00 \uD615\uC2DD \uC624\uB958 ${posts.errors.length}\uAC74 \xB7 \uAC80\uC0AC ${posts.docs.length}\uAC74 \xB7 \uAC8C\uC2DC \uC548 \uB428/\uBCF4\uB958 ${postFails}\uAC74`);
+if (errors.length || posts.errors.length) process.exitCode = 1;
