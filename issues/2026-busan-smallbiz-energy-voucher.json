@@ -1,33 +1,93 @@
 {
   "slug": "2026-busan-smallbiz-energy-voucher",
   "name": "소상공인 에너지바우처",
-  "aliases": ["소상공인 에너지 바우처", "부산 소상공인 에너지바우처"],
+  "aliases": [
+    "소상공인 에너지 바우처",
+    "부산 소상공인 에너지바우처"
+  ],
   "summary": "부산시가 지역 소상공인의 에너지 비용 부담을 덜어주려고 동백전 정책지원금 형태로 20만원 상당의 에너지바우처를 지급하는 사업이다. 9월 말부터 지급이 시작됐고, 한국전력공사와 협약을 맺어 사용처가 차량 연료비에서 전기요금까지 넓어졌다.",
   "stage": "confirmed",
   "hidden": false,
   "agency": "부산시",
-  "region": { "sido": "부산", "sigungu": null },
+  "region": {
+    "sido": "부산",
+    "sigungu": null
+  },
   "targetGroup": "smallbiz",
   "target": "부산에 사업장을 둔 연매출 3억 원 이하 소상공인",
   "amount": "업체당 20만원",
   "applyStart": "2026-09-28",
-  "applyEnd": null,
-  "applyMethod": null,
+  "applyEnd": "2026-11-06",
+  "applyMethod": "동백전 앱 → 정책자금 신청 → 부산시 소상공인 에너지바우처",
   "ageMin": null,
   "ageMax": null,
   "gov24Id": null,
+  "applyUrl": "https://www.busan.go.kr/minsaeng100/sub0203",
   "evidence": {
-    "agency": [{ "source": 0, "quote": "부산시는 12일 한국전력공사와 소상공인 에너지바우처 사용처 확대를 위한 업무협약" }],
-    "target": [{ "source": 1, "quote": "부산에 사업장을 둔 연매출 3억 원 이하 소상공인에게 업체당 20만원의 에너지바우처를" }],
-    "amount": [{ "source": 1, "quote": "부산에 사업장을 둔 연매출 3억 원 이하 소상공인에게 업체당 20만원의 에너지바우처를" }],
-    "applyStart": [{ "source": 0, "quote": "지난 9월 28일부터 지역 소상공인을 대상으로 1인당 20만원의 에너지 바우처를" }]
+    "agency": [
+      {
+        "source": 3,
+        "quote": "부산시는 한국전력공사 부산울산본부와 소상공인 에너지바우처 사용처 확대를 위한 업무협약을 체결했다고 13일 밝혔다."
+      }
+    ],
+    "target": [
+      {
+        "source": 2,
+        "quote": "부산에 사업장을 둔 연매출 3억 원 이하 소상공인에게 업체당 20만원의 에너지바우처를"
+      }
+    ],
+    "amount": [
+      {
+        "source": 2,
+        "quote": "부산에 사업장을 둔 연매출 3억 원 이하 소상공인에게 업체당 20만원의 에너지바우처를"
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 0,
+        "quote": "신청기간 2026. 9. 28.(월) ~ 11. 6.(금)"
+      }
+    ],
+    "applyEnd": [
+      {
+        "source": 0,
+        "quote": "신청기간 2026. 9. 28.(월) ~ 11. 6.(금)"
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 0,
+        "quote": "동백전 앱 → 「정책자금 신청」 → 「부산시 소상공인 에너지바우처」 순으로 진행하시면 됩니다."
+      }
+    ]
   },
   "sources": [
-    { "url": "https://www.yna.co.kr/view/AKR20261013024100051", "title": "부산시·한전, 소상공인 에너지바우처 이용 지원 '맞손'", "publisher": "연합뉴스" },
-    { "url": "https://www.newspim.com/news/view/20261012001505", "title": "한전 부울본부, 부산시와 소상공인 에너지바우처 지급 협약", "publisher": "뉴스핌" },
-    { "url": "https://www.sedaily.com/article/20100826", "title": "부산 소상공인 에너지바우처, 전기요금에도 쓴다", "publisher": "서울경제" },
-    { "url": "https://www.cnbnews.com/news/articleView.html?idxno=1018945", "title": "한전 부울본부-부산시, 소상공인 에너지바우처 사용처 확대 협약", "publisher": "CNB뉴스" }
+    {
+      "url": "https://www.busan.go.kr/minsaeng100/sub0203",
+      "title": "소상공인 에너지바우처 지급",
+      "publisher": "부산광역시"
+    },
+    {
+      "url": "https://www.yna.co.kr/view/AKR20261013024100051",
+      "title": "부산시·한전, 소상공인 에너지바우처 이용 지원 '맞손'",
+      "publisher": "연합뉴스"
+    },
+    {
+      "url": "https://www.newspim.com/news/view/20261012001505",
+      "title": "한전 부울본부, 부산시와 소상공인 에너지바우처 지급 협약",
+      "publisher": "뉴스핌"
+    },
+    {
+      "url": "https://www.sedaily.com/article/20100826",
+      "title": "부산 소상공인 에너지바우처, 전기요금에도 쓴다",
+      "publisher": "서울경제"
+    },
+    {
+      "url": "https://www.cnbnews.com/news/articleView.html?idxno=1018945",
+      "title": "한전 부울본부-부산시, 소상공인 에너지바우처 사용처 확대 협약",
+      "publisher": "CNB뉴스"
+    }
   ],
   "createdAt": "2026-10-13T03:00:00Z",
-  "updatedAt": "2026-10-13T03:00:00Z"
+  "updatedAt": "2026-10-13T10:50:00Z"
 }

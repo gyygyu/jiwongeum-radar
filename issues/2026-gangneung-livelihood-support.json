@@ -1,0 +1,71 @@
+{
+  "slug": "2026-gangneung-livelihood-support",
+  "name": "강릉시 민생안정지원금",
+  "aliases": [
+    "강릉 민생안정지원금",
+    "강릉 민생지원금",
+    "강릉시 민생지원금"
+  ],
+  "summary": "강원 강릉시가 고물가·고금리로 어려운 시민의 부담을 덜고 골목상권을 살리려고 모든 시민에게 지역화폐를 나눠 주는 사업이다. 소득이나 재산, 나이를 따지지 않고 1인당 10만원을 강릉페이로 받는다. 7월 시의회에서 한 차례 부결됐다가 9월 정례회에서 조례와 추경 예산이 통과됐다. 시는 11월 중순 지급 시작을 목표로 하며, 신청 기간과 방법은 시 홈페이지 등에서 따로 안내할 예정이다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "강릉시",
+  "region": {
+    "sido": "강원",
+    "sigungu": "강릉시"
+  },
+  "targetGroup": "personal",
+  "target": "소득·재산·연령에 관계없이 강릉시 전 시민",
+  "amount": "1인당 10만 원 (강릉페이)",
+  "applyStart": null,
+  "applyEnd": null,
+  "applyMethod": null,
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      {
+        "source": 1,
+        "quote": "강릉시는 심의위원회 등 후속 절차를 차질 없이 진행해 오는 11월 중순부터 지급을 시작할 계획이라고 밝혔다."
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "지원금은 소득과 재산, 연령에 관계없이 전 시민에게 지급된다."
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "강릉시민 전원이 11월 중순부터 1인당 10만 원을 강릉페이로 받는다."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://news.mtn.co.kr/news-detail/2026093009573458663",
+      "title": "강릉시, 민생안정지원금 전시민 지급...강릉페이로 10만원",
+      "publisher": "머니투데이방송"
+    },
+    {
+      "url": "https://www.heraldk.com/article/2026100113541424992",
+      "title": "강릉시, 그냥드림 선제적 시행 이어 전 시민 지역화폐 지급, “복지·행정도 잘하는 도시”",
+      "publisher": "헤럴드경제 미주판"
+    },
+    {
+      "url": "https://www.insight.co.kr/news/575892",
+      "title": "강릉시, '1인당 10만원' 민생안정지원금 모든 시민에 지급한다",
+      "publisher": "인사이트"
+    },
+    {
+      "url": "https://www.yna.co.kr/view/AKR20260930069800062",
+      "title": "강릉시민 1인당 10만원…11월 중순부터 강릉페이 지급",
+      "publisher": "연합뉴스"
+    }
+  ],
+  "createdAt": "2026-10-13T10:40:00Z",
+  "updatedAt": "2026-10-13T10:40:00Z"
+}
