@@ -1,0 +1,29 @@
+{
+  "key": "농산물지원금",
+  "detectedAt": "2026-10-13T23:36:41.132Z",
+  "hosts": [
+    "ajunews.com",
+    "industrynews.co.kr",
+    "farminsight.net"
+  ],
+  "articles": [
+    {
+      "title": "이마트 한 곳에만 농산물 지원금 '700억' 몰렸다",
+      "link": "https://www.ajunews.com/view/20261013085124334",
+      "host": "ajunews.com",
+      "pubDate": "2026-10-13T01:22:00.000Z"
+    },
+    {
+      "title": "[국감이슈] aT, 농산물 지원금 이마트 쏠림 알고도 방치…698억원 지급",
+      "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=87469",
+      "host": "industrynews.co.kr",
+      "pubDate": "2026-10-13T09:12:00.000Z"
+    },
+    {
+      "title": "[국감] aT, '농산물 지원금' 이마트 855억 쏠림 방치 논란",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17030",
+      "host": "farminsight.net",
+      "pubDate": "2026-10-13T23:34:00.000Z"
+    }
+  ]
+}
