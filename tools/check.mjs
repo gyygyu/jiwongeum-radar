@@ -2,7 +2,264 @@
 // 원본: sync/radar/check.ts — 사용법: node tools/check.mjs
 
 // sync/radar/check.ts
+import { existsSync as existsSync2, readdirSync as readdirSync2, readFileSync as readFileSync2 } from "node:fs";
+import { join as join2 } from "node:path";
 import { parseArgs } from "node:util";
+
+// src/lib/match/requirements.ts
+var REQ_GROUPS = {
+  basic: { label: "\uAE30\uCD08\uC0DD\uD65C\uC218\uAE09\uC790\xB7\uCC28\uC0C1\uC704", codes: ["JA0201"] },
+  lowincome: { label: "\uC800\uC18C\uB4DD\uCE35", codes: ["JA0201", "JA0202"] },
+  disabled: { label: "\uC7A5\uC560\uC778", codes: ["JA0328"] },
+  veteran: { label: "\uAD6D\uAC00\uC720\uACF5\uC790\xB7\uBCF4\uD6C8\uB300\uC0C1", codes: ["JA0329"] },
+  patient: { label: "\uC9C8\uBCD1\xB7\uC9C8\uD658\uC790", codes: ["JA0330"] },
+  pregnant: { label: "\uC784\uC2E0\xB7\uCD9C\uC0B0", codes: ["JA0301", "JA0302", "JA0303"] },
+  parent: { label: "\uC790\uB140 \uC591\uC721", codes: ["JA0411", "JA0403", "JA0303"], extras: ["child"] },
+  student: { label: "\uD559\uC0DD", codes: ["JA0317", "JA0318", "JA0319", "JA0320"] },
+  farmer: { label: "\uB18D\uC5B4\uC5C5\uC778", codes: ["JA0313", "JA0314", "JA0315", "JA0316"] },
+  worker: { label: "\uADFC\uB85C\uC790\xB7\uC7AC\uC9C1\uC790", codes: ["JA0326"] },
+  jobseeker: { label: "\uAD6C\uC9C1\uC790\xB7\uC2E4\uC5C5\uC790", codes: ["JA0327"] },
+  singleparent: { label: "\uD55C\uBD80\uBAA8\xB7\uC870\uC190\uAC00\uC815", codes: ["JA0403"] },
+  multicultural: { label: "\uB2E4\uBB38\uD654\uAC00\uC871", codes: ["JA0401"] },
+  defector: { label: "\uBD81\uD55C\uC774\uD0C8\uC8FC\uBBFC", codes: ["JA0402"] },
+  multichild: { label: "\uB2E4\uC790\uB140", codes: ["JA0411"] },
+  nohome: { label: "\uBB34\uC8FC\uD0DD", codes: ["JA0412"] },
+  oneperson: { label: "1\uC778 \uAC00\uAD6C", codes: ["JA0404"] },
+  newcomer: { label: "\uC2E0\uADDC \uC804\uC785", codes: ["JA0413"] },
+  business: { label: "\uC0AC\uC5C5\uC790\xB7\uC790\uC601\uC5C5\uC790", codes: [] },
+  other: { label: "\uD2B9\uC815 \uB300\uC0C1", codes: [] }
+};
+var REQ_KEYS = Object.keys(REQ_GROUPS);
+
+// src/lib/issues/hosts.ts
+function hostOf(url) {
+  try {
+    return new URL(url).hostname.toLowerCase().replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+function isOfficialHost(host) {
+  return host === "korea.kr" || host.endsWith(".korea.kr") || host === "go.kr" || host.endsWith(".go.kr");
+}
+var isOfficialUrl = (url) => isOfficialHost(hostOf(url));
+var APPLY_AGENCY_SITES = [
+  "semas.or.kr",
+  // 소상공인시장진흥공단
+  "sbiz24.kr",
+  // 소상공인24
+  "gov.kr",
+  // 정부24
+  "kosmes.or.kr"
+  // 중소벤처기업진흥공단
+];
+var isAgencyHost = (host) => APPLY_AGENCY_SITES.some((d) => host === d || host.endsWith(`.${d}`));
+var isApplyUrl = (url) => {
+  const host = hostOf(url);
+  return isOfficialHost(host) || isAgencyHost(host);
+};
+function trustOf(url) {
+  const host = hostOf(url);
+  return isOfficialHost(host) ? 2 : isAgencyHost(host) ? 1 : 0;
+}
+var SECOND_LEVEL = /^(?:co|or|ne|go|ac|re|pe|kr|com|net|org)\.[a-z]{2}$/;
+function siteOf(host) {
+  const parts = host.split(".");
+  const n = parts.length >= 3 && SECOND_LEVEL.test(parts.slice(-2).join(".")) ? 3 : 2;
+  return parts.slice(-n).join(".");
+}
+
+// src/lib/issues/phase.ts
+function computePhase(d, today) {
+  if (d.applyEnd && d.applyEnd < today) return "closed";
+  if (d.stage !== "confirmed") return "reviewing";
+  if (d.applyStart && d.applyStart <= today) return "open";
+  return "planned";
+}
+
+// src/lib/issues/types.ts
+var VERIFIABLE_FIELDS = ["agency", "target", "amount", "applyStart", "applyEnd", "applyMethod"];
+
+// sync/radar/verify.ts
+var ENTITIES = { nbsp: " ", lt: "<", gt: ">", quot: '"', apos: "'", "#39": "'", middot: "\xB7", amp: "&" };
+function htmlToText(html) {
+  return html.replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&(nbsp|lt|gt|quot|apos|#39|middot|amp);/g, (_, n) => ENTITIES[n]).replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d))).replace(/\s+/g, " ").trim();
+}
+function squash(s) {
+  return s.replace(/[\s "'“”‘’`]/g, "").toLowerCase();
+}
+var DATE_IN_QUOTE = /(?:(\d{4})\s*(?:년|[./-])\s*)?(\d{1,2})\s*(?:월\s*(\d{1,2})\s*일|[./-]\s*(\d{1,2})(?=\s*(?:[.)(~–-]|부터|까지|$|\s)))/g;
+function dateMentioned(quote, iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  for (const x of quote.matchAll(DATE_IN_QUOTE)) {
+    if (x[1] && Number(x[1]) !== y) continue;
+    if (Number(x[2]) === m && Number(x[3] ?? x[4]) === d) return true;
+  }
+  return false;
+}
+var numbersIn = (s) => new Set([...s.matchAll(/\d[\d,.]*/g)].map((m) => m[0].replace(/[,.]+$/, "").replace(/,/g, "")));
+function valueSupported(field, value, quote) {
+  if (field === "applyStart" || field === "applyEnd") return dateMentioned(quote, value);
+  const q = squash(quote);
+  if (field === "amount") {
+    const nums = numbersIn(value);
+    const quoted = numbersIn(quote);
+    return nums.size > 0 && [...nums].every((n) => quoted.has(n));
+  }
+  if (field === "agency") return q.includes(squash(value));
+  const words = value.split(/[\s,·/()]+/).map(squash).filter((w) => w.length >= 2);
+  if (words.length === 0) return q.includes(squash(value));
+  return words.filter((w) => q.includes(w)).length * 2 >= words.length;
+}
+var MIN_MEDIA_HOSTS = 3;
+async function checkApplyUrl(url, names, relevantTexts, fetchText2, prevUrl) {
+  if (url === null) return { url: null, note: null };
+  if (!isApplyUrl(url)) return { url: null, note: `\uC2E0\uCCAD \uB9C1\uD06C\uAC00 \uACF5\uC2DD \uB3C4\uBA54\uC778(*.go.kr\xB7korea.kr)\uC774\uB098 \uC9C0\uC815 \uACF5\uACF5\uAE30\uAD00(${APPLY_AGENCY_SITES.join("\xB7")})\uC774 \uC544\uB2C8\uB77C \uBE8C` };
+  let decoded = url;
+  try {
+    decoded = decodeURIComponent(url);
+  } catch {
+  }
+  if (names.some((n) => squash(decoded).includes(n))) return { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C \uC8FC\uC18C\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uB4E4\uC5B4 \uC788\uC5B4(\uAC80\uC0C9 \uACB0\uACFC \uD398\uC774\uC9C0\uB85C \uBCF4\uC784) \uBE8C" };
+  const text = await fetchText2(url).catch(() => null);
+  if (text === null) {
+    return prevUrl === url ? { url, note: "\uC2E0\uCCAD \uB9C1\uD06C\uB97C \uC5F4\uC9C0 \uBABB\uD568 \u2014 \uC9C1\uC804\uC5D0 \uD655\uC778\uB41C \uB9C1\uD06C\uB77C \uC720\uC9C0" } : { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C\uB97C \uC5F4\uC9C0 \uBABB\uD574 \uBE8C" };
+  }
+  const flat = squash(text);
+  if (names.some((n) => flat.includes(n))) return { url, note: null };
+  const site = squash(siteOf(hostOf(url)));
+  if (!isOfficialUrl(url) && relevantTexts.some((t) => t.includes(site))) return { url, note: null };
+  return { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C \uD398\uC774\uC9C0\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uC5C6\uACE0, \uCD9C\uCC98\uC5D0\uB3C4 \uADF8 \uC0AC\uC774\uD2B8 \uC8FC\uC18C\uAC00 \uC5C6\uC5B4 \uBE8C" };
+}
+async function verifyIssue(doc, fetchText2, today, now, prev = null) {
+  if (doc.hidden) return { status: "hidden", issue: null, notes: ["\uC6B4\uC601\uC790\uAC00 \uC228\uAE40 \uCC98\uB9AC\uD568"] };
+  const texts = await Promise.all(doc.sources.map((s) => fetchText2(s.url).catch(() => null)));
+  if (texts.every((t) => t === null)) {
+    return { status: "held", issue: null, notes: ["\uCD9C\uCC98\uB97C \uD558\uB098\uB3C4 \uC5F4\uC9C0 \uBABB\uD568 \u2014 \uC9C1\uC804 \uAC8C\uC2DC\uBCF8\uC744 \uC720\uC9C0\uD558\uACE0 \uB2E4\uC74C \uD68C\uCC28\uC5D0 \uB2E4\uC2DC \uD655\uC778"] };
+  }
+  const flat = texts.map((t) => t === null ? null : squash(t));
+  const names = [doc.name, ...doc.aliases].map(squash).filter((n) => n.length >= 4);
+  const relevant = flat.map((t) => t !== null && names.some((n) => t.includes(n)));
+  const officialOk = doc.sources.some((s, i) => relevant[i] && isOfficialUrl(s.url));
+  const mediaHosts = new Set(doc.sources.filter((s, i) => relevant[i] && !isOfficialUrl(s.url)).map((s) => siteOf(hostOf(s.url))));
+  const someDown = texts.some((t) => t === null);
+  const holdForOutage = (why) => ({
+    status: "held",
+    issue: null,
+    notes: [`\uCD9C\uCC98 \uC77C\uBD80\uB97C \uC5F4\uC9C0 \uBABB\uD568 \u2014 ${why}. \uC9C1\uC804 \uAC8C\uC2DC\uBCF8\uC744 \uC720\uC9C0\uD558\uACE0 \uB2E4\uC74C \uD68C\uCC28\uC5D0 \uB2E4\uC2DC \uD655\uC778`]
+  });
+  if (!officialOk && mediaHosts.size < MIN_MEDIA_HOSTS) {
+    if (prev && someDown) return holdForOutage("\uCD9C\uCC98 \uADDC\uCE59 \uBBF8\uB2EC");
+    return {
+      status: "rejected",
+      issue: null,
+      notes: [`\uCD9C\uCC98 \uADDC\uCE59 \uBBF8\uB2EC \u2014 \uACF5\uC2DD \uCD9C\uCC98 ${officialOk ? 1 : 0}\uACF3, \uC11C\uB85C \uB2E4\uB978 \uC5B8\uB860 ${mediaHosts.size}\uACF3 (\uACF5\uC2DD 1\uACF3 \uB610\uB294 \uC5B8\uB860 ${MIN_MEDIA_HOSTS}\uACF3 \uD544\uC694)`]
+    };
+  }
+  const values = {
+    agency: doc.agency,
+    target: doc.target,
+    amount: doc.amount,
+    applyStart: doc.applyStart,
+    applyEnd: doc.applyEnd,
+    applyMethod: doc.applyMethod
+  };
+  const unverified = [];
+  for (const field of VERIFIABLE_FIELDS) {
+    const value = values[field];
+    if (value === null) continue;
+    const ok = (doc.evidence[field] ?? []).some((q) => {
+      const text = flat[q.source];
+      const quote = squash(q.quote);
+      if (text == null || !relevant[q.source] || quote.length < 4 || !text.includes(quote)) return false;
+      return valueSupported(field, value, q.quote);
+    });
+    if (!ok) {
+      values[field] = null;
+      unverified.push(field);
+    }
+  }
+  const stage = doc.stage === "confirmed" && !officialOk ? "reviewing" : doc.stage;
+  if (prev && someDown) {
+    const lost = unverified.filter((f) => prev[f] !== null && !prev.unverified.includes(f));
+    if (lost.length) return holdForOutage(`\uC9C1\uC804\uC5D0 \uD655\uC778\uB41C \uD56D\uBAA9(${lost.join(", ")})\uC758 \uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD568`);
+    if (prev.stage === "confirmed" && stage !== "confirmed") return holdForOutage("\uACF5\uC2DD \uCD9C\uCC98\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD568");
+  }
+  const notes = [];
+  if (unverified.length) notes.push(`\uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 '\uBBF8\uC815'\uC73C\uB85C \uD45C\uC2DC: ${unverified.join(", ")}`);
+  if (stage !== doc.stage) notes.push('\uACF5\uC2DD \uCD9C\uCC98\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 "\uAC80\uD1A0 \uC911"\uC73C\uB85C \uD45C\uC2DC');
+  const relevantTexts = flat.filter((t, i) => t !== null && relevant[i]);
+  const apply = await checkApplyUrl(doc.applyUrl ?? null, names, relevantTexts, fetchText2, prev?.applyUrl ?? null);
+  if (apply.note) notes.push(apply.note);
+  const { evidence: _evidence, hidden: _hidden, sources, ...rest } = doc;
+  const issue = {
+    ...rest,
+    ...values,
+    applyUrl: apply.url,
+    stage,
+    phase: computePhase({ stage, applyStart: values.applyStart, applyEnd: values.applyEnd }, today),
+    sources: sources.map((s, i) => ({ ...s, official: isOfficialUrl(s.url), reachable: texts[i] !== null })),
+    unverified,
+    verifiedAt: now
+  };
+  return { status: "published", issue, notes };
+}
+
+// sync/requirements/verify.ts
+var MAX_CLAUSES = 6;
+var MAX_KEYS = 8;
+var QUOTE_MIN = 4;
+var QUOTE_MAX = 300;
+var fail = (error) => ({ ok: false, error });
+function checkReqResult(raw, item) {
+  if (typeof raw !== "object" || raw === null || Array.isArray(raw)) return fail("\uD615\uC2DD \uC624\uB958: \uACB0\uACFC\uAC00 \uAC1D\uCCB4\uAC00 \uC544\uB2D8");
+  const r = raw;
+  if (!item) return fail("\uD310\uB3C5 \uB300\uC0C1\uC774 \uC544\uB2D8 (id \uD655\uC778)");
+  if (r.hash !== item.hash) return fail("\uC6D0\uBB38\uC774 \uBC14\uB01C \u2014 \uC0C8 \uBB36\uC74C\uC5D0\uC11C \uB2E4\uC2DC \uD310\uB3C5");
+  if (!Array.isArray(r.clauses)) return fail("clauses \uBC30\uC5F4\uC774 \uC5C6\uC74C (\uC81C\uD55C\uC774 \uC5C6\uC73C\uBA74 \uBE48 \uBC30\uC5F4)");
+  if (r.clauses.length > MAX_CLAUSES) return fail(`\uC870\uAC74 \uBB36\uC74C\uC774 ${MAX_CLAUSES}\uAC1C\uBCF4\uB2E4 \uB9CE\uC74C`);
+  const text = squash(`${item.target}
+${item.criteria}`);
+  const clauses = [];
+  for (const c of r.clauses) {
+    if (!c || !Array.isArray(c.any) || c.any.length === 0 || c.any.length > MAX_KEYS) return fail("\uB0B1\uB9D0(any)\uC774 \uBE44\uC5C8\uAC70\uB098 \uB108\uBB34 \uB9CE\uC74C");
+    const unknown = c.any.filter((k) => !REQ_KEYS.includes(k));
+    if (unknown.length) return fail(`\uBAA8\uB974\uB294 \uB0B1\uB9D0: ${unknown.map(String).join(", ").slice(0, 60)}`);
+    if (typeof c.quote !== "string" || squash(c.quote).length < QUOTE_MIN) return fail("\uADFC\uAC70(quote)\uAC00 \uC5C6\uAC70\uB098 \uB108\uBB34 \uC9E7\uC74C");
+    if (c.quote.length > QUOTE_MAX) return fail(`\uADFC\uAC70(quote)\uAC00 ${QUOTE_MAX}\uC790\uBCF4\uB2E4 \uAE40`);
+    if (!text.includes(squash(c.quote))) return fail(`\uC6D0\uBB38\uC5D0 \uC5C6\uB294 \uADFC\uAC70: "${c.quote.slice(0, 30)}"`);
+    clauses.push({ any: [...new Set(c.any)], quote: c.quote });
+  }
+  return { ok: true, clauses };
+}
+
+// sync/requirements/radar.ts
+var STALE_MS = 3 * 24 * 60 * 60 * 1e3;
+function parse(text) {
+  try {
+    return JSON.parse(text);
+  } catch {
+    return null;
+  }
+}
+function checkDoneFile(doneText, todoText) {
+  if (todoText === null) return { ok: 0, errors: ["\uAC19\uC740 \uC774\uB984\uC758 req-todo \uBB36\uC74C\uC774 \uC5C6\uC74C (\uC774\uBBF8 \uAC00\uC838\uAC14\uAC70\uB098 \uD30C\uC77C \uC774\uB984\uC774 \uB2E4\uB984)"], missing: 0 };
+  const done = parse(doneText);
+  if (!done || !Array.isArray(done.results)) return { ok: 0, errors: ["\uD615\uC2DD \uC624\uB958: JSON \uC774 \uC544\uB2C8\uAC70\uB098 results \uBC30\uC5F4\uC774 \uC5C6\uC74C"], missing: 0 };
+  const todo = parse(todoText);
+  const items = new Map((todo?.items ?? []).map((i) => [i.id, i]));
+  let ok = 0;
+  const errors2 = [];
+  const seen = /* @__PURE__ */ new Set();
+  for (const raw of done.results) {
+    const id = typeof raw?.id === "string" ? raw.id : "";
+    seen.add(id);
+    const check = checkReqResult(raw, items.get(id));
+    if (check.ok) ok++;
+    else errors2.push(`${id || "(id \uC5C6\uC74C)"}: ${check.error}`);
+  }
+  return { ok, errors: errors2, missing: [...items.keys()].filter((id) => !seen.has(id)).length };
+}
 
 // sync/radar/load.ts
 import { existsSync, readdirSync, readFileSync } from "node:fs";
@@ -278,9 +535,6 @@ var REGIONS = [
 // src/lib/regions.ts
 var ALIASES = REGIONS.flatMap((region) => region.aliases.map((alias) => ({ region, alias }))).sort((a, b) => b.alias.length - a.alias.length);
 
-// src/lib/issues/types.ts
-var VERIFIABLE_FIELDS = ["agency", "target", "amount", "applyStart", "applyEnd", "applyMethod"];
-
 // src/lib/issues/validate.ts
 var SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 var STAGES = ["reviewing", "confirmed"];
@@ -358,44 +612,6 @@ function validateIssueDoc(raw, fileSlug) {
   return e.length ? { ok: false, errors: e } : { ok: true, doc: { ...r, applyUrl } };
 }
 
-// src/lib/issues/hosts.ts
-function hostOf(url) {
-  try {
-    return new URL(url).hostname.toLowerCase().replace(/^www\./, "");
-  } catch {
-    return "";
-  }
-}
-function isOfficialHost(host) {
-  return host === "korea.kr" || host.endsWith(".korea.kr") || host === "go.kr" || host.endsWith(".go.kr");
-}
-var isOfficialUrl = (url) => isOfficialHost(hostOf(url));
-var APPLY_AGENCY_SITES = [
-  "semas.or.kr",
-  // 소상공인시장진흥공단
-  "sbiz24.kr",
-  // 소상공인24
-  "gov.kr",
-  // 정부24
-  "kosmes.or.kr"
-  // 중소벤처기업진흥공단
-];
-var isAgencyHost = (host) => APPLY_AGENCY_SITES.some((d) => host === d || host.endsWith(`.${d}`));
-var isApplyUrl = (url) => {
-  const host = hostOf(url);
-  return isOfficialHost(host) || isAgencyHost(host);
-};
-function trustOf(url) {
-  const host = hostOf(url);
-  return isOfficialHost(host) ? 2 : isAgencyHost(host) ? 1 : 0;
-}
-var SECOND_LEVEL = /^(?:co|or|ne|go|ac|re|pe|kr|com|net|org)\.[a-z]{2}$/;
-function siteOf(host) {
-  const parts = host.split(".");
-  const n = parts.length >= 3 && SECOND_LEVEL.test(parts.slice(-2).join(".")) ? 3 : 2;
-  return parts.slice(-n).join(".");
-}
-
 // src/lib/posts/validate.ts
 var KINDS = ["guide", "explainer"];
 var BODY_MIN = 600;
@@ -452,139 +668,6 @@ function validatePostDoc(raw, fileSlug) {
     if (!isIsoTime(r[k])) e.push(`${k}: ISO \uC2DC\uAC01 (\uC608: 2026-10-14T00:00:00Z)`);
   }
   return e.length ? { ok: false, errors: e } : { ok: true, doc: r };
-}
-
-// src/lib/issues/phase.ts
-function computePhase(d, today) {
-  if (d.applyEnd && d.applyEnd < today) return "closed";
-  if (d.stage !== "confirmed") return "reviewing";
-  if (d.applyStart && d.applyStart <= today) return "open";
-  return "planned";
-}
-
-// sync/radar/verify.ts
-var ENTITIES = { nbsp: " ", lt: "<", gt: ">", quot: '"', apos: "'", "#39": "'", middot: "\xB7", amp: "&" };
-function htmlToText(html) {
-  return html.replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&(nbsp|lt|gt|quot|apos|#39|middot|amp);/g, (_, n) => ENTITIES[n]).replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d))).replace(/\s+/g, " ").trim();
-}
-function squash(s) {
-  return s.replace(/[\s "'“”‘’`]/g, "").toLowerCase();
-}
-var DATE_IN_QUOTE = /(?:(\d{4})\s*(?:년|[./-])\s*)?(\d{1,2})\s*(?:월\s*(\d{1,2})\s*일|[./-]\s*(\d{1,2})(?=\s*(?:[.)(~–-]|부터|까지|$|\s)))/g;
-function dateMentioned(quote, iso) {
-  const [y, m, d] = iso.split("-").map(Number);
-  for (const x of quote.matchAll(DATE_IN_QUOTE)) {
-    if (x[1] && Number(x[1]) !== y) continue;
-    if (Number(x[2]) === m && Number(x[3] ?? x[4]) === d) return true;
-  }
-  return false;
-}
-var numbersIn = (s) => new Set([...s.matchAll(/\d[\d,.]*/g)].map((m) => m[0].replace(/[,.]+$/, "").replace(/,/g, "")));
-function valueSupported(field, value, quote) {
-  if (field === "applyStart" || field === "applyEnd") return dateMentioned(quote, value);
-  const q = squash(quote);
-  if (field === "amount") {
-    const nums = numbersIn(value);
-    const quoted = numbersIn(quote);
-    return nums.size > 0 && [...nums].every((n) => quoted.has(n));
-  }
-  if (field === "agency") return q.includes(squash(value));
-  const words = value.split(/[\s,·/()]+/).map(squash).filter((w) => w.length >= 2);
-  if (words.length === 0) return q.includes(squash(value));
-  return words.filter((w) => q.includes(w)).length * 2 >= words.length;
-}
-var MIN_MEDIA_HOSTS = 3;
-async function checkApplyUrl(url, names, relevantTexts, fetchText2, prevUrl) {
-  if (url === null) return { url: null, note: null };
-  if (!isApplyUrl(url)) return { url: null, note: `\uC2E0\uCCAD \uB9C1\uD06C\uAC00 \uACF5\uC2DD \uB3C4\uBA54\uC778(*.go.kr\xB7korea.kr)\uC774\uB098 \uC9C0\uC815 \uACF5\uACF5\uAE30\uAD00(${APPLY_AGENCY_SITES.join("\xB7")})\uC774 \uC544\uB2C8\uB77C \uBE8C` };
-  let decoded = url;
-  try {
-    decoded = decodeURIComponent(url);
-  } catch {
-  }
-  if (names.some((n) => squash(decoded).includes(n))) return { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C \uC8FC\uC18C\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uB4E4\uC5B4 \uC788\uC5B4(\uAC80\uC0C9 \uACB0\uACFC \uD398\uC774\uC9C0\uB85C \uBCF4\uC784) \uBE8C" };
-  const text = await fetchText2(url).catch(() => null);
-  if (text === null) {
-    return prevUrl === url ? { url, note: "\uC2E0\uCCAD \uB9C1\uD06C\uB97C \uC5F4\uC9C0 \uBABB\uD568 \u2014 \uC9C1\uC804\uC5D0 \uD655\uC778\uB41C \uB9C1\uD06C\uB77C \uC720\uC9C0" } : { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C\uB97C \uC5F4\uC9C0 \uBABB\uD574 \uBE8C" };
-  }
-  const flat = squash(text);
-  if (names.some((n) => flat.includes(n))) return { url, note: null };
-  const site = squash(siteOf(hostOf(url)));
-  if (!isOfficialUrl(url) && relevantTexts.some((t) => t.includes(site))) return { url, note: null };
-  return { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C \uD398\uC774\uC9C0\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uC5C6\uACE0, \uCD9C\uCC98\uC5D0\uB3C4 \uADF8 \uC0AC\uC774\uD2B8 \uC8FC\uC18C\uAC00 \uC5C6\uC5B4 \uBE8C" };
-}
-async function verifyIssue(doc, fetchText2, today, now, prev = null) {
-  if (doc.hidden) return { status: "hidden", issue: null, notes: ["\uC6B4\uC601\uC790\uAC00 \uC228\uAE40 \uCC98\uB9AC\uD568"] };
-  const texts = await Promise.all(doc.sources.map((s) => fetchText2(s.url).catch(() => null)));
-  if (texts.every((t) => t === null)) {
-    return { status: "held", issue: null, notes: ["\uCD9C\uCC98\uB97C \uD558\uB098\uB3C4 \uC5F4\uC9C0 \uBABB\uD568 \u2014 \uC9C1\uC804 \uAC8C\uC2DC\uBCF8\uC744 \uC720\uC9C0\uD558\uACE0 \uB2E4\uC74C \uD68C\uCC28\uC5D0 \uB2E4\uC2DC \uD655\uC778"] };
-  }
-  const flat = texts.map((t) => t === null ? null : squash(t));
-  const names = [doc.name, ...doc.aliases].map(squash).filter((n) => n.length >= 4);
-  const relevant = flat.map((t) => t !== null && names.some((n) => t.includes(n)));
-  const officialOk = doc.sources.some((s, i) => relevant[i] && isOfficialUrl(s.url));
-  const mediaHosts = new Set(doc.sources.filter((s, i) => relevant[i] && !isOfficialUrl(s.url)).map((s) => siteOf(hostOf(s.url))));
-  const someDown = texts.some((t) => t === null);
-  const holdForOutage = (why) => ({
-    status: "held",
-    issue: null,
-    notes: [`\uCD9C\uCC98 \uC77C\uBD80\uB97C \uC5F4\uC9C0 \uBABB\uD568 \u2014 ${why}. \uC9C1\uC804 \uAC8C\uC2DC\uBCF8\uC744 \uC720\uC9C0\uD558\uACE0 \uB2E4\uC74C \uD68C\uCC28\uC5D0 \uB2E4\uC2DC \uD655\uC778`]
-  });
-  if (!officialOk && mediaHosts.size < MIN_MEDIA_HOSTS) {
-    if (prev && someDown) return holdForOutage("\uCD9C\uCC98 \uADDC\uCE59 \uBBF8\uB2EC");
-    return {
-      status: "rejected",
-      issue: null,
-      notes: [`\uCD9C\uCC98 \uADDC\uCE59 \uBBF8\uB2EC \u2014 \uACF5\uC2DD \uCD9C\uCC98 ${officialOk ? 1 : 0}\uACF3, \uC11C\uB85C \uB2E4\uB978 \uC5B8\uB860 ${mediaHosts.size}\uACF3 (\uACF5\uC2DD 1\uACF3 \uB610\uB294 \uC5B8\uB860 ${MIN_MEDIA_HOSTS}\uACF3 \uD544\uC694)`]
-    };
-  }
-  const values = {
-    agency: doc.agency,
-    target: doc.target,
-    amount: doc.amount,
-    applyStart: doc.applyStart,
-    applyEnd: doc.applyEnd,
-    applyMethod: doc.applyMethod
-  };
-  const unverified = [];
-  for (const field of VERIFIABLE_FIELDS) {
-    const value = values[field];
-    if (value === null) continue;
-    const ok = (doc.evidence[field] ?? []).some((q) => {
-      const text = flat[q.source];
-      const quote = squash(q.quote);
-      if (text == null || !relevant[q.source] || quote.length < 4 || !text.includes(quote)) return false;
-      return valueSupported(field, value, q.quote);
-    });
-    if (!ok) {
-      values[field] = null;
-      unverified.push(field);
-    }
-  }
-  const stage = doc.stage === "confirmed" && !officialOk ? "reviewing" : doc.stage;
-  if (prev && someDown) {
-    const lost = unverified.filter((f) => prev[f] !== null && !prev.unverified.includes(f));
-    if (lost.length) return holdForOutage(`\uC9C1\uC804\uC5D0 \uD655\uC778\uB41C \uD56D\uBAA9(${lost.join(", ")})\uC758 \uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD568`);
-    if (prev.stage === "confirmed" && stage !== "confirmed") return holdForOutage("\uACF5\uC2DD \uCD9C\uCC98\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD568");
-  }
-  const notes = [];
-  if (unverified.length) notes.push(`\uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 '\uBBF8\uC815'\uC73C\uB85C \uD45C\uC2DC: ${unverified.join(", ")}`);
-  if (stage !== doc.stage) notes.push('\uACF5\uC2DD \uCD9C\uCC98\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 "\uAC80\uD1A0 \uC911"\uC73C\uB85C \uD45C\uC2DC');
-  const relevantTexts = flat.filter((t, i) => t !== null && relevant[i]);
-  const apply = await checkApplyUrl(doc.applyUrl ?? null, names, relevantTexts, fetchText2, prev?.applyUrl ?? null);
-  if (apply.note) notes.push(apply.note);
-  const { evidence: _evidence, hidden: _hidden, sources, ...rest } = doc;
-  const issue = {
-    ...rest,
-    ...values,
-    applyUrl: apply.url,
-    stage,
-    phase: computePhase({ stage, applyStart: values.applyStart, applyEnd: values.applyEnd }, today),
-    sources: sources.map((s, i) => ({ ...s, official: isOfficialUrl(s.url), reachable: texts[i] !== null })),
-    unverified,
-    verifiedAt: now
-  };
-  return { status: "published", issue, notes };
 }
 
 // sync/radar/load.ts
@@ -736,7 +819,13 @@ function todayKst() {
 var defaultDir = true ? "issues" : "content/issues";
 var defaultPosts = true ? "posts" : "content/posts";
 var { values: args } = parseArgs({
-  options: { content: { type: "string", default: defaultDir }, posts: { type: "string", default: defaultPosts }, pages: { type: "string" } }
+  options: {
+    content: { type: "string", default: defaultDir },
+    posts: { type: "string", default: defaultPosts },
+    pages: { type: "string" },
+    "req-todo": { type: "string", default: "req-todo" },
+    "req-done": { type: "string", default: "req-done" }
+  }
 });
 var { docs, errors } = loadIssueDocs(args.content);
 var fetchText = args.pages ? offlineFetcher(args.pages) : (url) => fetchPageText(url);
@@ -765,4 +854,15 @@ for (const doc of posts.docs) {
   for (const n of r.notes) console.log(`  - ${n}`);
 }
 console.log(`\uAE00 \uD615\uC2DD \uC624\uB958 ${posts.errors.length}\uAC74 \xB7 \uAC80\uC0AC ${posts.docs.length}\uAC74 \xB7 \uAC8C\uC2DC \uC548 \uB428/\uBCF4\uB958 ${postFails}\uAC74`);
-if (errors.length || posts.errors.length) process.exitCode = 1;
+var reqFails = 0;
+if (existsSync2(args["req-done"])) {
+  for (const name of readdirSync2(args["req-done"]).filter((n) => n.endsWith(".json"))) {
+    const todoPath = join2(args["req-todo"], name);
+    const r = checkDoneFile(readFileSync2(join2(args["req-done"], name), "utf8"), existsSync2(todoPath) ? readFileSync2(todoPath, "utf8") : null);
+    if (r.errors.length) reqFails++;
+    console.log(`${r.errors.length ? "\u2717" : "\u2713"} \uC694\uAC74 ${name} \u2014 \uD1B5\uACFC ${r.ok} \xB7 \uC2E4\uD328 ${r.errors.length}${r.missing ? ` \xB7 \uACB0\uACFC \uC5C6\uB294 \uC9C0\uC6D0\uAE08 ${r.missing}` : ""}`);
+    for (const e of r.errors.slice(0, 20)) console.log(`  - ${e}`);
+    if (r.errors.length > 20) console.log(`  - \u2026 \uC678 ${r.errors.length - 20}\uAC74`);
+  }
+}
+if (errors.length || posts.errors.length || reqFails) process.exitCode = 1;
