@@ -309,6 +309,8 @@ function validateIssueDoc(raw, fileSlug) {
   }
   if (!GROUPS.includes(r.targetGroup)) e.push("targetGroup: personal | smallbiz | corp | all");
   if (!isNullableStr(r.gov24Id, 40)) e.push("gov24Id: \uBB38\uC790\uC5F4 \uB610\uB294 null");
+  const applyUrl = r.applyUrl ?? null;
+  if (applyUrl !== null && !(isStr(applyUrl) && /^https:\/\/[^\s]+$/.test(applyUrl))) e.push("applyUrl: https \uC8FC\uC18C(300\uC790 \uC774\uD558) \uB610\uB294 null");
   if (!isObj(r.region)) {
     e.push("region: { sido, sigungu }");
   } else {
@@ -353,7 +355,7 @@ function validateIssueDoc(raw, fileSlug) {
   for (const k of ["createdAt", "updatedAt"]) {
     if (typeof r[k] !== "string" || Number.isNaN(Date.parse(r[k]))) e.push(`${k}: ISO \uC2DC\uAC01`);
   }
-  return e.length ? { ok: false, errors: e } : { ok: true, doc: r };
+  return e.length ? { ok: false, errors: e } : { ok: true, doc: { ...r, applyUrl } };
 }
 
 // src/lib/issues/hosts.ts
@@ -368,6 +370,25 @@ function isOfficialHost(host) {
   return host === "korea.kr" || host.endsWith(".korea.kr") || host === "go.kr" || host.endsWith(".go.kr");
 }
 var isOfficialUrl = (url) => isOfficialHost(hostOf(url));
+var APPLY_AGENCY_SITES = [
+  "semas.or.kr",
+  // 소상공인시장진흥공단
+  "sbiz24.kr",
+  // 소상공인24
+  "gov.kr",
+  // 정부24
+  "kosmes.or.kr"
+  // 중소벤처기업진흥공단
+];
+var isAgencyHost = (host) => APPLY_AGENCY_SITES.some((d) => host === d || host.endsWith(`.${d}`));
+var isApplyUrl = (url) => {
+  const host = hostOf(url);
+  return isOfficialHost(host) || isAgencyHost(host);
+};
+function trustOf(url) {
+  const host = hostOf(url);
+  return isOfficialHost(host) ? 2 : isAgencyHost(host) ? 1 : 0;
+}
 var SECOND_LEVEL = /^(?:co|or|ne|go|ac|re|pe|kr|com|net|org)\.[a-z]{2}$/;
 function siteOf(host) {
   const parts = host.split(".");
@@ -415,6 +436,25 @@ function valueSupported(field, value, quote) {
   return words.filter((w) => q.includes(w)).length * 2 >= words.length;
 }
 var MIN_MEDIA_HOSTS = 3;
+async function checkApplyUrl(url, names, relevantTexts, fetchText2, prevUrl) {
+  if (url === null) return { url: null, note: null };
+  if (!isApplyUrl(url)) return { url: null, note: `\uC2E0\uCCAD \uB9C1\uD06C\uAC00 \uACF5\uC2DD \uB3C4\uBA54\uC778(*.go.kr\xB7korea.kr)\uC774\uB098 \uC9C0\uC815 \uACF5\uACF5\uAE30\uAD00(${APPLY_AGENCY_SITES.join("\xB7")})\uC774 \uC544\uB2C8\uB77C \uBE8C` };
+  let decoded = url;
+  try {
+    decoded = decodeURIComponent(url);
+  } catch {
+  }
+  if (names.some((n) => squash(decoded).includes(n))) return { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C \uC8FC\uC18C\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uB4E4\uC5B4 \uC788\uC5B4(\uAC80\uC0C9 \uACB0\uACFC \uD398\uC774\uC9C0\uB85C \uBCF4\uC784) \uBE8C" };
+  const text = await fetchText2(url).catch(() => null);
+  if (text === null) {
+    return prevUrl === url ? { url, note: "\uC2E0\uCCAD \uB9C1\uD06C\uB97C \uC5F4\uC9C0 \uBABB\uD568 \u2014 \uC9C1\uC804\uC5D0 \uD655\uC778\uB41C \uB9C1\uD06C\uB77C \uC720\uC9C0" } : { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C\uB97C \uC5F4\uC9C0 \uBABB\uD574 \uBE8C" };
+  }
+  const flat = squash(text);
+  if (names.some((n) => flat.includes(n))) return { url, note: null };
+  const site = squash(siteOf(hostOf(url)));
+  if (!isOfficialUrl(url) && relevantTexts.some((t) => t.includes(site))) return { url, note: null };
+  return { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C \uD398\uC774\uC9C0\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uC5C6\uACE0, \uCD9C\uCC98\uC5D0\uB3C4 \uADF8 \uC0AC\uC774\uD2B8 \uC8FC\uC18C\uAC00 \uC5C6\uC5B4 \uBE8C" };
+}
 async function verifyIssue(doc, fetchText2, today, now, prev = null) {
   if (doc.hidden) return { status: "hidden", issue: null, notes: ["\uC6B4\uC601\uC790\uAC00 \uC228\uAE40 \uCC98\uB9AC\uD568"] };
   const texts = await Promise.all(doc.sources.map((s) => fetchText2(s.url).catch(() => null)));
@@ -472,10 +512,14 @@ async function verifyIssue(doc, fetchText2, today, now, prev = null) {
   const notes = [];
   if (unverified.length) notes.push(`\uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 '\uBBF8\uC815'\uC73C\uB85C \uD45C\uC2DC: ${unverified.join(", ")}`);
   if (stage !== doc.stage) notes.push('\uACF5\uC2DD \uCD9C\uCC98\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 "\uAC80\uD1A0 \uC911"\uC73C\uB85C \uD45C\uC2DC');
+  const relevantTexts = flat.filter((t, i) => t !== null && relevant[i]);
+  const apply = await checkApplyUrl(doc.applyUrl ?? null, names, relevantTexts, fetchText2, prev?.applyUrl ?? null);
+  if (apply.note) notes.push(apply.note);
   const { evidence: _evidence, hidden: _hidden, sources, ...rest } = doc;
   const issue = {
     ...rest,
     ...values,
+    applyUrl: apply.url,
     stage,
     phase: computePhase({ stage, applyStart: values.applyStart, applyEnd: values.applyEnd }, today),
     sources: sources.map((s, i) => ({ ...s, official: isOfficialUrl(s.url), reachable: texts[i] !== null })),
@@ -518,13 +562,25 @@ function detectCharset(contentType, head) {
   if (KOREAN_LEGACY.includes(cs)) return "euc-kr";
   return cs === "utf8" ? "utf-8" : cs;
 }
+var MAX_REDIRECTS = 5;
 async function fetchPageText(url, fetchImpl = fetch) {
   try {
-    const res = await fetchImpl(url, {
-      redirect: "follow",
-      signal: AbortSignal.timeout(2e4),
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; jiwongeum-damoa-verifier/1.0)", "Accept-Language": "ko-KR,ko;q=0.9" }
-    });
+    const startTrust = trustOf(url);
+    const signal = AbortSignal.timeout(2e4);
+    let current = url;
+    let res;
+    for (let hop = 0; ; hop++) {
+      res = await fetchImpl(current, {
+        redirect: "manual",
+        signal,
+        headers: { "User-Agent": "Mozilla/5.0 (compatible; jiwongeum-damoa-verifier/1.0)", "Accept-Language": "ko-KR,ko;q=0.9" }
+      });
+      const location = res.status >= 300 && res.status < 400 ? res.headers.get("location") : null;
+      if (!location) break;
+      if (hop >= MAX_REDIRECTS) return null;
+      current = new URL(location, current).toString();
+      if (trustOf(current) < startTrust) return null;
+    }
     if (!res.ok) return null;
     const buf = new Uint8Array(await res.arrayBuffer()).slice(0, MAX_BYTES);
     const head = new TextDecoder("latin1").decode(buf.slice(0, 4096));
@@ -556,9 +612,10 @@ for (const e of errors) console.log(`\u2717 ${e.file}
   - ${e.errors.join("\n  - ")}`);
 for (const doc of docs) {
   const r = await verifyIssue(doc, fetchText, todayKst(), (/* @__PURE__ */ new Date()).toISOString());
-  const mark = r.status === "published" ? r.issue.unverified.length ? "\u25B3" : "\u2713" : r.status === "hidden" ? "\xB7" : "!";
+  const partial = r.status === "published" && (r.issue.unverified.length > 0 || doc.applyUrl !== null && r.issue.applyUrl === null);
+  const mark = r.status === "published" ? partial ? "\u25B3" : "\u2713" : r.status === "hidden" ? "\xB7" : "!";
   console.log(`${mark} ${doc.slug} \u2014 ${r.status}${r.status === "published" ? ` (${r.issue.phase})` : ""}`);
   for (const n of r.notes) console.log(`  - ${n}`);
 }
-console.log(`\uD615\uC2DD \uC624\uB958 ${errors.length}\uAC74 \xB7 \uAC80\uC0AC ${docs.length}\uAC74 (\u2713 \uD1B5\uACFC, \u25B3 \uC77C\uBD80 \uBBF8\uC815, ! \uAC8C\uC2DC \uC548 \uB428/\uBCF4\uB958)`);
+console.log(`\uD615\uC2DD \uC624\uB958 ${errors.length}\uAC74 \xB7 \uAC80\uC0AC ${docs.length}\uAC74 (\u2713 \uD1B5\uACFC, \u25B3 \uC77C\uBD80 \uBBF8\uC815\xB7\uC2E0\uCCAD \uB9C1\uD06C \uBE60\uC9D0, ! \uAC8C\uC2DC \uC548 \uB428/\uBCF4\uB958)`);
 if (errors.length) process.exitCode = 1;
