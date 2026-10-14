@@ -44,6 +44,10 @@
       }
     ]
   },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
   "sources": [
     {
       "url": "https://news.mtn.co.kr/news-detail/2026093009573458663",
@@ -67,5 +71,5 @@
     }
   ],
   "createdAt": "2026-10-13T10:40:00Z",
-  "updatedAt": "2026-10-13T10:40:00Z"
+  "updatedAt": "2026-10-14T06:56:19Z"
 }
