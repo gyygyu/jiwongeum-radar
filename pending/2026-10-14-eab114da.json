@@ -1,0 +1,29 @@
+{
+  "key": "카드형밀양사랑상품권",
+  "detectedAt": "2026-10-14T02:40:02.130Z",
+  "hosts": [
+    "gndomin.com",
+    "newsgn.com",
+    "gukjenews.com"
+  ],
+  "articles": [
+    {
+      "title": "밀양시, 카드형 밀양사랑상품권 월 구매한도 30만원 조정",
+      "link": "http://www.gndomin.com/news/articleView.html?idxno=492640",
+      "host": "gndomin.com",
+      "pubDate": "2026-10-13T09:22:00.000Z"
+    },
+    {
+      "title": "밀양시, 카드형 밀양사랑상품권 월 구매한도 30만 원 조정",
+      "link": "https://www.newsgn.com/news/articleView.html?idxno=579008",
+      "host": "newsgn.com",
+      "pubDate": "2026-10-14T02:26:00.000Z"
+    },
+    {
+      "title": "밀양사랑상품권 월 구매한도 30만원으로 조정…12% 할인 유지",
+      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3719688",
+      "host": "gukjenews.com",
+      "pubDate": "2026-10-13T02:08:00.000Z"
+    }
+  ]
+}

@@ -30,6 +30,30 @@ var REQ_GROUPS = {
   other: { label: "\uD2B9\uC815 \uB300\uC0C1", codes: [] }
 };
 var REQ_KEYS = Object.keys(REQ_GROUPS);
+var BIG = { \uC5B5: 1e8, \uB9CC: 1e4 };
+var SMALL = { \uCC9C: 1e3, \uBC31: 100, \uC2ED: 10 };
+var NUM = String.raw`\d[\d,]*(?:\.\d+)?`;
+var AMOUNT = new RegExp(String.raw`(?:${NUM}\s*(?:[억만천백십]\s*)+)+(?:${NUM}\s*원|원)?|${NUM}\s*원`, "g");
+var TOKEN = new RegExp(String.raw`(${NUM})?\s*([억만천백십])|(${NUM})`, "g");
+function amountOf(s) {
+  let total = 0;
+  let group = 0;
+  for (const t of s.matchAll(TOKEN)) {
+    const raw = t[1] ?? t[3];
+    const n = raw === void 0 ? null : Number(raw.replace(/,/g, ""));
+    const unit = t[2];
+    if (!unit) group += n ?? 0;
+    else if (unit in SMALL) group += (n ?? 1) * SMALL[unit];
+    else {
+      total += (group + (n ?? 0) || 1) * BIG[unit];
+      group = 0;
+    }
+  }
+  return Math.round(total + group);
+}
+function moneyAmounts(text) {
+  return [...text.matchAll(AMOUNT)].map((m) => amountOf(m[0]));
+}
 
 // src/lib/issues/hosts.ts
 function hostOf(url) {
@@ -207,30 +231,80 @@ async function verifyIssue(doc, fetchText2, today, now, prev = null) {
 
 // sync/requirements/verify.ts
 var MAX_CLAUSES = 6;
+var MAX_INCOME = 3;
 var MAX_KEYS = 8;
+var MAX_LIMITS = 3;
 var QUOTE_MIN = 4;
 var QUOTE_MAX = 300;
+var REQ_AGENCY_SITES = [...APPLY_AGENCY_SITES, "nhis.or.kr", "nps.or.kr", "lh.or.kr", "kead.or.kr", "kcomwel.or.kr", "kosaf.go.kr"];
+function isReqSourceUrl(url) {
+  if (!/^https?:\/\//i.test(url)) return false;
+  const host = hostOf(url);
+  return isOfficialUrl(url) || REQ_AGENCY_SITES.some((d) => host === d || host.endsWith(`.${d}`));
+}
 var fail = (error) => ({ ok: false, error });
-function checkReqResult(raw, item) {
+var won = (n) => `${Math.round(n / 1e4).toLocaleString("ko-KR")}\uB9CC \uC6D0`;
+function quoteError(quote, src, apiText, docs2, trustSrc) {
+  if (typeof quote !== "string" || squash(quote).length < QUOTE_MIN) return "\uADFC\uAC70(quote)\uAC00 \uC5C6\uAC70\uB098 \uB108\uBB34 \uC9E7\uC74C";
+  if (quote.length > QUOTE_MAX) return `\uADFC\uAC70(quote)\uAC00 ${QUOTE_MAX}\uC790\uBCF4\uB2E4 \uAE40`;
+  if (src === void 0) return apiText.includes(squash(quote)) ? null : `\uC6D0\uBB38\uC5D0 \uC5C6\uB294 \uADFC\uAC70: "${quote.slice(0, 30)}"`;
+  if (typeof src !== "string" || !isReqSourceUrl(src)) return `\uACF5\uC2DD \uB204\uB9AC\uC9D1\uC774 \uC544\uB2CC \uCD9C\uCC98: ${String(src).slice(0, 60)}`;
+  if (trustSrc) return null;
+  const doc = docs2?.get(src);
+  if (doc == null) return `\uCD9C\uCC98\uB97C \uC5F4 \uC218 \uC5C6\uC74C: ${src.slice(0, 80)}`;
+  return squash(doc).includes(squash(quote)) ? null : `\uCD9C\uCC98 \uBB38\uC11C\uC5D0 \uC5C6\uB294 \uADFC\uAC70: "${quote.slice(0, 30)}"`;
+}
+function limitOf(raw) {
+  const l = raw;
+  if (!l || typeof l !== "object") return null;
+  if (l.kind === "median") {
+    return typeof l.pct === "number" && l.pct > 0 && l.pct <= 300 ? { kind: "median", pct: l.pct } : null;
+  }
+  if ((l.kind === "month" || l.kind === "year") && (l.per === "household" || l.per === "person") && typeof l.won === "number" && Number.isInteger(l.won) && l.won > 0 && l.won <= 1e10) {
+    return { kind: l.kind, won: l.won, per: l.per };
+  }
+  return null;
+}
+function numberInQuote(l, quote) {
+  if (l.kind === "median") return squash(quote).includes(`${l.pct}%`) ? null : `\uADFC\uAC70\uC5D0 ${l.pct}% \uAC00 \uC5C6\uC74C`;
+  return moneyAmounts(quote).includes(l.won) ? null : `\uADFC\uAC70\uC5D0 ${won(l.won)}(${l.won}\uC6D0)\uC774 \uC5C6\uC74C`;
+}
+function checkReqResult(raw, item, docs2, trustSrc = false) {
   if (typeof raw !== "object" || raw === null || Array.isArray(raw)) return fail("\uD615\uC2DD \uC624\uB958: \uACB0\uACFC\uAC00 \uAC1D\uCCB4\uAC00 \uC544\uB2D8");
   const r = raw;
   if (!item) return fail("\uD310\uB3C5 \uB300\uC0C1\uC774 \uC544\uB2D8 (id \uD655\uC778)");
   if (r.hash !== item.hash) return fail("\uC6D0\uBB38\uC774 \uBC14\uB01C \u2014 \uC0C8 \uBB36\uC74C\uC5D0\uC11C \uB2E4\uC2DC \uD310\uB3C5");
   if (!Array.isArray(r.clauses)) return fail("clauses \uBC30\uC5F4\uC774 \uC5C6\uC74C (\uC81C\uD55C\uC774 \uC5C6\uC73C\uBA74 \uBE48 \uBC30\uC5F4)");
   if (r.clauses.length > MAX_CLAUSES) return fail(`\uC870\uAC74 \uBB36\uC74C\uC774 ${MAX_CLAUSES}\uAC1C\uBCF4\uB2E4 \uB9CE\uC74C`);
-  const text = squash(`${item.target}
-${item.criteria}`);
+  if (r.income !== void 0 && !Array.isArray(r.income)) return fail("income \uBC30\uC5F4\uC774 \uC544\uB2D8 (\uC18C\uB4DD \uD55C\uB3C4\uAC00 \uC5C6\uC73C\uBA74 \uBE7C\uAC70\uB098 \uBE48 \uBC30\uC5F4)");
+  const incomeRaw = r.income ?? [];
+  if (incomeRaw.length > MAX_INCOME) return fail(`\uC18C\uB4DD \uD55C\uB3C4\uAC00 ${MAX_INCOME}\uAC1C\uBCF4\uB2E4 \uB9CE\uC74C`);
+  const apiText = squash(`${item.target}
+${item.criteria}
+${item.content ?? ""}`);
   const clauses = [];
   for (const c of r.clauses) {
     if (!c || !Array.isArray(c.any) || c.any.length === 0 || c.any.length > MAX_KEYS) return fail("\uB0B1\uB9D0(any)\uC774 \uBE44\uC5C8\uAC70\uB098 \uB108\uBB34 \uB9CE\uC74C");
     const unknown = c.any.filter((k) => !REQ_KEYS.includes(k));
     if (unknown.length) return fail(`\uBAA8\uB974\uB294 \uB0B1\uB9D0: ${unknown.map(String).join(", ").slice(0, 60)}`);
-    if (typeof c.quote !== "string" || squash(c.quote).length < QUOTE_MIN) return fail("\uADFC\uAC70(quote)\uAC00 \uC5C6\uAC70\uB098 \uB108\uBB34 \uC9E7\uC74C");
-    if (c.quote.length > QUOTE_MAX) return fail(`\uADFC\uAC70(quote)\uAC00 ${QUOTE_MAX}\uC790\uBCF4\uB2E4 \uAE40`);
-    if (!text.includes(squash(c.quote))) return fail(`\uC6D0\uBB38\uC5D0 \uC5C6\uB294 \uADFC\uAC70: "${c.quote.slice(0, 30)}"`);
-    clauses.push({ any: [...new Set(c.any)], quote: c.quote });
+    const qe = quoteError(c.quote, c.src, apiText, docs2, trustSrc);
+    if (qe) return fail(qe);
+    clauses.push({ any: [...new Set(c.any)], quote: c.quote, ...c.src !== void 0 ? { src: c.src } : {} });
   }
-  return { ok: true, clauses };
+  const income = [];
+  for (const c of incomeRaw) {
+    if (!c || !Array.isArray(c.any) || c.any.length === 0 || c.any.length > MAX_LIMITS) return fail("\uC18C\uB4DD \uD55C\uB3C4 \uD615\uC2DD \uC624\uB958: any \uAC00 \uBE44\uC5C8\uAC70\uB098 \uB108\uBB34 \uB9CE\uC74C");
+    const limits = c.any.map(limitOf);
+    if (limits.some((l) => l === null)) return fail("\uC18C\uB4DD \uD55C\uB3C4 \uD615\uC2DD \uC624\uB958: kind \uB294 median(pct) \uB610\uB294 month\xB7year(won, per: household\xB7person)");
+    const qe = quoteError(c.quote, c.src, apiText, docs2, trustSrc);
+    if (qe) return fail(qe);
+    for (const l of limits) {
+      const ne = numberInQuote(l, c.quote);
+      if (ne) return fail(ne);
+    }
+    income.push({ any: limits, quote: c.quote, ...c.src !== void 0 ? { src: c.src } : {} });
+  }
+  return { ok: true, clauses, income };
 }
 
 // sync/requirements/radar.ts
@@ -242,7 +316,7 @@ function parse(text) {
     return null;
   }
 }
-function checkDoneFile(doneText, todoText) {
+function checkDoneFile(doneText, todoText, docs2) {
   if (todoText === null) return { ok: 0, errors: ["\uAC19\uC740 \uC774\uB984\uC758 req-todo \uBB36\uC74C\uC774 \uC5C6\uC74C (\uC774\uBBF8 \uAC00\uC838\uAC14\uAC70\uB098 \uD30C\uC77C \uC774\uB984\uC774 \uB2E4\uB984)"], missing: 0 };
   const done = parse(doneText);
   if (!done || !Array.isArray(done.results)) return { ok: 0, errors: ["\uD615\uC2DD \uC624\uB958: JSON \uC774 \uC544\uB2C8\uAC70\uB098 results \uBC30\uC5F4\uC774 \uC5C6\uC74C"], missing: 0 };
@@ -254,7 +328,7 @@ function checkDoneFile(doneText, todoText) {
   for (const raw of done.results) {
     const id = typeof raw?.id === "string" ? raw.id : "";
     seen.add(id);
-    const check = checkReqResult(raw, items.get(id));
+    const check = checkReqResult(raw, items.get(id), docs2);
     if (check.ok) ok++;
     else errors2.push(`${id || "(id \uC5C6\uC74C)"}: ${check.error}`);
   }
