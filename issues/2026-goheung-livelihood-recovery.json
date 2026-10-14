@@ -10,7 +10,10 @@
   "stage": "confirmed",
   "hidden": false,
   "agency": "고흥군",
-  "region": { "sido": "전남광주", "sigungu": "고흥군" },
+  "region": {
+    "sido": "전남광주",
+    "sigungu": "고흥군"
+  },
   "targetGroup": "personal",
   "target": "2026년 7월 31일부터 지급일까지 계속 고흥군에 주소를 둔 모든 군민",
   "amount": "1인당 30만 원 (지류형 고흥사랑상품권)",
@@ -20,22 +23,79 @@
   "ageMin": null,
   "ageMax": null,
   "gov24Id": null,
-  "applyUrl": null,
+  "applyUrl": "https://www.goheung.go.kr/boardView.do?pageId=www96&boardId=BD_00018&seq=3019641",
   "evidence": {
-    "agency": [{ "source": 0, "quote": "고흥군(군수 공영민)은 전 군민을 대상으로 1인당 30만 원의 2026년 고흥군 민생회복지원금 지급을 9월 14일부터 시작했다고 밝혔다." }],
-    "target": [{ "source": 0, "quote": "지급 대상은 2026년 7월 31일부터 지급일까지 계속해서 고흥군에 주소를 둔 모든 군민이다." }],
-    "amount": [{ "source": 0, "quote": "전 군민을 대상으로 1인당 30만 원의 2026년 고흥군 민생회복지원금 지급을" }],
-    "applyStart": [{ "source": 0, "quote": "민생회복지원금 지급 첫날인 14일부터 18일까지 5일간 직원이 마을을 직접 방문해 고흥사랑상품권을 지급한다." }, { "source": 0, "quote": "2026년 고흥군 민생회복지원금 지급을 9월 14일부터 시작했다고 밝혔다." }],
-    "applyEnd": [{ "source": 0, "quote": "9월 21일부터 10월 30일까지 주소지 읍·면사무소를 방문해 신청하면 즉시 받을 수 있다." }],
-    "applyMethod": [{ "source": 0, "quote": "부득이하게 세대원이 수령할 경우 위임장과 본인 및 세대주 신분증을 함께 지참하면 된다." }, { "source": 0, "quote": "10월 30일까지 주소지 읍·면사무소를 방문해 신청하면 즉시 받을 수 있다." }]
+    "agency": [
+      {
+        "source": 0,
+        "quote": "고흥군(군수 공영민)은 전 군민을 대상으로 1인당 30만 원의 2026년 고흥군 민생회복지원금 지급을 9월 14일부터 시작했다고 밝혔다."
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "지급 대상은 2026년 7월 31일부터 지급일까지 계속해서 고흥군에 주소를 둔 모든 군민이다."
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "전 군민을 대상으로 1인당 30만 원의 2026년 고흥군 민생회복지원금 지급을"
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 0,
+        "quote": "민생회복지원금 지급 첫날인 14일부터 18일까지 5일간 직원이 마을을 직접 방문해 고흥사랑상품권을 지급한다."
+      },
+      {
+        "source": 0,
+        "quote": "2026년 고흥군 민생회복지원금 지급을 9월 14일부터 시작했다고 밝혔다."
+      }
+    ],
+    "applyEnd": [
+      {
+        "source": 0,
+        "quote": "9월 21일부터 10월 30일까지 주소지 읍·면사무소를 방문해 신청하면 즉시 받을 수 있다."
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 0,
+        "quote": "부득이하게 세대원이 수령할 경우 위임장과 본인 및 세대주 신분증을 함께 지참하면 된다."
+      },
+      {
+        "source": 0,
+        "quote": "10월 30일까지 주소지 읍·면사무소를 방문해 신청하면 즉시 받을 수 있다."
+      }
+    ]
   },
-  "req": { "clauses": [], "income": [] },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
   "sources": [
-    { "url": "https://www.goheung.go.kr/boardView.do?pageId=www102&boardId=BD_00025&seq=4408008", "title": "고흥군, 9월 14일부터 민생회복지원금 지급 본격 개시", "publisher": "고흥군" },
-    { "url": "https://www.goheung.go.kr/boardView.do?pageId=www96&boardId=BD_00018&seq=3019641", "title": "2026년 고흥군 민생회복지원금 지급 알림", "publisher": "고흥군" },
-    { "url": "https://www.ngonews.kr/news/articleView.html?idxno=240523", "title": "고흥군, 민생회복지원금 지급률 97% 달성 \"이달 30일 마감, 보이스피싱 주의\"", "publisher": "한국NGO신문" },
-    { "url": "https://sports.donga.com/region/article/all/20261014/134839696/1", "title": "고흥군, 민생회복지원금 97% 지급… 공영민 군수 “미신청 군민 세심히 살필 것”", "publisher": "스포츠동아" }
+    {
+      "url": "https://www.goheung.go.kr/boardView.do?pageId=www102&boardId=BD_00025&seq=4408008",
+      "title": "고흥군, 9월 14일부터 민생회복지원금 지급 본격 개시",
+      "publisher": "고흥군"
+    },
+    {
+      "url": "https://www.goheung.go.kr/boardView.do?pageId=www96&boardId=BD_00018&seq=3019641",
+      "title": "2026년 고흥군 민생회복지원금 지급 알림",
+      "publisher": "고흥군"
+    },
+    {
+      "url": "https://www.ngonews.kr/news/articleView.html?idxno=240523",
+      "title": "고흥군, 민생회복지원금 지급률 97% 달성 \"이달 30일 마감, 보이스피싱 주의\"",
+      "publisher": "한국NGO신문"
+    },
+    {
+      "url": "https://sports.donga.com/region/article/all/20261014/134839696/1",
+      "title": "고흥군, 민생회복지원금 97% 지급… 공영민 군수 “미신청 군민 세심히 살필 것”",
+      "publisher": "스포츠동아"
+    }
   ],
   "createdAt": "2026-10-14T05:48:40Z",
-  "updatedAt": "2026-10-14T05:48:40Z"
+  "updatedAt": "2026-10-14T21:40:00Z"
 }
