@@ -1,0 +1,29 @@
+{
+  "key": "가정에출산지원금",
+  "detectedAt": "2026-10-14T12:49:46.925Z",
+  "hosts": [
+    "kmaeil.com",
+    "shinailbo.co.kr",
+    "munhwa.com"
+  ],
+  "articles": [
+    {
+      "title": "안양시, 세쌍둥이 가정에 출산지원금 1600만원...지역 기업도 1080만원 후...",
+      "link": "https://www.kmaeil.com/news/articleView.html?idxno=654031",
+      "host": "kmaeil.com",
+      "pubDate": "2026-10-13T01:14:00.000Z"
+    },
+    {
+      "title": "안양시 세쌍둥이 가정에 출산지원금 1600만원…지역 기업도 후원",
+      "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5071183",
+      "host": "shinailbo.co.kr",
+      "pubDate": "2026-10-13T04:44:00.000Z"
+    },
+    {
+      "title": "하루 늦게 태어났다고 3428만원 못받는 ‘설움’…정부, 출산지원금 기...",
+      "link": "https://www.munhwa.com/article/11623521?ref=naver",
+      "host": "munhwa.com",
+      "pubDate": "2026-10-14T09:59:00.000Z"
+    }
+  ]
+}
