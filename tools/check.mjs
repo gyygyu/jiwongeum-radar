@@ -30,6 +30,8 @@ var REQ_GROUPS = {
   other: { label: "\uD2B9\uC815 \uB300\uC0C1", codes: [] }
 };
 var REQ_KEYS = Object.keys(REQ_GROUPS);
+var QUOTE_MAX = 40;
+var shortQuote = (q) => q.length > QUOTE_MAX ? `${q.slice(0, QUOTE_MAX)}\u2026` : q;
 var BIG = { \uC5B5: 1e8, \uB9CC: 1e4 };
 var SMALL = { \uCC9C: 1e3, \uBC31: 100, \uC2ED: 10 };
 var NUM = String.raw`\d[\d,]*(?:\.\d+)?`;
@@ -53,6 +55,22 @@ function amountOf(s) {
 }
 function moneyAmounts(text) {
   return [...text.matchAll(AMOUNT)].map((m) => amountOf(m[0]));
+}
+var manwon = (won) => `${Math.round(won / 1e4).toLocaleString("ko-KR")}\uB9CC \uC6D0`;
+function toIncomeLimit(raw) {
+  const l = raw;
+  if (!l || typeof l !== "object") return null;
+  if (l.kind === "median") {
+    return typeof l.pct === "number" && l.pct > 0 && l.pct <= 300 ? { kind: "median", pct: l.pct } : null;
+  }
+  if ((l.kind === "month" || l.kind === "year") && (l.per === "household" || l.per === "person") && typeof l.won === "number" && Number.isInteger(l.won) && l.won > 0 && l.won <= 1e10) {
+    return { kind: l.kind, won: l.won, per: l.per };
+  }
+  return null;
+}
+function incomeNumberError(l, quote) {
+  if (l.kind === "median") return quote.replace(/\s/g, "").includes(`${l.pct}%`) ? null : `\uADFC\uAC70\uC5D0 ${l.pct}% \uAC00 \uC5C6\uC74C`;
+  return moneyAmounts(quote).includes(l.won) ? null : `\uADFC\uAC70\uC5D0 ${manwon(l.won)}(${l.won}\uC6D0)\uC774 \uC5C6\uC74C`;
 }
 
 // src/lib/issues/hosts.ts
@@ -155,6 +173,31 @@ async function checkApplyUrl(url, names, relevantTexts, fetchText2, prevUrl) {
   if (!isOfficialUrl(url) && relevantTexts.some((t) => t.includes(site))) return { url, note: null };
   return { url: null, note: "\uC2E0\uCCAD \uB9C1\uD06C \uD398\uC774\uC9C0\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uC5C6\uACE0, \uCD9C\uCC98\uC5D0\uB3C4 \uADF8 \uC0AC\uC774\uD2B8 \uC8FC\uC18C\uAC00 \uC5C6\uC5B4 \uBE8C" };
 }
+function checkIssueReq(req, flat, relevant) {
+  if (!req || !req.clauses.length && !req.income.length) return { req: void 0, note: null, down: false };
+  const drop = (why, down = false) => ({ req: void 0, note: `\uC694\uAC74 \uC815\uB9AC\uB97C \uBE8C \u2014 ${why}`, down });
+  for (const c of [...req.clauses, ...req.income]) {
+    const text = flat[c.source];
+    if (text == null) return drop(`\uCD9C\uCC98 ${c.source}\uBC88\uC744 \uC5F4\uC9C0 \uBABB\uD568`, true);
+    if (!relevant[c.source]) return drop(`\uCD9C\uCC98 ${c.source}\uBC88\uC5D0 \uC774\uC288 \uC774\uB984\uC774 \uC5C6\uC74C`);
+    if (squash(c.quote).length < 4) return drop(`\uADFC\uAC70\uAC00 \uB108\uBB34 \uC9E7\uC74C: "${c.quote.slice(0, 30)}"`);
+    if (!text.includes(squash(c.quote))) return drop(`\uCD9C\uCC98\uC5D0 \uC5C6\uB294 \uADFC\uAC70: "${c.quote.slice(0, 30)}"`);
+  }
+  for (const c of req.income) {
+    for (const l of c.any) {
+      const e = incomeNumberError(l, c.quote);
+      if (e) return drop(e);
+    }
+  }
+  return {
+    req: {
+      clauses: req.clauses.map((c) => ({ any: [...new Set(c.any)], quote: shortQuote(c.quote) })),
+      income: req.income.map((c) => ({ any: c.any, quote: shortQuote(c.quote) }))
+    },
+    note: null,
+    down: false
+  };
+}
 async function verifyIssue(doc, fetchText2, today, now, prev = null) {
   if (doc.hidden) return { status: "hidden", issue: null, notes: ["\uC6B4\uC601\uC790\uAC00 \uC228\uAE40 \uCC98\uB9AC\uD568"] };
   const texts = await Promise.all(doc.sources.map((s) => fetchText2(s.url).catch(() => null)));
@@ -204,7 +247,9 @@ async function verifyIssue(doc, fetchText2, today, now, prev = null) {
     }
   }
   const stage = doc.stage === "confirmed" && !officialOk ? "reviewing" : doc.stage;
+  const req = checkIssueReq(doc.req, flat, relevant);
   if (prev && someDown) {
+    if (prev.req && req.down) return holdForOutage("\uC9C1\uC804\uC5D0 \uD655\uC778\uB41C \uC694\uAC74 \uC815\uB9AC\uC758 \uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD568");
     const lost = unverified.filter((f) => prev[f] !== null && !prev.unverified.includes(f));
     if (lost.length) return holdForOutage(`\uC9C1\uC804\uC5D0 \uD655\uC778\uB41C \uD56D\uBAA9(${lost.join(", ")})\uC758 \uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD568`);
     if (prev.stage === "confirmed" && stage !== "confirmed") return holdForOutage("\uACF5\uC2DD \uCD9C\uCC98\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD568");
@@ -212,10 +257,11 @@ async function verifyIssue(doc, fetchText2, today, now, prev = null) {
   const notes = [];
   if (unverified.length) notes.push(`\uADFC\uAC70\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 '\uBBF8\uC815'\uC73C\uB85C \uD45C\uC2DC: ${unverified.join(", ")}`);
   if (stage !== doc.stage) notes.push('\uACF5\uC2DD \uCD9C\uCC98\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 "\uAC80\uD1A0 \uC911"\uC73C\uB85C \uD45C\uC2DC');
+  if (req.note) notes.push(req.note);
   const relevantTexts = flat.filter((t, i) => t !== null && relevant[i]);
   const apply = await checkApplyUrl(doc.applyUrl ?? null, names, relevantTexts, fetchText2, prev?.applyUrl ?? null);
   if (apply.note) notes.push(apply.note);
-  const { evidence: _evidence, hidden: _hidden, sources, ...rest } = doc;
+  const { evidence: _evidence, hidden: _hidden, sources, req: _req, ...rest } = doc;
   const issue = {
     ...rest,
     ...values,
@@ -224,7 +270,8 @@ async function verifyIssue(doc, fetchText2, today, now, prev = null) {
     phase: computePhase({ stage, applyStart: values.applyStart, applyEnd: values.applyEnd }, today),
     sources: sources.map((s, i) => ({ ...s, official: isOfficialUrl(s.url), reachable: texts[i] !== null })),
     unverified,
-    verifiedAt: now
+    verifiedAt: now,
+    ...req.req ? { req: req.req } : {}
   };
   return { status: "published", issue, notes };
 }
@@ -235,7 +282,7 @@ var MAX_INCOME = 3;
 var MAX_KEYS = 8;
 var MAX_LIMITS = 3;
 var QUOTE_MIN = 4;
-var QUOTE_MAX = 300;
+var QUOTE_MAX2 = 300;
 var REQ_AGENCY_SITES = [...APPLY_AGENCY_SITES, "nhis.or.kr", "nps.or.kr", "lh.or.kr", "kead.or.kr", "kcomwel.or.kr", "kosaf.go.kr"];
 function isReqSourceUrl(url) {
   if (!/^https?:\/\//i.test(url)) return false;
@@ -243,31 +290,15 @@ function isReqSourceUrl(url) {
   return isOfficialUrl(url) || REQ_AGENCY_SITES.some((d) => host === d || host.endsWith(`.${d}`));
 }
 var fail = (error) => ({ ok: false, error });
-var won = (n) => `${Math.round(n / 1e4).toLocaleString("ko-KR")}\uB9CC \uC6D0`;
 function quoteError(quote, src, apiText, docs2, trustSrc) {
   if (typeof quote !== "string" || squash(quote).length < QUOTE_MIN) return "\uADFC\uAC70(quote)\uAC00 \uC5C6\uAC70\uB098 \uB108\uBB34 \uC9E7\uC74C";
-  if (quote.length > QUOTE_MAX) return `\uADFC\uAC70(quote)\uAC00 ${QUOTE_MAX}\uC790\uBCF4\uB2E4 \uAE40`;
+  if (quote.length > QUOTE_MAX2) return `\uADFC\uAC70(quote)\uAC00 ${QUOTE_MAX2}\uC790\uBCF4\uB2E4 \uAE40`;
   if (src === void 0) return apiText.includes(squash(quote)) ? null : `\uC6D0\uBB38\uC5D0 \uC5C6\uB294 \uADFC\uAC70: "${quote.slice(0, 30)}"`;
   if (typeof src !== "string" || !isReqSourceUrl(src)) return `\uACF5\uC2DD \uB204\uB9AC\uC9D1\uC774 \uC544\uB2CC \uCD9C\uCC98: ${String(src).slice(0, 60)}`;
   if (trustSrc) return null;
   const doc = docs2?.get(src);
   if (doc == null) return `\uCD9C\uCC98\uB97C \uC5F4 \uC218 \uC5C6\uC74C: ${src.slice(0, 80)}`;
   return squash(doc).includes(squash(quote)) ? null : `\uCD9C\uCC98 \uBB38\uC11C\uC5D0 \uC5C6\uB294 \uADFC\uAC70: "${quote.slice(0, 30)}"`;
-}
-function limitOf(raw) {
-  const l = raw;
-  if (!l || typeof l !== "object") return null;
-  if (l.kind === "median") {
-    return typeof l.pct === "number" && l.pct > 0 && l.pct <= 300 ? { kind: "median", pct: l.pct } : null;
-  }
-  if ((l.kind === "month" || l.kind === "year") && (l.per === "household" || l.per === "person") && typeof l.won === "number" && Number.isInteger(l.won) && l.won > 0 && l.won <= 1e10) {
-    return { kind: l.kind, won: l.won, per: l.per };
-  }
-  return null;
-}
-function numberInQuote(l, quote) {
-  if (l.kind === "median") return squash(quote).includes(`${l.pct}%`) ? null : `\uADFC\uAC70\uC5D0 ${l.pct}% \uAC00 \uC5C6\uC74C`;
-  return moneyAmounts(quote).includes(l.won) ? null : `\uADFC\uAC70\uC5D0 ${won(l.won)}(${l.won}\uC6D0)\uC774 \uC5C6\uC74C`;
 }
 function checkReqResult(raw, item, docs2, trustSrc = false) {
   if (typeof raw !== "object" || raw === null || Array.isArray(raw)) return fail("\uD615\uC2DD \uC624\uB958: \uACB0\uACFC\uAC00 \uAC1D\uCCB4\uAC00 \uC544\uB2D8");
@@ -294,12 +325,12 @@ ${item.content ?? ""}`);
   const income = [];
   for (const c of incomeRaw) {
     if (!c || !Array.isArray(c.any) || c.any.length === 0 || c.any.length > MAX_LIMITS) return fail("\uC18C\uB4DD \uD55C\uB3C4 \uD615\uC2DD \uC624\uB958: any \uAC00 \uBE44\uC5C8\uAC70\uB098 \uB108\uBB34 \uB9CE\uC74C");
-    const limits = c.any.map(limitOf);
+    const limits = c.any.map(toIncomeLimit);
     if (limits.some((l) => l === null)) return fail("\uC18C\uB4DD \uD55C\uB3C4 \uD615\uC2DD \uC624\uB958: kind \uB294 median(pct) \uB610\uB294 month\xB7year(won, per: household\xB7person)");
     const qe = quoteError(c.quote, c.src, apiText, docs2, trustSrc);
     if (qe) return fail(qe);
     for (const l of limits) {
-      const ne = numberInQuote(l, c.quote);
+      const ne = incomeNumberError(l, c.quote);
       if (ne) return fail(ne);
     }
     income.push({ any: limits, quote: c.quote, ...c.src !== void 0 ? { src: c.src } : {} });
@@ -616,6 +647,29 @@ var GROUPS = ["personal", "smallbiz", "corp", "all"];
 var isObj = (v) => typeof v === "object" && v !== null && !Array.isArray(v);
 var isStr = (v, max = 300) => typeof v === "string" && v.trim().length > 0 && v.length <= max;
 var isNullableStr = (v, max = 300) => v === null || isStr(v, max);
+var REQ_MAX_CLAUSES = 6;
+var REQ_MAX_KEYS = 8;
+var REQ_MAX_INCOME = 3;
+var REQ_MAX_LIMITS = 3;
+function reqErrors(raw, sourceCount) {
+  if (raw === void 0 || raw === null) return [];
+  if (!isObj(raw)) return ["req: { clauses: [...], income: [...] } \uB610\uB294 null"];
+  const req = { clauses: raw.clauses ?? [], income: raw.income ?? [] };
+  if (!Array.isArray(req.clauses) || !Array.isArray(req.income)) return ["req: { clauses: [...], income: [...] } \uB610\uB294 null"];
+  const e = [];
+  const ref = (c) => typeof c.source === "number" && Number.isInteger(c.source) && c.source >= 0 && c.source < sourceCount && typeof c.quote === "string" && c.quote.trim().length >= 4 && c.quote.length <= 300;
+  if (req.clauses.length > REQ_MAX_CLAUSES) e.push(`req.clauses: ${REQ_MAX_CLAUSES}\uAC1C \uC774\uD558`);
+  req.clauses.forEach((c, i) => {
+    const ok = isObj(c) && Array.isArray(c.any) && c.any.length >= 1 && c.any.length <= REQ_MAX_KEYS && c.any.every((k) => REQ_KEYS.includes(k)) && ref(c);
+    if (!ok) e.push(`req.clauses[${i}]: { any: \uB0B1\uB9D0 1~${REQ_MAX_KEYS}\uAC1C(\uC9C0\uC2DC\uC11C 7-3), source: \uCD9C\uCC98 \uBC88\uD638(0~${sourceCount - 1}), quote: 4~300\uC790 }`);
+  });
+  if (req.income.length > REQ_MAX_INCOME) e.push(`req.income: ${REQ_MAX_INCOME}\uAC1C \uC774\uD558`);
+  req.income.forEach((c, i) => {
+    const ok = isObj(c) && Array.isArray(c.any) && c.any.length >= 1 && c.any.length <= REQ_MAX_LIMITS && c.any.every((l) => toIncomeLimit(l) !== null) && ref(c);
+    if (!ok) e.push(`req.income[${i}]: { any: \uC18C\uB4DD \uD55C\uB3C4 1~${REQ_MAX_LIMITS}\uAC1C(median pct \uB610\uB294 month\xB7year won\xB7per), source: \uCD9C\uCC98 \uBC88\uD638, quote: 4~300\uC790 }`);
+  });
+  return e;
+}
 function isIsoDate(v) {
   if (typeof v !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
   const d = /* @__PURE__ */ new Date(`${v}T00:00:00Z`);
@@ -680,10 +734,12 @@ function validateIssueDoc(raw, fileSlug) {
       if (!ok) e.push(`evidence.${field}: [{ source: \uCD9C\uCC98 \uBC88\uD638(0~${sourceCount - 1}), quote: 4~200\uC790 }]`);
     }
   }
+  e.push(...reqErrors(r.req, sourceCount));
   for (const k of ["createdAt", "updatedAt"]) {
     if (typeof r[k] !== "string" || Number.isNaN(Date.parse(r[k]))) e.push(`${k}: ISO \uC2DC\uAC01`);
   }
-  return e.length ? { ok: false, errors: e } : { ok: true, doc: { ...r, applyUrl } };
+  const req = isObj(r.req) ? { clauses: r.req.clauses ?? [], income: r.req.income ?? [] } : null;
+  return e.length ? { ok: false, errors: e } : { ok: true, doc: { ...r, applyUrl, req } };
 }
 
 // src/lib/posts/validate.ts
@@ -907,12 +963,13 @@ for (const e of errors) console.log(`\u2717 ${e.file}
   - ${e.errors.join("\n  - ")}`);
 for (const doc of docs) {
   const r = await verifyIssue(doc, fetchText, todayKst(), (/* @__PURE__ */ new Date()).toISOString());
-  const partial = r.status === "published" && (r.issue.unverified.length > 0 || doc.applyUrl !== null && r.issue.applyUrl === null);
+  const reqLost = !!(doc.req?.clauses.length || doc.req?.income.length) && r.status === "published" && !r.issue.req;
+  const partial = r.status === "published" && (r.issue.unverified.length > 0 || doc.applyUrl !== null && r.issue.applyUrl === null || reqLost);
   const mark = r.status === "published" ? partial ? "\u25B3" : "\u2713" : r.status === "hidden" ? "\xB7" : "!";
   console.log(`${mark} ${doc.slug} \u2014 ${r.status}${r.status === "published" ? ` (${r.issue.phase})` : ""}`);
   for (const n of r.notes) console.log(`  - ${n}`);
 }
-console.log(`\uD615\uC2DD \uC624\uB958 ${errors.length}\uAC74 \xB7 \uAC80\uC0AC ${docs.length}\uAC74 (\u2713 \uD1B5\uACFC, \u25B3 \uC77C\uBD80 \uBBF8\uC815\xB7\uC2E0\uCCAD \uB9C1\uD06C \uBE60\uC9D0, ! \uAC8C\uC2DC \uC548 \uB428/\uBCF4\uB958)`);
+console.log(`\uD615\uC2DD \uC624\uB958 ${errors.length}\uAC74 \xB7 \uAC80\uC0AC ${docs.length}\uAC74 (\u2713 \uD1B5\uACFC, \u25B3 \uC77C\uBD80 \uBBF8\uC815\xB7\uC2E0\uCCAD \uB9C1\uD06C\xB7\uC694\uAC74 \uC815\uB9AC \uBE60\uC9D0, ! \uAC8C\uC2DC \uC548 \uB428/\uBCF4\uB958)`);
 var posts = loadPostDocs(args.posts);
 for (const e of posts.errors) console.log(`\u2717 \uAE00 ${e.file}
   - ${e.errors.join("\n  - ")}`);
