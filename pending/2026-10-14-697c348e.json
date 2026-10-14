@@ -1,0 +1,29 @@
+{
+  "key": "차이로양육지원금",
+  "detectedAt": "2026-10-14T06:51:00.024Z",
+  "hosts": [
+    "jnilbo.com",
+    "daejonilbo.com",
+    "hemophilia.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "하루 차이로 양육지원금 3400만원 격차…정부, 1월생부터 소급 검토",
+      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000073106",
+      "host": "jnilbo.com",
+      "pubDate": "2026-10-13T22:30:00.000Z"
+    },
+    {
+      "title": "하루 차이로 양육지원금 3428만 원 격차에… 정부, 소급 적용 검토",
+      "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2306791",
+      "host": "daejonilbo.com",
+      "pubDate": "2026-10-14T00:35:00.000Z"
+    },
+    {
+      "title": "하루 차이로 양육지원금 3천400만원 격차…정부, 내년 1월생부터 소급 ...",
+      "link": "https://www.hemophilia.co.kr/news/articleView.html?idxno=45034",
+      "host": "hemophilia.co.kr",
+      "pubDate": "2026-10-14T05:56:00.000Z"
+    }
+  ]
+}
