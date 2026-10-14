@@ -311,7 +311,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 201222,
+  "views": 201347,
   "deadline": "예산 소진시까지"
  },
  {
@@ -428,7 +428,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 155495,
+  "views": 155562,
   "deadline": "세부사업별 상이"
  },
  {
@@ -545,7 +545,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 120477,
+  "views": 120563,
   "deadline": "추후 공지"
  },
  {
@@ -824,7 +824,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 77757,
+  "views": 77804,
   "deadline": "추후 공지"
  },
  {
@@ -1143,6 +1143,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000115994",
+  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 기술",
+  "supportType": "기술",
+  "views": 54307,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "SD0000005037",
   "name": "국민임대주택공급",
   "agency": "국토교통부",
@@ -1150,15 +1159,6 @@
   "supportType": "기타",
   "views": 54304,
   "deadline": "접수기관 별 상이"
- },
- {
-  "id": "BIZ-PBLN_000000000115994",
-  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 기술",
-  "supportType": "기술",
-  "views": 54266,
-  "deadline": "세부사업별 상이"
  },
  {
   "id": "149200000147",
@@ -1220,7 +1220,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 50325,
+  "views": 50403,
   "deadline": "예산 소진시까지"
  },
  {
