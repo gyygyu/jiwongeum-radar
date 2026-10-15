@@ -1,0 +1,103 @@
+{
+  "slug": "2026-naju-livelihood-recovery",
+  "name": "나주시 민생회복지원금",
+  "aliases": [
+    "나주 민생회복지원금",
+    "나주시민생회복지원금",
+    "나주시 민생지원금",
+    "나주 민생지원금"
+  ],
+  "summary": "전남광주 나주시가 고물가와 경기 침체로 힘든 시민의 살림을 돕고 지역 안 소비를 늘리려고 추가경정예산으로 마련한 지원금이다. 7월 1일부터 신청일까지 계속 나주시에 주민등록을 둔 시민이면 소득과 관계없이 1인당 20만원을 받으며, 결혼이민자와 영주권자도 포함된다. 온라인 접수는 9월 30일에 끝났고 10월 16일까지 주소지 읍면동 행정복지센터에 가면 선불카드로 바로 받는다. 마감 뒤에는 추가 접수가 없고, 받은 지원금은 11월 30일까지 관내 가맹점에서 써야 한다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "나주시",
+  "region": {
+    "sido": "전남광주",
+    "sigungu": "나주시"
+  },
+  "targetGroup": "personal",
+  "target": "2026년 7월 1일 이전부터 신청일까지 계속 나주시에 주민등록을 둔 시민 (결혼이민자·영주권자 포함)",
+  "amount": "1인당 20만 원 (선불카드 또는 모바일 나주사랑상품권)",
+  "applyStart": "2026-09-14",
+  "applyEnd": "2026-10-16",
+  "applyMethod": "주소지 읍면동 행정복지센터 방문 신청 (온라인 신청은 9월 30일 종료), 현장에서 선불카드 수령",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      {
+        "source": 0,
+        "quote": "14일 나주시(시장 윤병태)에 따르면 전날(10월 13일) 기준 지급대상자의 95.6%인"
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "지원 대상은 2026년 7월 1일 이전부터 신청일까지 계속해서 나주시에 주민등록을 두고 있는 시민이며 결혼이민자(F-6)와 영주권자(F-5)도 포함된다."
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "나주시가 시민 1인당 20만 원을 지급하는 민생회복지원금 신청을 오는 10월 16일 마감한다."
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 2,
+        "quote": "신청 기간은 9월 14일부터 10월 16일까지다."
+      }
+    ],
+    "applyEnd": [
+      {
+        "source": 2,
+        "quote": "신청 기간은 9월 14일부터 10월 16일까지다."
+      },
+      {
+        "source": 0,
+        "quote": "민생회복지원금 신청을 오는 10월 16일 마감한다."
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 0,
+        "quote": "온라인 신청은 지난 9월 30일 종료됐으며 현재는 주소지 읍면동 행정복지센터를 직접 방문해 신청해야 하고 방문 신청자는 현장에서 선불카드 방식으로 지원금을 수령할 수 있다."
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "https://www.naju.go.kr/www/administration/reporting/coverage?idx=612330&mode=view",
+      "title": "나주 민생회복지원금 신청률 95.6%…“16일까지 신청하세요”",
+      "publisher": "나주시"
+    },
+    {
+      "url": "https://www.naju.go.kr/www/administration/reporting/coverage?idx=610676&mode=view",
+      "title": "나주시, 시민 1인당 20만 원 민생회복지원금 지급",
+      "publisher": "나주시"
+    },
+    {
+      "url": "https://www.wikitree.co.kr/articles/1159496",
+      "title": "나주 시민 11만7천명에 20만원…추석 민생지원 시작",
+      "publisher": "위키트리"
+    },
+    {
+      "url": "https://www.newsis.com/view/NISX20261015_0003827080",
+      "title": "나주시 민생회복지원금 신청률 95.6%…16일 마감",
+      "publisher": "뉴시스"
+    },
+    {
+      "url": "https://sports.donga.com/region/article/all/20261015/134844363/1",
+      "title": "나주시, 민생회복지원금 신청 16일 마감…미신청자 4.4% 서둘러야",
+      "publisher": "스포츠동아"
+    }
+  ],
+  "createdAt": "2026-10-15T23:40:00Z",
+  "updatedAt": "2026-10-15T23:40:00Z"
+}
