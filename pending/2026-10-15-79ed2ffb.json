@@ -1,0 +1,29 @@
+{
+  "key": "농축수산물할인지원금",
+  "detectedAt": "2026-10-15T09:42:26.981Z",
+  "hosts": [
+    "seoulfn.com",
+    "ikbc.co.kr",
+    "sentv.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "[국감] 농축수산물 할인지원금 이마트에 855억원···예산 쏠림 논란",
+      "link": "https://www.seoulfn.com/news/articleView.html?idxno=639918",
+      "host": "seoulfn.com",
+      "pubDate": "2026-10-13T01:59:00.000Z"
+    },
+    {
+      "title": "[국감]송옥주 \"농수산물 할인 지원금, 이마트 편중…평가 체계 개선 필...",
+      "link": "https://www.ikbc.co.kr/article/view/kbc202610130049",
+      "host": "ikbc.co.kr",
+      "pubDate": "2026-10-13T06:45:00.000Z"
+    },
+    {
+      "title": "[단독] SKT 할인 지원금 홀로 챙긴 공차...가맹점협 \"공정위 신고\"",
+      "link": "https://www.sentv.co.kr/article/view/sentv202610140146",
+      "host": "sentv.co.kr",
+      "pubDate": "2026-10-15T09:24:00.000Z"
+    }
+  ]
+}
