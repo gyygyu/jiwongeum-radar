@@ -1,0 +1,16 @@
+{
+  "batch": "20261016T0744-01",
+  "results": [
+    { "id": "628000000176", "hash": "d3bb2c9a81f8", "clauses": [
+      { "any": ["nohome"], "quote": "인천시 거주 무주택자(본인 및 배우자 모두 무주택자)" }
+    ], "income": [
+      { "any": [{ "kind": "year", "won": 75000000, "per": "person" }], "quote": "부부 합산 연소득: 7천5백만원 이하" }
+    ] },
+    { "id": "386000000147", "hash": "edb3ed0c3035", "clauses": [
+      { "any": ["basic", "singleparent", "other"], "quote": "수급자, 한부모가정, 차상위 본인부담경감대상자, 지역아동센터 등록 아동" }
+    ] },
+    { "id": "386000000149", "hash": "e4019af949a3", "clauses": [
+      { "any": ["other"], "quote": "사망한 부모의 채무로 인하여 상속포기 또는 한정승인이 필요한 자" }
+    ] }
+  ]
+}
