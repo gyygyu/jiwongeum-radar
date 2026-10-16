@@ -1,0 +1,29 @@
+{
+  "key": "병원비환급금",
+  "detectedAt": "2026-10-16T02:40:21.176Z",
+  "hosts": [
+    "pressian.com",
+    "dailymedi.com",
+    "jeonmin.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "돌려받지 못한 병원비 환급금, 지난해 240억원 소멸...69.4%가 65세 이상",
+      "link": "https://www.pressian.com/pages/articles/2026101606083167407?utm_source=naver&utm_medium=search",
+      "host": "pressian.com",
+      "pubDate": "2026-10-15T22:17:00.000Z"
+    },
+    {
+      "title": "국민 돌려받지 못한 병원비 환급금 중 '240억 소멸'",
+      "link": "https://www.dailymedi.com/news/news_view.php?wr_id=941514",
+      "host": "dailymedi.com",
+      "pubDate": "2026-10-16T00:24:00.000Z"
+    },
+    {
+      "title": "박지원 \"병원비 환급금 240억원 소멸…고령층·저소득층에 집중\"",
+      "link": "http://www.jeonmin.co.kr/news/articleView.html?idxno=448669",
+      "host": "jeonmin.co.kr",
+      "pubDate": "2026-10-16T01:40:00.000Z"
+    }
+  ]
+}
