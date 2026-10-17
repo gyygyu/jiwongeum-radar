@@ -1,0 +1,15 @@
+{
+  "batch": "20261017T0738-01",
+  "results": [
+    { "id": "445000000250", "hash": "f73ce3dedd2b", "clauses": [
+      { "any": ["student", "parent"], "quote": "관내·관외 초·중·고등학교 및 대안학교에 최초 입학하는 1학년 학생" }
+    ] },
+    { "id": "498000000126", "hash": "e95ae5acd0ee", "clauses": [] },
+    { "id": "647000000196", "hash": "d194fa3189cb", "clauses": [
+      { "any": ["multichild"], "quote": "3자녀 이상 다자녀 가정" },
+      { "any": ["other"], "quote": "주택 구입 자금 대출을 이용 중인 1주택 가구" }
+    ], "income": [
+      { "any": [{ "kind": "year", "won": 130000000, "per": "person" }], "quote": "부부 합산 연 소득 1.3억원 이하" }
+    ] }
+  ]
+}
