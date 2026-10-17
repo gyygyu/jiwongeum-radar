@@ -27,19 +27,19 @@
   "evidence": {
     "agency": [
       {
-        "source": 1,
+        "source": 2,
         "quote": "강릉시는 심의위원회 등 후속 절차를 차질 없이 진행해 오는 11월 중순부터 지급을 시작할 계획이라고 밝혔다."
       }
     ],
     "target": [
       {
-        "source": 0,
+        "source": 1,
         "quote": "지원금은 소득과 재산, 연령에 관계없이 전 시민에게 지급된다."
       }
     ],
     "amount": [
       {
-        "source": 0,
+        "source": 1,
         "quote": "강릉시민 전원이 11월 중순부터 1인당 10만 원을 강릉페이로 받는다."
       }
     ]
@@ -49,6 +49,11 @@
     "income": []
   },
   "sources": [
+    {
+      "url": "https://www.gn.go.kr/www/selectBbsNttView.do?key=277&bbsNo=23&nttNo=235831",
+      "title": "9.30.(수) 보도자료 - 「강릉시 민생안정지원금 지급 조례」 9월 30일 공포, 11월 중순부터 지급 추진",
+      "publisher": "강릉시"
+    },
     {
       "url": "https://news.mtn.co.kr/news-detail/2026093009573458663",
       "title": "강릉시, 민생안정지원금 전시민 지급...강릉페이로 10만원",
@@ -71,5 +76,5 @@
     }
   ],
   "createdAt": "2026-10-13T10:40:00Z",
-  "updatedAt": "2026-10-14T06:56:19Z"
+  "updatedAt": "2026-10-17T21:30:00Z"
 }
