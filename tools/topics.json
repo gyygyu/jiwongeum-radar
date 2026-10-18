@@ -302,7 +302,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 202391,
+  "views": 202485,
   "deadline": "예산 소진시까지"
  },
  {
@@ -419,7 +419,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 156380,
+  "views": 156469,
   "deadline": "세부사업별 상이"
  },
  {
@@ -536,7 +536,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 121335,
+  "views": 121398,
   "deadline": "추후 공지"
  },
  {
@@ -815,7 +815,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 78407,
+  "views": 78468,
   "deadline": "추후 공지"
  },
  {
@@ -1125,6 +1125,15 @@
   "deadline": "자세한 날짜는 보건소에 따라 다를 수 있음"
  },
  {
+  "id": "BIZ-PBLN_000000000115994",
+  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 기술",
+  "supportType": "기술",
+  "views": 54858,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "SPE000000060",
   "name": "보험급여 (건강보험 장애인보조기기)",
   "agency": "보건복지부",
@@ -1132,15 +1141,6 @@
   "supportType": "현금(감면)",
   "views": 54832,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000115994",
-  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 기술",
-  "supportType": "기술",
-  "views": 54803,
-  "deadline": "세부사업별 상이"
  },
  {
   "id": "SD0000005037",
@@ -1193,7 +1193,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 51173,
+  "views": 51253,
   "deadline": "예산 소진시까지"
  },
  {
