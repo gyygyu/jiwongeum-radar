@@ -1,0 +1,29 @@
+{
+  "key": "넉살육아지원금",
+  "detectedAt": "2026-10-19T00:52:21.555Z",
+  "hosts": [
+    "sportschosun.com",
+    "fnnews.com",
+    "mediafine.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "\"나라 위해 출산했나\"…넉살, '육아지원금 100만원 부족' 발언 역풍[SC이...",
+      "link": "https://www.sportschosun.com/entertainment/2026-10-19/202610190100116250007586",
+      "host": "sportschosun.com",
+      "pubDate": "2026-10-18T23:10:00.000Z"
+    },
+    {
+      "title": "\"애 낳으면 영웅 추대해야\"…'아들 둘 아빠' 넉살의 '육아 지원금' 발언...",
+      "link": "https://www.fnnews.com/news/202610181920246385",
+      "host": "fnnews.com",
+      "pubDate": "2026-10-18T20:00:00.000Z"
+    },
+    {
+      "title": "넉살 \"이 나라 정신 못 차려\" 육아 지원금 비판",
+      "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=92976",
+      "host": "mediafine.co.kr",
+      "pubDate": "2026-10-19T00:18:00.000Z"
+    }
+  ]
+}
