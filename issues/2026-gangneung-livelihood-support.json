@@ -19,7 +19,7 @@
   "amount": "1인당 10만 원 (강릉페이)",
   "applyStart": "2026-11-09",
   "applyEnd": "2026-12-31",
-  "applyMethod": null,
+  "applyMethod": "강릉페이 앱(온라인) 또는 주소지 관할 읍·면·동 주민센터 방문",
   "ageMin": null,
   "ageMax": null,
   "gov24Id": null,
@@ -53,6 +53,12 @@
       {
         "source": 0,
         "quote": "신청기간: 2026. 11. 9.(월)~12. 31.(목)"
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 9,
+        "quote": "신청은 온라인 강릉사랑상품권(강릉페이) 앱이나 주소지 관할 읍·면·동 주민센터에서 할 수 있다."
       }
     ]
   },
@@ -105,8 +111,13 @@
       "url": "https://view.asiae.co.kr/article/2026093016004093696",
       "title": "\"나이·소득 무관\"…11월부터 민생지원금 '10만원' 지급 확정한 '이곳'",
       "publisher": "아시아경제"
+    },
+    {
+      "url": "https://www.dtoday.co.kr/news/articleView.html?idxno=797933",
+      "title": "강릉시, 민생안정지원금 1인당 10만원 지급…11월 9일 개시",
+      "publisher": "일간투데이"
     }
   ],
   "createdAt": "2026-10-13T10:40:00Z",
-  "updatedAt": "2026-10-19T21:20:00Z"
+  "updatedAt": "2026-10-20T21:20:00Z"
 }
