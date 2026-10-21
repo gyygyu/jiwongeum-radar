@@ -302,7 +302,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 203461,
+  "views": 203602,
   "deadline": "예산 소진시까지"
  },
  {
@@ -419,7 +419,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 157081,
+  "views": 157199,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 122466,
+  "views": 122546,
   "deadline": "추후 공지"
  },
  {
@@ -801,6 +801,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000116904",
+  "name": "2026년 중앙부처 및 지자체 창업지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 창업",
+  "supportType": "창업",
+  "views": 79144,
+  "deadline": "추후 공지"
+ },
+ {
   "id": "134200005002",
   "name": "국가장학금 Ⅱ유형 (대학자체노력연계형)",
   "agency": "교육부",
@@ -808,15 +817,6 @@
   "supportType": "현금(장학금)",
   "views": 79107,
   "deadline": "2026-09-09"
- },
- {
-  "id": "BIZ-PBLN_000000000116904",
-  "name": "2026년 중앙부처 및 지자체 창업지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 창업",
-  "supportType": "창업",
-  "views": 79026,
-  "deadline": "추후 공지"
  },
  {
   "id": "650000000326",
@@ -1130,7 +1130,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 55428,
+  "views": 55477,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1175,7 +1175,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 51848,
+  "views": 51939,
   "deadline": "예산 소진시까지"
  },
  {
