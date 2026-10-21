@@ -1,0 +1,29 @@
+{
+  "key": "태안군출산장려금",
+  "detectedAt": "2026-10-21T03:41:02.927Z",
+  "hosts": [
+    "breaknews.com",
+    "newsfreezone.co.kr",
+    "newsis.com"
+  ],
+  "articles": [
+    {
+      "title": "태안군, 출산장려금 최대 1000만 원 지원…맞춤복지 강화",
+      "link": "http://www.breaknews.com/1244509",
+      "host": "breaknews.com",
+      "pubDate": "2026-10-21T02:10:00.000Z"
+    },
+    {
+      "title": "태안군, 출산장려금 최대 1000만원으로 인상",
+      "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=715146",
+      "host": "newsfreezone.co.kr",
+      "pubDate": "2026-10-21T01:54:00.000Z"
+    },
+    {
+      "title": "\"첫째 300만원, 셋째 1천만원\"…출산장려금 올리는 태안",
+      "link": "https://www.newsis.com/view/NISX20261021_0003834909",
+      "host": "newsis.com",
+      "pubDate": "2026-10-21T03:10:00.000Z"
+    }
+  ]
+}
