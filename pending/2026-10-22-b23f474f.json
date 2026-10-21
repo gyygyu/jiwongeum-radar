@@ -1,0 +1,29 @@
+{
+  "key": "셋째출산장려금",
+  "detectedAt": "2026-10-21T21:41:57.996Z",
+  "hosts": [
+    "wowtv.co.kr",
+    "newsworker.co.kr",
+    "segye.com"
+  ],
+  "articles": [
+    {
+      "title": "인구 절벽에 '초비상'…셋째 출산장려금 '200만→1000만원' 5배 올리는 곳",
+      "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610210054&t=NN",
+      "host": "wowtv.co.kr",
+      "pubDate": "2026-10-21T01:51:00.000Z"
+    },
+    {
+      "title": "태안군, 셋째 출산장려금 1,000만 원 인상과 맞춤 복지 가동",
+      "link": "https://www.newsworker.co.kr/news/articleView.html?idxno=509802",
+      "host": "newsworker.co.kr",
+      "pubDate": "2026-10-21T05:36:00.000Z"
+    },
+    {
+      "title": "태안 셋째 출산장려금 ‘200만→1000만원’",
+      "link": "https://www.segye.com/newsView/20261021524489?OutUrl=naver",
+      "host": "segye.com",
+      "pubDate": "2026-10-21T21:04:00.000Z"
+    }
+  ]
+}
