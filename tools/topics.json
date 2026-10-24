@@ -302,7 +302,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 204549,
+  "views": 204656,
   "deadline": "예산 소진시까지"
  },
  {
@@ -396,6 +396,15 @@
   "deadline": "출생신고 시 또는 출생신고 이후(※ 개별 서비스별 신청 기간은 \"지원대상\" 참조)"
  },
  {
+  "id": "BIZ-PBLN_000000000117016",
+  "name": "2026년 중소벤처기업부 소상공인 지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 경영",
+  "supportType": "경영",
+  "views": 157931,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "GMO000000010",
   "name": "정보통신 보조기기 보급",
   "agency": "과학기술정보통신부",
@@ -403,15 +412,6 @@
   "supportType": "현물",
   "views": 157836,
   "deadline": "매년 수혜자 선정을 위해 5월초~6월중 약 1.5개월간 지정된 접수처에서 신청접수 실시(※ 자세한 내용은 홈페이지(www.at4u.or.kr) 참조)"
- },
- {
-  "id": "BIZ-PBLN_000000000117016",
-  "name": "2026년 중소벤처기업부 소상공인 지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 경영",
-  "supportType": "경영",
-  "views": 157822,
-  "deadline": "세부사업별 상이"
  },
  {
   "id": "135200000120",
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 123102,
+  "views": 123180,
   "deadline": "추후 공지"
  },
  {
@@ -806,7 +806,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 79580,
+  "views": 79644,
   "deadline": "추후 공지"
  },
  {
@@ -1112,7 +1112,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 55875,
+  "views": 55927,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1175,7 +1175,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 52645,
+  "views": 52743,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1346,7 +1346,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 44643,
+  "views": 44691,
   "deadline": "2026-12-31"
  }
 ]
