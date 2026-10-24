@@ -1,0 +1,269 @@
+{
+  "batch": "20261024T0741-01",
+  "results": [
+    {
+      "id": "406000000112",
+      "hash": "222857c1d3be",
+      "clauses": []
+    },
+    {
+      "id": "B37003100004",
+      "hash": "501acdb474cb",
+      "clauses": []
+    },
+    {
+      "id": "370000000113",
+      "hash": "01cc314fbc0e",
+      "clauses": [
+        {
+          "any": [
+            "pregnant",
+            "parent"
+          ],
+          "quote": "출생아의 부모 중 1명 이상"
+        }
+      ]
+    },
+    {
+      "id": "383000000146",
+      "hash": "8efdefabb158",
+      "clauses": [
+        {
+          "any": [
+            "lowincome",
+            "disabled",
+            "singleparent",
+            "multicultural",
+            "oneperson"
+          ],
+          "quote": "저소득층, 중증장애인, 한부모가정, 다문화가정, 1인가구"
+        }
+      ]
+    },
+    {
+      "id": "SD0000004330",
+      "hash": "d8b2206f47e4",
+      "clauses": [
+        {
+          "any": [
+            "farmer"
+          ],
+          "quote": "어업허가를 받은 어업인"
+        }
+      ]
+    },
+    {
+      "id": "814000000013",
+      "hash": "7c6ad30960c5",
+      "clauses": [
+        {
+          "any": [
+            "multichild"
+          ],
+          "quote": "둘 이상의 자녀를 양육하는 가정"
+        },
+        {
+          "any": [
+            "student",
+            "parent"
+          ],
+          "quote": "둘째 이후 자율형 사립고 학생"
+        }
+      ]
+    },
+    {
+      "id": "300000000101",
+      "hash": "49f75c4d490c",
+      "clauses": [
+        {
+          "any": [
+            "pregnant"
+          ],
+          "quote": "종로구 거주 임산부"
+        }
+      ]
+    },
+    {
+      "id": "814000000014",
+      "hash": "c3ded44d2815",
+      "clauses": [
+        {
+          "any": [
+            "parent"
+          ],
+          "quote": "사립유치원 재원 유아"
+        }
+      ]
+    },
+    {
+      "id": "315000000261",
+      "hash": "6f8b501159fe",
+      "clauses": []
+    },
+    {
+      "id": "814000000012",
+      "hash": "be3f9fbf6c04",
+      "clauses": [
+        {
+          "any": [
+            "student",
+            "parent"
+          ],
+          "quote": "초, 중,고등학교 학생"
+        }
+      ]
+    },
+    {
+      "id": "513000000360",
+      "hash": "910c03d07c6a",
+      "clauses": []
+    },
+    {
+      "id": "508000000691",
+      "hash": "940501072a7b",
+      "clauses": [
+        {
+          "any": [
+            "defector"
+          ],
+          "quote": "구미시에 주소를 두고 있는 북한이탈주민 가정"
+        }
+      ]
+    },
+    {
+      "id": "442000000651",
+      "hash": "9a7238204b99",
+      "clauses": [
+        {
+          "any": [
+            "newcomer"
+          ],
+          "quote": "보은군에 전입 후 6개월 이상 거주한"
+        }
+      ]
+    },
+    {
+      "id": "536000000607",
+      "hash": "b8e56ec7ea13",
+      "clauses": [
+        {
+          "any": [
+            "pregnant"
+          ],
+          "quote": "밀양시 거주 난임부부"
+        }
+      ]
+    },
+    {
+      "id": "442000000655",
+      "hash": "542adff86c65",
+      "clauses": [
+        {
+          "any": [
+            "other"
+          ],
+          "quote": "신혼부부 세대"
+        }
+      ]
+    },
+    {
+      "id": "442000000654",
+      "hash": "bb7ca9aca83a",
+      "clauses": [
+        {
+          "any": [
+            "newcomer"
+          ],
+          "quote": "관내로 2명 이상이 동시에 전입"
+        }
+      ]
+    },
+    {
+      "id": "442000000653",
+      "hash": "2f96b5c5459b",
+      "clauses": [
+        {
+          "any": [
+            "newcomer"
+          ],
+          "quote": "보은군에 전입 후 6개월 이상 거주"
+        },
+        {
+          "any": [
+            "multichild"
+          ],
+          "quote": "성인이 아닌 둘째아 이상 양육하는 다자녀 가구"
+        }
+      ]
+    },
+    {
+      "id": "442000000657",
+      "hash": "b7949a42f689",
+      "clauses": [
+        {
+          "any": [
+            "other"
+          ],
+          "quote": "전입을 유도하여 6개월 이상 군내에 거주하게 한 자"
+        }
+      ]
+    },
+    {
+      "id": "418100000003",
+      "hash": "4f5dd7c6bd16",
+      "clauses": [
+        {
+          "any": [
+            "pregnant"
+          ],
+          "quote": "여성: 난임 진단받은 대상자"
+        }
+      ]
+    },
+    {
+      "id": "315000000283",
+      "hash": "dc57ce27c551",
+      "clauses": []
+    },
+    {
+      "id": "531000000649",
+      "hash": "4eea86619990",
+      "clauses": []
+    },
+    {
+      "id": "435100000004",
+      "hash": "077b4250bc0e",
+      "clauses": [
+        {
+          "any": [
+            "pregnant"
+          ],
+          "quote": "양양군 주민등록을 둔 임산부"
+        }
+      ]
+    },
+    {
+      "id": "641000000878",
+      "hash": "c1c2849c4a1d",
+      "clauses": [
+        {
+          "any": [
+            "other"
+          ],
+          "quote": "도내 9~24세 위기청소년"
+        }
+      ],
+      "income": [
+        {
+          "any": [
+            {
+              "kind": "median",
+              "pct": 100
+            }
+          ],
+          "quote": "중위소득 100% 이하 가구"
+        }
+      ]
+    }
+  ]
+}
