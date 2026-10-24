@@ -1,0 +1,69 @@
+{
+  "slug": "2026-dangjin-economic-recovery",
+  "name": "당진시 경제회복지원금",
+  "aliases": [
+    "당진 경제회복지원금",
+    "당진시경제회복지원금"
+  ],
+  "summary": "충남 당진시가 시민 한 사람에게 30만원씩 주려고 추진하는 경제회복지원금이다. 8월에 한 차례 부결됐던 근거 조례가 보완을 거쳐 10월 23일 시의회 본회의를 통과했다. 시는 내년도 본예산에 530억원을 편성해 설 명절 전에 줄 계획이지만, 예산안이 시의회 심의를 통과해야 실제로 지급된다. 지급 기준일, 선불카드·모바일 상품권 수령 방법, 사용기한은 아직 정해지지 않았다.",
+  "stage": "reviewing",
+  "hidden": false,
+  "agency": "당진시",
+  "region": {
+    "sido": "충남",
+    "sigungu": "당진시"
+  },
+  "targetGroup": "personal",
+  "target": "당진시민",
+  "amount": "1인당 30만원",
+  "applyStart": null,
+  "applyEnd": null,
+  "applyMethod": null,
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      {
+        "source": 0,
+        "quote": "당진시는 내년 설 명절 전 지급을 목표로 530억원 규모의 예산 편성과 후속 절차에 들어갈 계획이다."
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "당진시민에게 1인당 30만원의 경제회복지원금을 지급하기 위한 제도적 근거가 마련됐다."
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "당진시민에게 1인당 30만원의 경제회복지원금을 지급하기 위한 제도적 근거가 마련됐다."
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=715823",
+      "title": "당진시 경제회복지원금 조례 통과…1인당 30만원 설 전 지급 추진",
+      "publisher": "뉴스프리존"
+    },
+    {
+      "url": "https://www.idjnews.kr/news/articleView.html?idxno=303464",
+      "title": "1인 30만원씩 받나..당진시 경제회복지원금 조례안 통과",
+      "publisher": "당진신문"
+    },
+    {
+      "url": "https://tjmbc.co.kr/NewsArticle/869026",
+      "title": "'1인당 30만 원' 당진시 경제회복지원금 조례안 상임위 통과",
+      "publisher": "대전MBC"
+    }
+  ],
+  "createdAt": "2026-10-24T05:42:00Z",
+  "updatedAt": "2026-10-24T05:42:00Z"
+}
