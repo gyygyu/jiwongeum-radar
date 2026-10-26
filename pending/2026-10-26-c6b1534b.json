@@ -1,0 +1,29 @@
+{
+  "key": "대덕구고유가지원금",
+  "detectedAt": "2026-10-26T08:52:10.889Z",
+  "hosts": [
+    "joongdo.co.kr",
+    "segye.com",
+    "dongponews.net"
+  ],
+  "articles": [
+    {
+      "title": "대덕구 고유가지원금·무상급식 묶여…의회 파행에 민생예산 '발목'",
+      "link": "https://www.joongdo.co.kr/web/view.php?key=20261025010007061",
+      "host": "joongdo.co.kr",
+      "pubDate": "2026-10-25T08:02:00.000Z"
+    },
+    {
+      "title": "전국민 소비쿠폰→고유가 지원금…재정 취약한 비수도권만 ‘부담 폭탄...",
+      "link": "https://www.segye.com/newsView/20261026509546?OutUrl=naver",
+      "host": "segye.com",
+      "pubDate": "2026-10-26T04:37:00.000Z"
+    },
+    {
+      "title": "고유가 지원금서 빠진 고려인·사할린 동포…동포청 의견도 외면",
+      "link": "https://www.dongponews.net/news/articleView.html?idxno=61293",
+      "host": "dongponews.net",
+      "pubDate": "2026-10-26T08:32:00.000Z"
+    }
+  ]
+}
