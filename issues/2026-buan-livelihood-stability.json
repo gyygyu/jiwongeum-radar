@@ -1,0 +1,116 @@
+{
+  "slug": "2026-buan-livelihood-stability",
+  "name": "부안군 민생안정지원금",
+  "aliases": [
+    "부안 민생안정지원금",
+    "부안군민생안정지원금",
+    "부안형 기본사회 준비를 위한 민생안정지원금",
+    "부안 민생지원금"
+  ],
+  "summary": "전북 부안군이 고물가와 경기 침체로 늘어난 군민의 생활비 부담을 덜고 관내 소비를 살리려고 마련한 지원금으로, 군이 추진하는 '부안형 기본사회'의 첫 단계로 소개됐다. 기준일인 8월 3일부터 받는 날까지 계속 부안군에 주민등록을 둔 군민이면 소득·재산과 상관없이 1인당 30만원을 무기명 선불카드로 받는다. 9월 중순 마을별 집중 지급이 끝난 뒤에는 주소지 읍·면사무소에서 신청하며 10월 30일에 접수가 끝난다. 카드는 11월 30일까지 써야 하고 남은 금액은 자동으로 사라진다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "부안군",
+  "region": {
+    "sido": "전북",
+    "sigungu": "부안군"
+  },
+  "targetGroup": "personal",
+  "target": "2026년 8월 3일 기준으로 지급일까지 계속해서 부안군에 주민등록을 둔 사람 (결혼이민자·영주권자 포함)",
+  "amount": "군민 1인당 30만원 (무기명 선불카드)",
+  "applyStart": "2026-09-16",
+  "applyEnd": "2026-10-30",
+  "applyMethod": "주소지 읍·면사무소 방문 신청 후 선불카드 수령",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": "https://www.buan.go.kr/town/board/view.buan?boardId=BBS_0000105&menuCd=DOM_000000401007000000&paging=ok&startPage=1&dataSid=368459",
+  "evidence": {
+    "agency": [
+      {
+        "source": 1,
+        "quote": "부안군민의 생활안정과 지역 내 소비를 촉진하여 지역경제 활성화를 위한"
+      },
+      {
+        "source": 2,
+        "quote": "부안군은 부안형 기본사회 실현과 지역경제 활성화를 위해 추진 중인 민생안정지원금 신청이 오는 30일 종료된다고 26일 밝혔다."
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "2026. 8. 3. 기준으로 지급일까지 계속해서 부안군에 주민등록을 둔 사람"
+      },
+      {
+        "source": 3,
+        "quote": "지급 대상은 2026년 8월 3일 기준일 현재 군에 주민등록을 둔 군민과 결혼이민자(F6), 영주권(F5) 체류 외국인 등이다."
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "3. 지원금액 : 군민 1인당 30만원"
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 0,
+        "quote": "5. 지급기간 : 2026. 9. 16. ~ 10. 30."
+      }
+    ],
+    "applyEnd": [
+      {
+        "source": 0,
+        "quote": "5. 지급기간 : 2026. 9. 16. ~ 10. 30."
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 0,
+        "quote": "주소지 읍 · 면사무소 방문 신청 후 수령"
+      },
+      {
+        "source": 2,
+        "quote": "이후에는 주소지 읍·면사무소에서 신청을 받아 지원금을 지급하고 있다."
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "https://www.buan.go.kr/town/board/view.buan?boardId=BBS_0000105&menuCd=DOM_000000401007000000&paging=ok&startPage=1&dataSid=368459",
+      "title": "2026년 부안군 민생안정지원금 지정지급처 안내",
+      "publisher": "부안군 부안읍"
+    },
+    {
+      "url": "https://www.buan.go.kr/board/view.buan?boardId=BBS_0000054&startPage=1&menuCd=DOM_000000103001003000&dataSid=368504",
+      "title": "부안형 기본사회 준비를 위한 민생안정지원금 지원 공고",
+      "publisher": "부안군"
+    },
+    {
+      "url": "https://www.thepowernews.co.kr/view.php?ud=2026102614380454253dfcd109a8_7",
+      "title": "부안군 민생안정지원금 신청률 97.5%…1100명 아직 미신청",
+      "publisher": "더파워"
+    },
+    {
+      "url": "https://www.inews24.com/view/1992583",
+      "title": "부안군, 전 군민 대상 민생안정지원금 30만원 지급",
+      "publisher": "아이뉴스24"
+    },
+    {
+      "url": "https://sjbnews.com/news/news.php?number=890861",
+      "title": "부안군, 민생안정지원금 신청 30일 마감",
+      "publisher": "새전북신문"
+    },
+    {
+      "url": "http://www.jmbc.co.kr/news/view/69148",
+      "title": "부안군, 민생안정지원금 신청 30일 마감",
+      "publisher": "전주MBC"
+    }
+  ],
+  "createdAt": "2026-10-26T11:10:00Z",
+  "updatedAt": "2026-10-26T11:10:00Z"
+}
