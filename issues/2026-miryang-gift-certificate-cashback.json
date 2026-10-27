@@ -1,0 +1,89 @@
+{
+  "slug": "2026-miryang-gift-certificate-cashback",
+  "name": "밀양사랑상품권 5% 환급",
+  "aliases": [
+    "밀양사랑상품권 결제 시 5% 환급",
+    "밀양사랑상품권 5% 추가 환급",
+    "밀양사랑상품권 추가 환급",
+    "밀양사랑상품권 환급"
+  ],
+  "summary": "밀양시가 '2026 코리아 그랜드 페스티벌'에 맞춰 10월 30일부터 11월 15일까지 카드형·모바일 밀양사랑상품권 결제액의 5%를 돌려주는 한시 행사다. 평소 12% 선할인에 더해지는 혜택이며 착한가격업소에서는 별도 환급까지 겹친다. 종이 상품권은 빠지고, 카드는 결제 즉시·모바일은 11월 마지막 주에 환급된다. 예산이 떨어지면 일찍 끝날 수 있다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "밀양시",
+  "region": {
+    "sido": "경남",
+    "sigungu": "밀양시"
+  },
+  "targetGroup": "personal",
+  "target": "카드형·모바일 밀양사랑상품권 결제자 (종이형 제외)",
+  "amount": "결제금액의 5% 환급",
+  "applyStart": "2026-10-30",
+  "applyEnd": "2026-11-15",
+  "applyMethod": "카드형·모바일 밀양사랑상품권으로 결제 (카드 결제는 실시간, 모바일 결제는 11월 마지막 주 일괄 지급)",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      {
+        "source": 0,
+        "quote": "밀양시(시장 안병구)는 오는 10월 30일부터 11월 15일까지 밀양사랑상품권으로 결제하면"
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "이번 행사는 종이형(지류)을 제외한 카드형과 모바일 상품권 결제분을 대상으로 한다."
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "밀양사랑상품권으로 결제하면 결제금액의 5%를 돌려주는 환급 행사를 추진한다고 밝혔다."
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 0,
+        "quote": "오는 10월 30일부터 11월 15일까지 밀양사랑상품권으로 결제하면"
+      }
+    ],
+    "applyEnd": [
+      {
+        "source": 0,
+        "quote": "오는 10월 30일부터 11월 15일까지 밀양사랑상품권으로 결제하면"
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 0,
+        "quote": "환급금은 카드 결제 시 실시간으로, 모바일 결제 시에는 11월 마지막 주에 일괄 지급된다."
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "https://www.newsgn.com/news/articleView.html?idxno=581665",
+      "title": "밀양시, 밀양사랑상품권 결제 시 5% 환급",
+      "publisher": "뉴스경남"
+    },
+    {
+      "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5076190",
+      "title": "밀양시, 밀양사랑상품권 5% 추가 환급…최대 22% 혜택",
+      "publisher": "신아일보"
+    },
+    {
+      "url": "http://www.gndomin.com/news/articleView.html?idxno=494452",
+      "title": "밀양시, 밀양사랑상품권 결제 시 5% 환급",
+      "publisher": "경남도민신문"
+    }
+  ],
+  "createdAt": "2026-10-27T10:00:00Z",
+  "updatedAt": "2026-10-27T10:00:00Z"
+}
