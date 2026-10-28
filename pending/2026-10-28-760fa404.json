@@ -1,0 +1,29 @@
+{
+  "key": "원민경혼인지원금",
+  "detectedAt": "2026-10-28T06:59:56.187Z",
+  "hosts": [
+    "newspim.com",
+    "news1.kr",
+    "shinailbo.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "[2026 국감] 원민경, 혼인지원금 미래기금서 사용…\"혼인 여건 마련 필요...",
+      "link": "https://www.newspim.com/news/view/20261028000906",
+      "host": "newspim.com",
+      "pubDate": "2026-10-28T04:05:00.000Z"
+    },
+    {
+      "title": "성평등부 국감서 野 \"혼인지원금에 미래대응기금 투입 부적절\"",
+      "link": "https://www.news1.kr/politics/assembly/6334778",
+      "host": "news1.kr",
+      "pubDate": "2026-10-28T03:32:00.000Z"
+    },
+    {
+      "title": "성평등부 국감서 與 \"친밀관계 폭력 대응\"…野 \"혼인지원금·임신중지약...",
+      "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5077088",
+      "host": "shinailbo.co.kr",
+      "pubDate": "2026-10-28T06:52:00.000Z"
+    }
+  ]
+}
