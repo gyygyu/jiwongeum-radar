@@ -1,0 +1,84 @@
+{
+  "slug": "2026-chungju-gift-certificate-cashback",
+  "name": "충주사랑상품권 5% 캐시백",
+  "aliases": [
+    "충주사랑상품권 후캐시백",
+    "충주사랑상품권 추가 환급",
+    "충주사랑상품권 카드 결제 시 결제금액 5% 캐시백",
+    "충주사랑상품권 카드 결제 시 5% 추가 환급",
+    "충주사랑상품권 5% 추가 환급"
+  ],
+  "summary": "충주시가 '코리아 그랜드 페스티벌'과 연계해 11월 1일부터 15일까지 충주사랑상품권 카드로 본인 충전금을 결제하면 결제액의 5%를 돌려주는 한시 행사다. 충전할 때 받는 10% 선할인에 더해지는 혜택이다. 착한가격업소에서 쓰면 기존 캐시백과 겹쳐 할인 효과가 더 커진다. 예산이 떨어지면 기간 안에도 일찍 끝날 수 있다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "충주시",
+  "region": {
+    "sido": "충북",
+    "sigungu": "충주시"
+  },
+  "targetGroup": "personal",
+  "target": "충주사랑상품권 카드 결제 이용자 (본인 충전금 결제분)",
+  "amount": "결제액의 5% 캐시백",
+  "applyStart": "2026-11-01",
+  "applyEnd": null,
+  "applyMethod": "충주사랑상품권 카드로 본인 충전금 결제",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      {
+        "source": 0,
+        "quote": "충주시가 내수 소비 촉진과 지역경제 활성화를 위해 오는 11월 1일부터 15일까지"
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "충주사랑상품권 카드 결제 이용자를 대상으로 본인 충전금 결제액에 대한 5% 캐시백을"
+      }
+    ],
+    "amount": [
+      {
+        "source": 2,
+        "quote": "충주사랑상품권 카드 이용자가 본인 충전금으로 결제하면 결제액의 5%를 캐시백으로 지급한다."
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 0,
+        "quote": "오는 11월 1일부터 15일까지 충주사랑상품권 카드 결제 이용자를 대상으로"
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 2,
+        "quote": "충주사랑상품권 카드 이용자가 본인 충전금으로 결제하면 결제액의 5%를 캐시백으로 지급한다."
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "http://www.newstown.co.kr/news/articleView.html?idxno=720085",
+      "title": "충주시, 충주사랑상품권 카드 결제 시 결제금액 5% 캐시백 지급",
+      "publisher": "뉴스타운"
+    },
+    {
+      "url": "https://www.dynews.co.kr/news/articleView.html?idxno=871605",
+      "title": "충주시, 충주사랑상품권 카드 결제 시 5% 추가 환급",
+      "publisher": "동양일보"
+    },
+    {
+      "url": "https://www.jbnews.com/news/articleView.html?idxno=1514646",
+      "title": "충주사랑상품권, 11월 보름간 결제액 5% 추가 환급",
+      "publisher": "중부매일"
+    }
+  ],
+  "createdAt": "2026-10-29T04:30:00Z",
+  "updatedAt": "2026-10-29T04:30:00Z"
+}
