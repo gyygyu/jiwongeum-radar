@@ -1,0 +1,99 @@
+{
+  "slug": "2026-namwon-gift-certificate-payback",
+  "name": "남원사랑상품권 인센티브 한시 상향",
+  "aliases": [
+    "남원사랑상품권 페이백",
+    "남원사랑상품권 혜택 확대",
+    "남원사랑상품권 인센티브 상향",
+    "남원사랑상품권 최대 25% 혜택"
+  ],
+  "summary": "남원시가 '코리아 그랜드 페스티벌'에 맞춰 10월 29일부터 11월 15일까지 모바일·카드형 남원사랑상품권 사용 혜택을 한시적으로 늘린다. 상품권은 평소처럼 10% 싸게 살 수 있고, 일반 가맹점에서 쓰면 결제액의 7%, 착한가격업소에서 쓰면 15%를 페이백으로 더 돌려준다. 두 혜택을 합치면 최대 25%다. 따로 신청할 필요 없이 해당 상품권으로 결제하면 자동으로 지급된다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "남원시",
+  "region": {
+    "sido": "전북",
+    "sigungu": "남원시"
+  },
+  "targetGroup": "personal",
+  "target": "모바일형·카드형 남원사랑상품권 결제자",
+  "amount": "10% 할인 구매에 더해 일반가맹점 결제 시 7%, 착한가격업소 결제 시 15% 페이백 (최대 25%)",
+  "applyStart": "2026-10-29",
+  "applyEnd": "2026-11-15",
+  "applyMethod": "별도 신청 없이 모바일형·카드형 남원사랑상품권으로 결제하면 페이백 자동 지급",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      {
+        "source": 0,
+        "quote": "남원시는 10월 29일부터 11월 15일까지 18일간 열리는"
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "이번 한시 상향은 모바일형과 카드형 남원사랑상품권에 적용되며"
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "남원사랑상품권을 기존과 동일하게 10% 할인 구매할 수 있으며, 구매한 금액으로 일반가맹점 결제 시 7%, 착한가격업소 결제 시 15%를 추가 할인(페이백) 받아 최대 25% 혜택을 받을 수 있다."
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 0,
+        "quote": "남원시는 10월 29일부터 11월 15일까지 18일간 열리는"
+      }
+    ],
+    "applyEnd": [
+      {
+        "source": 0,
+        "quote": "남원시는 10월 29일부터 11월 15일까지 18일간 열리는"
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 0,
+        "quote": "이번 한시 상향은 모바일형과 카드형 남원사랑상품권에 적용되며, 페이백은 별도 절차 없이 결제와 동시에 자동 지급된다."
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "https://sjbnews.com/news/news.php?number=891278",
+      "title": "남원시, 남원사랑상품권 인센티브 한시 상향 운영",
+      "publisher": "새전북신문"
+    },
+    {
+      "url": "http://www.jeollailbo.com/news/articleView.html?idxno=815157",
+      "title": "남원사랑상품권 혜택 확대…최대 25% 돌려받는다",
+      "publisher": "전라일보"
+    },
+    {
+      "url": "https://www.gukjenews.com/news/articleView.html?idxno=3736713",
+      "title": "남원사랑상품권 10% 할인·최대 25% 혜택…29일부터 인센티브 상향",
+      "publisher": "국제뉴스"
+    },
+    {
+      "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5077570",
+      "title": "남원시, 내달 15일까지 지역사랑상품권 혜택 '최대 25%'",
+      "publisher": "신아일보"
+    },
+    {
+      "url": "http://www.domin.co.kr/news/articleView.html?idxno=1573585",
+      "title": "남원시, 코리아 그랜드 페스티벌 기간 남원사랑상품권 인센티브 한시 상향 운영",
+      "publisher": "전북도민일보"
+    }
+  ],
+  "createdAt": "2026-10-29T10:20:00Z",
+  "updatedAt": "2026-10-29T10:20:00Z"
+}
