@@ -1,0 +1,73 @@
+{
+  "slug": "2026-mokpo-gift-certificate-cashback",
+  "name": "목포사랑상품권 5% 추가 환급",
+  "aliases": [
+    "목포사랑상품권 혜택 확대",
+    "목포사랑상품권 할인 및 환급 혜택",
+    "목포사랑상품권 할인·환급 혜택",
+    "목포사랑상품권 최대 15% 혜택"
+  ],
+  "summary": "목포시가 '코리아 그랜드 페스티벌'에 맞춰 10월 29일부터 11월 15일까지 카드형·모바일형 목포사랑상품권으로 결제한 금액의 5%를 추가로 돌려주는 한시 행사다. 구매할 때 받는 10% 선할인은 그대로라 합치면 최대 15% 혜택이 된다. 11월에는 1인당 구매한도도 70만 원으로 늘어난다. 종이 상품권은 환급에서 빠지고, 예산이 떨어지면 일찍 끝날 수 있다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "목포시",
+  "region": {
+    "sido": "전남광주",
+    "sigungu": "목포시"
+  },
+  "targetGroup": "personal",
+  "target": "카드형·모바일형 목포사랑상품권 결제자 (지류형 제외)",
+  "amount": "결제금액의 5% 추가 환급 (기존 10% 선할인 포함 최대 15%)",
+  "applyStart": "2026-10-29",
+  "applyEnd": "2026-11-15",
+  "applyMethod": "카드형·모바일형 목포사랑상품권으로 결제 (환급금은 12월 초까지 지급 예정)",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      { "source": 0, "quote": "목포시(시장 강성휘)는 범정부 차원의 소비촉진 행사인 ‘코리아 그랜드 페스티벌’에 맞춰" }
+    ],
+    "target": [
+      { "source": 0, "quote": "추가 환급은 지류형을 제외한 카드형·모바일형 상품권에 적용되며" }
+    ],
+    "amount": [
+      { "source": 0, "quote": "할인 혜택은 기존 10% 선할인에 행사 기간 결제금액의 5% 추가 환급을 더해 최대 15%의 실질적인 혜택을 제공한다." }
+    ],
+    "applyStart": [
+      { "source": 0, "quote": "오는 10월 29일부터 11월 15일까지 18일간 목포사랑상품권 할인 및 환급 혜택을 확대 운영한다." }
+    ],
+    "applyEnd": [
+      { "source": 0, "quote": "오는 10월 29일부터 11월 15일까지 18일간 목포사랑상품권 할인 및 환급 혜택을 확대 운영한다." }
+    ],
+    "applyMethod": [
+      { "source": 0, "quote": "추가 환급은 지류형을 제외한 카드형·모바일형 상품권에 적용되며, 환급금은 12월 초까지 지급할 예정이다." }
+    ]
+  },
+  "req": { "clauses": [], "income": [] },
+  "sources": [
+    {
+      "url": "https://www.mokpo.go.kr/www/mokpo_news/press_release/report_material?idx=549823&mode=view",
+      "title": "목포시, 코리아 그랜드 페스티벌 맞아 목포사랑상품권 혜택 확대",
+      "publisher": "목포시"
+    },
+    {
+      "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=92355",
+      "title": "목포사랑상품권 11월 15일까지 최대 15% 혜택…11월 한도 70만 원",
+      "publisher": "더페어"
+    },
+    {
+      "url": "https://www.newsworker.co.kr/news/articleView.html?idxno=511212",
+      "title": "목포시, 18일간 목포사랑상품권 최대 15% 파격 할인",
+      "publisher": "뉴스워커"
+    },
+    {
+      "url": "https://www.cbci.co.kr/news/articleView.html?idxno=620710",
+      "title": "목포시, 코리아 그랜드 페스티벌 맞아 목포사랑상품권 혜택 확대",
+      "publisher": "CBC뉴스"
+    }
+  ],
+  "createdAt": "2026-10-29T05:52:00Z",
+  "updatedAt": "2026-10-29T05:52:00Z"
+}
