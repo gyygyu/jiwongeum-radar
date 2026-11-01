@@ -302,7 +302,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 207896,
+  "views": 208110,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 159565,
+  "views": 159640,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 125167,
+  "views": 125227,
   "deadline": "추후 공지"
  },
  {
@@ -779,7 +779,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 80875,
+  "views": 80935,
   "deadline": "추후 공지"
  },
  {
@@ -1062,6 +1062,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000115994",
+  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 기술",
+  "supportType": "기술",
+  "views": 57415,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "B46001400003",
   "name": "기부식품등 제공사업(푸드뱅크·푸드마켓)",
   "agency": "한국사회복지협의회",
@@ -1069,15 +1078,6 @@
   "supportType": "현물",
   "views": 57377,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000115994",
-  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 기술",
-  "supportType": "기술",
-  "views": 57354,
-  "deadline": "세부사업별 상이"
  },
  {
   "id": "B27000100005",
@@ -1139,7 +1139,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 54923,
+  "views": 55030,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1310,7 +1310,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 46205,
+  "views": 46295,
   "deadline": "2026-12-31"
  },
  {
@@ -1323,6 +1323,15 @@
   "deadline": "출산일로부터 1년 이내(기간내 미신청시 소멸)"
  },
  {
+  "id": "BIZ-PBLN_000000000117928",
+  "name": "2026년 중소기업 마케팅지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 내수",
+  "supportType": "내수",
+  "views": 45636,
+  "deadline": "추후 공지"
+ },
+ {
   "id": "641000000193",
   "name": "경기도 청년 면접수당",
   "agency": "경기도",
@@ -1330,15 +1339,6 @@
   "supportType": "기타",
   "views": 45614,
   "deadline": "6~7월, 10~12월"
- },
- {
-  "id": "BIZ-PBLN_000000000117928",
-  "name": "2026년 중소기업 마케팅지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 내수",
-  "supportType": "내수",
-  "views": 45594,
-  "deadline": "추후 공지"
  },
  {
   "id": "B55037300001",
