@@ -302,7 +302,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 208132,
+  "views": 208212,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 159654,
+  "views": 159699,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 125237,
+  "views": 125277,
   "deadline": "추후 공지"
  },
  {
@@ -788,7 +788,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 80943,
+  "views": 80983,
   "deadline": "추후 공지"
  },
  {
@@ -1071,6 +1071,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000115994",
+  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 기술",
+  "supportType": "기술",
+  "views": 57467,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "B27000100005",
   "name": "무료 법률상담 서비스(국민)",
   "agency": "대한법률구조공단",
@@ -1078,15 +1087,6 @@
   "supportType": "기타(상담)",
   "views": 57432,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000115994",
-  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 기술",
-  "supportType": "기술",
-  "views": 57426,
-  "deadline": "세부사업별 상이"
  },
  {
   "id": "B46001400003",
@@ -1139,7 +1139,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 55039,
+  "views": 55096,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1310,7 +1310,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 46313,
+  "views": 46376,
   "deadline": "2026-12-31"
  },
  {
@@ -1337,7 +1337,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 45643,
+  "views": 45698,
   "deadline": "추후 공지"
  },
  {
