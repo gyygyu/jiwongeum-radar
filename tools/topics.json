@@ -302,7 +302,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 209037,
+  "views": 209306,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 160083,
+  "views": 160255,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 126052,
+  "views": 126243,
   "deadline": "추후 공지"
  },
  {
@@ -788,7 +788,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 81315,
+  "views": 81426,
   "deadline": "추후 공지"
  },
  {
@@ -1067,7 +1067,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 57875,
+  "views": 58004,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1116,6 +1116,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000117022",
+  "name": "2026년 소상공인 고용보험료 지원사업 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 55758,
+  "deadline": "예산 소진시까지"
+ },
+ {
   "id": "135200000005",
   "name": "임산부 및 영유아 영양플러스",
   "agency": "보건복지부",
@@ -1132,15 +1141,6 @@
   "supportType": "현금(융자)",
   "views": 55649,
   "deadline": "자세한 날짜는 읍면동 주민센터에 따라 다를 수 있음"
- },
- {
-  "id": "BIZ-PBLN_000000000117022",
-  "name": "2026년 소상공인 고용보험료 지원사업 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 55592,
-  "deadline": "예산 소진시까지"
  },
  {
   "id": "SPE000000060",
@@ -1296,6 +1296,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000117059",
+  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
+  "agency": "고용노동부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 47115,
+  "deadline": "2026-12-31"
+ },
+ {
   "id": "149200000037",
   "name": "직업훈련 생계비대부사업",
   "agency": "고용노동부",
@@ -1303,15 +1312,6 @@
   "supportType": "현금(융자)",
   "views": 47007,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000117059",
-  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
-  "agency": "고용노동부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 46984,
-  "deadline": "2026-12-31"
  },
  {
   "id": "149200000153",
@@ -1328,7 +1328,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 45988,
+  "views": 46080,
   "deadline": "추후 공지"
  },
  {
