@@ -1,0 +1,29 @@
+{
+  "key": "맞아투자지원금",
+  "detectedAt": "2026-11-04T06:04:50.222Z",
+  "hosts": [
+    "thebigdata.co.kr",
+    "newsian.co.kr",
+    "newsis.com"
+  ],
+  "articles": [
+    {
+      "title": "빗썸, ‘쓱데이’ 맞아 ‘투자지원금 페스타’ 개최…소비자 관심도 상...",
+      "link": "https://www.thebigdata.co.kr/view.php?ud=202611040941248827df3c2a17b7_23",
+      "host": "thebigdata.co.kr",
+      "pubDate": "2026-11-04T01:00:00.000Z"
+    },
+    {
+      "title": "빗썸, '쓱데이' 맞아 투자지원금 페스타… 최대 100만 포인트",
+      "link": "https://www.newsian.co.kr/news/articleView.html?idxno=100597",
+      "host": "newsian.co.kr",
+      "pubDate": "2026-11-04T05:18:00.000Z"
+    },
+    {
+      "title": "빗썸, '쓱데이' 맞아 투자지원금 페스타",
+      "link": "https://www.newsis.com/view/NISX20261104_0003854548",
+      "host": "newsis.com",
+      "pubDate": "2026-11-04T05:11:00.000Z"
+    }
+  ]
+}
