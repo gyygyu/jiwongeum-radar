@@ -1,0 +1,43 @@
+{
+  "key": "재배농가경영안정지원금",
+  "detectedAt": "2026-11-04T07:22:28.971Z",
+  "hosts": [
+    "dnews.co.kr",
+    "kbmaeil.com",
+    "dkilbo.com",
+    "kyongbuk.co.kr",
+    "breaknews.com"
+  ],
+  "articles": [
+    {
+      "title": "의성군, 벼 재배농가 경영안정지원금 14억 8천만 원 지급",
+      "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611041528132420643",
+      "host": "dnews.co.kr",
+      "pubDate": "2026-11-04T07:02:00.000Z"
+    },
+    {
+      "title": "의성군, 벼 재배농가 7490명에 경영안정지원금 14억8000만 원 지급",
+      "link": "https://www.kbmaeil.com/article/20261104500288",
+      "host": "kbmaeil.com",
+      "pubDate": "2026-11-04T02:28:00.000Z"
+    },
+    {
+      "title": "의성군, 벼 재배농가 7490명에 14억 8000만원 경영안정지원금 지급",
+      "link": "https://www.dkilbo.com/news/articleView.html?idxno=559565",
+      "host": "dkilbo.com",
+      "pubDate": "2026-11-04T05:30:00.000Z"
+    },
+    {
+      "title": "의성 벼 재배농가 7490명에 경영안정지원금…5일부터 최대 100만원 지급",
+      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4089626",
+      "host": "kyongbuk.co.kr",
+      "pubDate": "2026-11-04T06:54:00.000Z"
+    },
+    {
+      "title": "의성군, 벼 재배농가 7,490명에 경영안정지원금 14억8천만 원 지급",
+      "link": "http://www.breaknews.com/1248353",
+      "host": "breaknews.com",
+      "pubDate": "2026-11-04T06:12:00.000Z"
+    }
+  ]
+}
