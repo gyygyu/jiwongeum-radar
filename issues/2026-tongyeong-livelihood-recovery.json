@@ -1,0 +1,43 @@
+{
+  "slug": "2026-tongyeong-livelihood-recovery",
+  "name": "통영형 민생회복지원금",
+  "aliases": [
+    "통영형민생회복지원금",
+    "통영시 민생회복지원금",
+    "통영 민생회복지원금",
+    "통영 민생지원금"
+  ],
+  "summary": "경남 통영시가 고물가와 지역 경기 침체 속에서 시민 생활을 돕고 동네 상권 소비를 늘리려고 시의회와 협의해 마련한 지원금이다. 4월 15일 기준 통영시에 주민등록을 둔 시민과 결혼이민자·영주권자 외국인이 1인당 35만원을 받았다. 8월 31일부터 10월 30일까지 온라인이나 읍면동 행정복지센터에서 신청을 받았고 지금은 마감됐다. 받은 지원금은 통영사랑상품권(모바일)이나 선불카드로 12월 31일까지 관내 소상공인 매장 위주로 써야 한다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "통영시",
+  "region": { "sido": "경남", "sigungu": "통영시" },
+  "targetGroup": "personal",
+  "target": "2026년 4월 15일 기준 통영시에 주민등록이 된 시민과 외국인 중 결혼이민자·영주권자",
+  "amount": "1인당 35만 원 (통영사랑상품권(모바일) 또는 선불카드)",
+  "applyStart": "2026-08-31",
+  "applyEnd": "2026-10-30",
+  "applyMethod": "온라인 신청 또는 읍면동 행정복지센터 방문 신청",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [{ "source": 0, "quote": "통영시(시장 강석주)는 오는 31일(월)부터 시민들의 생활 안정을 돕고" }],
+    "target": [{ "source": 0, "quote": "2026년 4월 15일 기준 통영시에 주민등록이 돼 있는 시민과 외국인 중 결혼이민자·영주권자를 대상으로 한다." }],
+    "amount": [{ "source": 0, "quote": "지원금은 1인당 35만 원으로, 신청기간은 8월 31일부터 10월 30일까지다." }],
+    "applyStart": [{ "source": 0, "quote": "지원금은 1인당 35만 원으로, 신청기간은 8월 31일부터 10월 30일까지다." }],
+    "applyEnd": [{ "source": 0, "quote": "지원금은 1인당 35만 원으로, 신청기간은 8월 31일부터 10월 30일까지다." }],
+    "applyMethod": [{ "source": 1, "quote": "지난 8월 31일부터 온라인과 읍면동 행정복지센터를 통해 신청·지급을 시작했으며" }]
+  },
+  "req": { "clauses": [], "income": [] },
+  "sources": [
+    { "url": "https://www.tongyeong.go.kr/00852/00853/00859.web?gcode=9078&idx=662276&amode=view", "title": "통영시,‘통영형 민생회복지원금’지급확정", "publisher": "통영시" },
+    { "url": "https://www.tongyeong.go.kr/00852/00853/00859.web?gcode=9078&idx=663867&amode=view", "title": "통영시,‘통영형 민생회복지원금’신청·지급 마무리", "publisher": "통영시" },
+    { "url": "https://www.newsgn.com/news/articleView.html?idxno=582863", "title": "통영시,'통영형 민생회복지원금'신청·지급 마무리", "publisher": "뉴스경남" },
+    { "url": "http://www.gndomin.com/news/articleView.html?idxno=495230", "title": "통영시 '통영형 민생회복지원금' 신청·지급 마무리", "publisher": "경남도민신문" },
+    { "url": "https://www.newsis.com/view/NISX20260805_0003736927", "title": "통영시-시의회 합의…\"1인 35만원\" 민생회복지원금 지급", "publisher": "뉴시스" }
+  ],
+  "createdAt": "2026-11-05T03:00:00Z",
+  "updatedAt": "2026-11-05T03:00:00Z"
+}
