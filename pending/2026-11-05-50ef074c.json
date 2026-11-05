@@ -1,0 +1,29 @@
+{
+  "key": "위로금이주지원금",
+  "detectedAt": "2026-11-05T05:04:53.761Z",
+  "hosts": [
+    "4th.kr",
+    "yna.co.kr",
+    "biz.heraldcorp.com"
+  ],
+  "articles": [
+    {
+      "title": "SH, 구룡마을 화재 피해 61세대에 위로금·이주지원금 지급",
+      "link": "http://www.4th.kr/news/articleView.html?idxno=2121198",
+      "host": "4th.kr",
+      "pubDate": "2026-11-05T02:38:00.000Z"
+    },
+    {
+      "title": "SH, 구룡마을 화재 61세대에 위로금·이주지원금 150만원씩",
+      "link": "https://www.yna.co.kr/view/AKR20261105084500004?input=1195m",
+      "host": "yna.co.kr",
+      "pubDate": "2026-11-05T02:30:00.000Z"
+    },
+    {
+      "title": "SH, 구룡마을 화재 피해 61가구 이주지원금 지급…현장 안전관리 강화 ...",
+      "link": "https://biz.heraldcorp.com/article/10927119?ref=naver",
+      "host": "biz.heraldcorp.com",
+      "pubDate": "2026-11-05T04:36:00.000Z"
+    }
+  ]
+}
