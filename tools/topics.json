@@ -293,7 +293,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 209943,
+  "views": 210177,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 160524,
+  "views": 160636,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 126533,
+  "views": 126654,
   "deadline": "추후 공지"
  },
  {
@@ -788,7 +788,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 81639,
+  "views": 81740,
   "deadline": "추후 공지"
  },
  {
@@ -1058,7 +1058,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 58176,
+  "views": 58258,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1121,7 +1121,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 56060,
+  "views": 56187,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1301,7 +1301,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 47525,
+  "views": 47821,
   "deadline": "2026-12-31"
  },
  {
@@ -1314,6 +1314,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000117928",
+  "name": "2026년 중소기업 마케팅지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 내수",
+  "supportType": "내수",
+  "views": 46292,
+  "deadline": "추후 공지"
+ },
+ {
   "id": "149200000153",
   "name": "고용보험 미적용자 출산급여",
   "agency": "고용노동부",
@@ -1321,15 +1330,6 @@
   "supportType": "현금",
   "views": 46277,
   "deadline": "출산일로부터 1년 이내(기간내 미신청시 소멸)"
- },
- {
-  "id": "BIZ-PBLN_000000000117928",
-  "name": "2026년 중소기업 마케팅지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 내수",
-  "supportType": "내수",
-  "views": 46241,
-  "deadline": "추후 공지"
  },
  {
   "id": "641000000193",
