@@ -1,0 +1,29 @@
+{
+  "key": "통영형민생회복지원금",
+  "detectedAt": "2026-11-05T02:17:42.126Z",
+  "hosts": [
+    "newsgn.com",
+    "gndomin.com",
+    "mbcgn.kr"
+  ],
+  "articles": [
+    {
+      "title": "통영시,'통영형 민생회복지원금'신청·지급 마무리",
+      "link": "https://www.newsgn.com/news/articleView.html?idxno=582863",
+      "host": "newsgn.com",
+      "pubDate": "2026-11-02T07:12:00.000Z"
+    },
+    {
+      "title": "통영시 '통영형 민생회복지원금' 신청·지급 마무리",
+      "link": "http://www.gndomin.com/news/articleView.html?idxno=495230",
+      "host": "gndomin.com",
+      "pubDate": "2026-11-02T09:06:00.000Z"
+    },
+    {
+      "title": "통영형 민생회복지원금 99% 지급",
+      "link": "https://mbcgn.kr/01_new/new01_view.asp?idx=412025",
+      "host": "mbcgn.kr",
+      "pubDate": "2026-11-05T01:26:00.000Z"
+    }
+  ]
+}
