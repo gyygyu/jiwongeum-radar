@@ -288,6 +288,15 @@
   "deadline": "접수기관 별 상이"
  },
  {
+  "id": "BIZ-PBLN_000000000117908",
+  "name": "소상공인 경영안정 바우처 지원사업 시행 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 경영",
+  "supportType": "경영",
+  "views": 209943,
+  "deadline": "예산 소진시까지"
+ },
+ {
   "id": "149200000092",
   "name": "구직자 취업지원 서비스 제공",
   "agency": "고용노동부",
@@ -295,15 +304,6 @@
   "supportType": "상담/법률지원·서비스(일자리)",
   "views": 209678,
   "deadline": "채용행사와 프로그램의 종류 및 일정 등은 고용센터마다 상이하므로 고용24에서 일정 및 신청시기 등 직접 확인"
- },
- {
-  "id": "BIZ-PBLN_000000000117908",
-  "name": "소상공인 경영안정 바우처 지원사업 시행 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 경영",
-  "supportType": "경영",
-  "views": 209550,
-  "deadline": "예산 소진시까지"
  },
  {
   "id": "SD0000004508",
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 160351,
+  "views": 160524,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 126338,
+  "views": 126533,
   "deadline": "추후 공지"
  },
  {
@@ -788,7 +788,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 81512,
+  "views": 81639,
   "deadline": "추후 공지"
  },
  {
@@ -1053,6 +1053,15 @@
   "deadline": "개별공고에 따라 신청"
  },
  {
+  "id": "BIZ-PBLN_000000000115994",
+  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 기술",
+  "supportType": "기술",
+  "views": 58176,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "WLU000000020",
   "name": "차상위 본인부담 경감대상자 지원",
   "agency": "보건복지부",
@@ -1060,15 +1069,6 @@
   "supportType": "의료지원·현금(감면)",
   "views": 58101,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000115994",
-  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 기술",
-  "supportType": "기술",
-  "views": 58066,
-  "deadline": "세부사업별 상이"
  },
  {
   "id": "B01000300002",
@@ -1121,7 +1121,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 55877,
+  "views": 56060,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1301,7 +1301,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 47218,
+  "views": 47525,
   "deadline": "2026-12-31"
  },
  {
@@ -1328,7 +1328,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 46138,
+  "views": 46241,
   "deadline": "추후 공지"
  },
  {
