@@ -940,6 +940,14 @@ async function fetchPageText(url, fetchImpl = fetch) {
   }
 }
 
+// src/lib/amount.ts
+var NUM2 = String.raw`\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?`;
+var UNIT2 = "\uC870|\uC5B5|\uCC9C\uB9CC|\uBC31\uB9CC|\uB9CC|\uCC9C";
+var AMOUNT_RE = new RegExp(
+  String.raw`(?<![\d,.])((?:(?:1인당|1회당|가구당|분기별|매월|연간|회당|인당|월|연)\s*)?(?:최대\s*)?)` + String.raw`((?:${NUM2})\s*(?:${UNIT2})?(?:\s*(?:${NUM2})\s*(?:${UNIT2}))*\s*원)`,
+  "g"
+);
+
 // src/lib/benefit-view.ts
 function todayKst() {
   return new Date(Date.now() + 9 * 3600 * 1e3).toISOString().slice(0, 10);
