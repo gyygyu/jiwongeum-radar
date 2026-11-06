@@ -293,7 +293,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 210177,
+  "views": 210586,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 160636,
+  "views": 160803,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 126654,
+  "views": 126826,
   "deadline": "추후 공지"
  },
  {
@@ -774,6 +774,15 @@
   "deadline": "의료급여 및 급여비용을 받을 권리, 대지급금을 상환받을 권리 발생일로부터 3년이내 신청, 이후 소멸"
  },
  {
+  "id": "BIZ-PBLN_000000000116904",
+  "name": "2026년 중앙부처 및 지자체 창업지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 창업",
+  "supportType": "창업",
+  "views": 81872,
+  "deadline": "추후 공지"
+ },
+ {
   "id": "SBA000000100",
   "name": "자활근로(기초, 차상위)",
   "agency": "보건복지부",
@@ -781,15 +790,6 @@
   "supportType": "서비스(일자리)",
   "views": 81856,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000116904",
-  "name": "2026년 중앙부처 및 지자체 창업지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 창업",
-  "supportType": "창업",
-  "views": 81740,
-  "deadline": "추후 공지"
  },
  {
   "id": "999000000090",
@@ -1058,7 +1058,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 58258,
+  "views": 58380,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1121,7 +1121,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 56187,
+  "views": 56379,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1287,6 +1287,15 @@
   "deadline": "2026-12-31"
  },
  {
+  "id": "BIZ-PBLN_000000000117059",
+  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
+  "agency": "고용노동부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 48153,
+  "deadline": "2026-12-31"
+ },
+ {
   "id": "507000000642",
   "name": "농업인 건강보험료 지원",
   "agency": "농림축산식품부",
@@ -1294,15 +1303,6 @@
   "supportType": "현금(보험)",
   "views": 48048,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000117059",
-  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
-  "agency": "고용노동부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 47821,
-  "deadline": "2026-12-31"
  },
  {
   "id": "149200000037",
@@ -1319,7 +1319,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 46292,
+  "views": 46379,
   "deadline": "추후 공지"
  },
  {
