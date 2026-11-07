@@ -293,7 +293,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 211019,
+  "views": 211184,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 161017,
+  "views": 161090,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 126996,
+  "views": 127054,
   "deadline": "추후 공지"
  },
  {
@@ -779,7 +779,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 82063,
+  "views": 82130,
   "deadline": "추후 공지"
  },
  {
@@ -1058,7 +1058,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 58521,
+  "views": 58603,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1112,7 +1112,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 56645,
+  "views": 56753,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1260,6 +1260,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000117059",
+  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
+  "agency": "고용노동부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 48936,
+  "deadline": "2026-12-31"
+ },
+ {
   "id": "SCY000000080",
   "name": "아동발달지원계좌(디딤씨앗통장) 지원",
   "agency": "보건복지부",
@@ -1267,15 +1276,6 @@
   "supportType": "현금",
   "views": 48688,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000117059",
-  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
-  "agency": "고용노동부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 48671,
-  "deadline": "2026-12-31"
  },
  {
   "id": "SD0000016119",
@@ -1319,7 +1319,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 46496,
+  "views": 46543,
   "deadline": "추후 공지"
  },
  {
