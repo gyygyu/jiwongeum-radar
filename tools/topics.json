@@ -293,7 +293,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 211994,
+  "views": 212282,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 161542,
+  "views": 161669,
   "deadline": "세부사업별 상이"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 127674,
+  "views": 127869,
   "deadline": "추후 공지"
  },
  {
@@ -770,7 +770,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 82412,
+  "views": 82516,
   "deadline": "추후 공지"
  },
  {
@@ -1058,7 +1058,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 58879,
+  "views": 58969,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1089,6 +1089,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000117022",
+  "name": "2026년 소상공인 고용보험료 지원사업 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 57411,
+  "deadline": "예산 소진시까지"
+ },
+ {
   "id": "B46001400003",
   "name": "기부식품등 제공사업(푸드뱅크·푸드마켓)",
   "agency": "한국사회복지협의회",
@@ -1105,15 +1114,6 @@
   "supportType": "이용권",
   "views": 57304,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000117022",
-  "name": "2026년 소상공인 고용보험료 지원사업 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 57272,
-  "deadline": "예산 소진시까지"
  },
  {
   "id": "B55145700016",
@@ -1238,7 +1238,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 49892,
+  "views": 50157,
   "deadline": "2026-12-31"
  },
  {
@@ -1319,7 +1319,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 46767,
+  "views": 46835,
   "deadline": "추후 공지"
  },
  {
