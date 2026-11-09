@@ -1,0 +1,29 @@
+{
+  "key": "전세사기최소지원금",
+  "detectedAt": "2026-11-09T07:38:35.757Z",
+  "hosts": [
+    "newsis.com",
+    "newspim.com",
+    "namdonews.com"
+  ],
+  "articles": [
+    {
+      "title": "'보증금 3분의1 보장'…전세사기 최소지원금 10일부터 접수",
+      "link": "https://www.newsis.com/view/NISX20261109_0003859831",
+      "host": "newsis.com",
+      "pubDate": "2026-11-09T02:00:00.000Z"
+    },
+    {
+      "title": "전세사기 피해자, 보증금 3분의1 최소지원금 10일부터 신청 가능",
+      "link": "https://www.newspim.com/news/view/20261109000505",
+      "host": "newspim.com",
+      "pubDate": "2026-11-09T02:00:00.000Z"
+    },
+    {
+      "title": "전세사기 당해도 보증금 3분의 1은 국가가 지킨다…10일부터 최소지원금...",
+      "link": "https://www.namdonews.com/news/articleView.html?idxno=928650",
+      "host": "namdonews.com",
+      "pubDate": "2026-11-09T06:50:00.000Z"
+    }
+  ]
+}
