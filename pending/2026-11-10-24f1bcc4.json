@@ -1,0 +1,29 @@
+{
+  "key": "신혼부부에혼인지원금",
+  "detectedAt": "2026-11-10T13:08:24.259Z",
+  "hosts": [
+    "incheontoday.com",
+    "gukjenews.com",
+    "siminsori.com"
+  ],
+  "articles": [
+    {
+      "title": "인천시, 내년부터 신혼부부에 혼인지원금 100만원 지급",
+      "link": "https://www.incheontoday.com/news/articleView.html?idxno=326133",
+      "host": "incheontoday.com",
+      "pubDate": "2026-11-10T01:30:00.000Z"
+    },
+    {
+      "title": "인천시, 2027년 신혼부부에 혼인지원금 100만 원 지급한다",
+      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3748104",
+      "host": "gukjenews.com",
+      "pubDate": "2026-11-10T13:00:00.000Z"
+    },
+    {
+      "title": "인천시, 2027년부터 혼인신고 부부에 혼인지원금 지급",
+      "link": "https://www.siminsori.com/news/articleView.html?idxno=402338",
+      "host": "siminsori.com",
+      "pubDate": "2026-11-10T07:02:00.000Z"
+    }
+  ]
+}
