@@ -1,0 +1,92 @@
+{
+  "key": "국내주식투자지원금",
+  "detectedAt": "2026-11-10T01:08:07.261Z",
+  "hosts": [
+    "cstimes.com",
+    "ftoday.co.kr",
+    "newsinside.kr",
+    "fetv.co.kr",
+    "popcornnews.net",
+    "choicenews.co.kr",
+    "thetracker.co.kr",
+    "newsdream.kr",
+    "ajunews.com",
+    "edaily.co.kr",
+    "socialvalue.kr",
+    "fnnews.com"
+  ],
+  "articles": [
+    {
+      "title": "삼성증권, 국내주식 투자지원금 이벤트 실시",
+      "link": "https://www.cstimes.com/news/articleView.html?idxno=727272",
+      "host": "cstimes.com",
+      "pubDate": "2026-11-09T23:38:00.000Z"
+    },
+    {
+      "title": "삼성증권, 국내주식 투자지원금 이벤트...신규 고객 1만5000명 지급",
+      "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=369283",
+      "host": "ftoday.co.kr",
+      "pubDate": "2026-11-10T00:58:00.000Z"
+    },
+    {
+      "title": "삼성증권, 비대면 신규 고객 대상 국내주식 투자지원금 이벤트",
+      "link": "https://www.newsinside.kr/news/articleView.html?idxno=5044506",
+      "host": "newsinside.kr",
+      "pubDate": "2026-11-10T00:56:00.000Z"
+    },
+    {
+      "title": "삼성증권, 국내주식 투자지원금 이벤트 실시",
+      "link": "https://www.fetv.co.kr/news/articleView.html?idxno=313400",
+      "host": "fetv.co.kr",
+      "pubDate": "2026-11-10T00:40:00.000Z"
+    },
+    {
+      "title": "삼성증권, 첫 비대면 계좌 개설 고객에 국내주식 투자지원금 2만 원",
+      "link": "http://www.popcornnews.net/news/articleView.html?idxno=139342",
+      "host": "popcornnews.net",
+      "pubDate": "2026-11-10T00:34:00.000Z"
+    },
+    {
+      "title": "삼성증권, 국내주식 투자지원금 이벤트...고객 유치 '확대'",
+      "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=173051",
+      "host": "choicenews.co.kr",
+      "pubDate": "2026-11-10T00:32:00.000Z"
+    },
+    {
+      "title": "삼성증권, 신규 고객에 국내주식 투자지원금 2만원 지급",
+      "link": "https://thetracker.co.kr/View.aspx?No=4304851",
+      "host": "thetracker.co.kr",
+      "pubDate": "2026-11-10T00:29:00.000Z"
+    },
+    {
+      "title": "삼성증권, 국내주식 투자지원금 이벤트 실시…\"신규 고객에 2만원 혜택...",
+      "link": "http://www.newsdream.kr/news/articleView.html?idxno=121767",
+      "host": "newsdream.kr",
+      "pubDate": "2026-11-10T00:28:00.000Z"
+    },
+    {
+      "title": "\"증시 폭락에 투심 잡아라\"…삼성증권, 국내주식 투자지원금 이벤트",
+      "link": "https://www.ajunews.com/view/20261110084824076",
+      "host": "ajunews.com",
+      "pubDate": "2026-11-09T23:56:00.000Z"
+    },
+    {
+      "title": "삼성증권, 이달 국내주식 투자지원금 이벤트 실시",
+      "link": "https://www.edaily.co.kr/News/Read?newsId=03371846645644408&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "host": "edaily.co.kr",
+      "pubDate": "2026-11-09T23:52:00.000Z"
+    },
+    {
+      "title": "삼성증권, 신규 고객 1만5000명에 주식 투자지원금 2만원 지급",
+      "link": "https://www.socialvalue.kr/news/view/1065573133900084",
+      "host": "socialvalue.kr",
+      "pubDate": "2026-11-10T00:34:00.000Z"
+    },
+    {
+      "title": "삼성증권, 신규 고객 1만5000명에 주식 투자지원금 2만원 지급",
+      "link": "https://www.fnnews.com/news/202611100903059525",
+      "host": "fnnews.com",
+      "pubDate": "2026-11-10T00:06:00.000Z"
+    }
+  ]
+}
