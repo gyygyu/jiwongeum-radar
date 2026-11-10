@@ -1,0 +1,52 @@
+{
+  "slug": "2026-ganghwa-smallbiz-stability",
+  "name": "강화군 소상공인 경영안정지원금",
+  "aliases": [
+    "소상공인 경영안정지원금",
+    "강화 소상공인 경영안정지원금",
+    "강화군 경영안정지원금",
+    "강화군 소상공인 지원금"
+  ],
+  "summary": "인천 강화군이 경기 침체와 소비 위축으로 힘든 지역 소상공인의 부담을 덜기 위해 국비·시비 없이 군 예산 17억 원으로 마련한 지원금이다. 강화군에 사업장을 두고 사업자등록을 한 생활밀접업종·국세청 100대 생활업종·택시 및 화물 운송업 소상공인에게 업체당 30만 원을 강화군에서만 쓸 수 있는 인천e음으로 준다. 9~10월 1차 접수를 놓친 사업자를 위해 이달 12일부터 25일까지 사업장 소재지 읍·면사무소 산업팀에서 추가 신청을 받는다. 지원금은 적격 심사를 거쳐 지급되며 올해 12월 31일까지 써야 한다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "강화군",
+  "region": { "sido": "인천", "sigungu": "강화군" },
+  "targetGroup": "smallbiz",
+  "target": "강화군에 사업장을 두고 사업자등록을 한 소상공인 중 생활밀접업종, 국세청 100대 생활업종, 택시 및 화물자동차 운송업 사업자",
+  "amount": "업체당 30만 원 (인천e음, 강화군에서 사용)",
+  "applyStart": null,
+  "applyEnd": null,
+  "applyMethod": "사업장 소재지 읍·면사무소 산업팀 방문 신청",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": "https://www.ganghwa.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=23325&bcd=report",
+  "evidence": {
+    "agency": [
+      { "source": 0, "quote": "강화군(군수 박용철)은 경기침체와 소비심리 위축 등으로 어려움을 겪는 지역 소상공인의 경영 부담을 완화하기 위해" }
+    ],
+    "target": [
+      { "source": 0, "quote": "강화군에 사업장을 두고 사업자등록을 한 소상공인 중 인천광역시 소상공인 통계의 생활밀접업종, 국세청 100대 생활업종, 택시 및 화물자동차 운송업에 해당하는 사업자다" }
+    ],
+    "amount": [
+      { "source": 0, "quote": "요건을 갖춘 소상공인에게 업체당 30만 원을 지원하고 있다" }
+    ],
+    "applyMethod": [
+      { "source": 0, "quote": "신청은 사업장 소재지 읍·면사무소 산업팀을 방문해 신분증과 신청서" }
+    ]
+  },
+  "req": {
+    "clauses": [
+      { "any": ["business"], "source": 0, "quote": "강화군에 사업장을 두고 사업자등록을 한 소상공인" }
+    ],
+    "income": []
+  },
+  "sources": [
+    { "url": "https://www.ganghwa.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=23325&bcd=report", "title": "강화군, 전액 군비 17억 원 들여 소상공인 30만 원 지원… 못 받은 분들 위해 추가 신청 '문 활짝'", "publisher": "강화군" },
+    { "url": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3082032", "title": "강화군 소상공인 경영안정지원금 추가 신청 접수", "publisher": "뉴스클레임" },
+    { "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5081638", "title": "강화군, 소상공인 경영안정지원금 추가 접수…업체당 30만 원 지급", "publisher": "신아일보" }
+  ],
+  "createdAt": "2026-11-10T06:02:00Z",
+  "updatedAt": "2026-11-10T06:02:00Z"
+}
