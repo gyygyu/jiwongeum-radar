@@ -1,0 +1,29 @@
+{
+  "key": "건강보험본인부담금환급금",
+  "detectedAt": "2026-11-11T07:20:59.334Z",
+  "hosts": [
+    "newsis.com",
+    "akomnews.com",
+    "fnnews.com"
+  ],
+  "articles": [
+    {
+      "title": "\"잠자는 건강보험 본인부담금환급금 확인하세요\"",
+      "link": "https://www.newsis.com/view/NISX20261111_0003863907",
+      "host": "newsis.com",
+      "pubDate": "2026-11-11T05:45:00.000Z"
+    },
+    {
+      "title": "잠자는 건강보험 본인부담금환급금 확인하세요",
+      "link": "https://www.akomnews.com/bbs/board.php?bo_table=news&wr_id=68974",
+      "host": "akomnews.com",
+      "pubDate": "2026-11-11T06:18:00.000Z"
+    },
+    {
+      "title": "내가 낸 병원비 돌려받을 수도...건보공단 '본인부담금 환급금' 확인하...",
+      "link": "https://www.fnnews.com/news/202611111558379994",
+      "host": "fnnews.com",
+      "pubDate": "2026-11-11T07:01:00.000Z"
+    }
+  ]
+}
