@@ -1,0 +1,29 @@
+{
+  "key": "기후부에너지바우처",
+  "detectedAt": "2026-11-11T01:10:39.742Z",
+  "hosts": [
+    "metroseoul.co.kr",
+    "econonews.co.kr",
+    "todayenergy.kr"
+  ],
+  "articles": [
+    {
+      "title": "기후부 '에너지바우처 찾아드림 서비스' 신설… \"취약계층 겨울나기 지...",
+      "link": "http://www.metroseoul.co.kr/article/20261110500154",
+      "host": "metroseoul.co.kr",
+      "pubDate": "2026-11-10T02:06:00.000Z"
+    },
+    {
+      "title": "기후부, '에너지바우처 찾아드림 서비스' 신규 도입...월세에 난방비 포...",
+      "link": "http://www.econonews.co.kr/news/articleView.html?idxno=446975",
+      "host": "econonews.co.kr",
+      "pubDate": "2026-11-10T11:36:00.000Z"
+    },
+    {
+      "title": "기후부, 에너지바우처 찾아드림 서비스 신설",
+      "link": "https://www.todayenergy.kr/news/articleView.html?idxno=305371",
+      "host": "todayenergy.kr",
+      "pubDate": "2026-11-11T00:16:00.000Z"
+    }
+  ]
+}
