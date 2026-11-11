@@ -293,7 +293,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 213634,
+  "views": 213904,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 162330,
+  "views": 162487,
   "deadline": "세부사업별 상이"
  },
  {
@@ -518,7 +518,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 128440,
+  "views": 128548,
   "deadline": "추후 공지"
  },
  {
@@ -770,7 +770,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 83012,
+  "views": 83179,
   "deadline": "추후 공지"
  },
  {
@@ -1058,8 +1058,17 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 59306,
+  "views": 59375,
   "deadline": "세부사업별 상이"
+ },
+ {
+  "id": "BIZ-PBLN_000000000117022",
+  "name": "2026년 소상공인 고용보험료 지원사업 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 58163,
+  "deadline": "예산 소진시까지"
  },
  {
   "id": "WLU000000020",
@@ -1069,15 +1078,6 @@
   "supportType": "의료지원·현금(감면)",
   "views": 58101,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000117022",
-  "name": "2026년 소상공인 고용보험료 지원사업 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 58037,
-  "deadline": "예산 소진시까지"
  },
  {
   "id": "B01000300002",
@@ -1229,7 +1229,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 50627,
+  "views": 50704,
   "deadline": "2026-12-31"
  },
  {
@@ -1310,7 +1310,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 47119,
+  "views": 47169,
   "deadline": "추후 공지"
  },
  {
