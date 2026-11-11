@@ -1,0 +1,29 @@
+{
+  "key": "받으면빼난지원금",
+  "detectedAt": "2026-11-11T06:05:50.477Z",
+  "hosts": [
+    "mt.co.kr",
+    "news.jtbc.co.kr",
+    "inews24.com"
+  ],
+  "articles": [
+    {
+      "title": "빼빼로 못 받으면 '빼난지원금' 수령?…아일릿 \"우리도 받았었다\"",
+      "link": "https://www.mt.co.kr/society/2026/11/10/2026111007574324321",
+      "host": "mt.co.kr",
+      "pubDate": "2026-11-09T23:53:00.000Z"
+    },
+    {
+      "title": "빼빼로 못 받으면 '빼난지원금'?…아일릿도 \"그게 뭐예요?\" 초등생 신조...",
+      "link": "https://news.jtbc.co.kr/article/NB12327565?influxDiv=NAVER",
+      "host": "news.jtbc.co.kr",
+      "pubDate": "2026-11-11T05:57:00.000Z"
+    },
+    {
+      "title": "'빼난지원금'을 아시나요?…11월11일 맞아 초등학교서 유행하는 신조어",
+      "link": "http://www.inews24.com/view/2024930",
+      "host": "inews24.com",
+      "pubDate": "2026-11-11T01:59:00.000Z"
+    }
+  ]
+}
