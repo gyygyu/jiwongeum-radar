@@ -1,0 +1,29 @@
+{
+  "key": "중도포기지원금",
+  "detectedAt": "2026-11-11T09:02:13.825Z",
+  "hosts": [
+    "edaily.co.kr",
+    "mk.co.kr",
+    "ytn.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "경기도 주4.5일 참여기업 17.6% '중도포기'…지원금 환수 '0원'",
+      "link": "https://www.edaily.co.kr/News/Read?newsId=05356246645644736&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "host": "edaily.co.kr",
+      "pubDate": "2026-11-11T08:16:00.000Z"
+    },
+    {
+      "title": "경기도 ‘주 4.5일제’ 참여기업 17.6% 중도 포기…지원금 9억 환수 ‘0원...",
+      "link": "https://www.mk.co.kr/article/12205502",
+      "host": "mk.co.kr",
+      "pubDate": "2026-11-11T07:54:00.000Z"
+    },
+    {
+      "title": "경기 '주 4.5일제' 18% 중도 포기...지원금 9억 미환수",
+      "link": "https://www.ytn.co.kr/_ln/0115_202611111649515820",
+      "host": "ytn.co.kr",
+      "pubDate": "2026-11-11T07:49:00.000Z"
+    }
+  ]
+}
