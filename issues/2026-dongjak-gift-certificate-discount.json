@@ -1,0 +1,36 @@
+{
+  "slug": "2026-dongjak-gift-certificate-discount",
+  "name": "제3차 동작사랑상품권",
+  "aliases": ["동작사랑상품권", "동작사랑상품권 40억 원 발행", "동작구동작사랑상품권", "동작사랑상품권 페이백"],
+  "summary": "서울 동작구가 연말 생활비 부담을 덜기 위해 40억 원어치 동작사랑상품권을 11월 16일 오후 2시부터 5% 할인해 판다. 한 사람이 한 달에 50만 원까지 살 수 있고 서울페이+ 앱에서 구매한다. 이번에는 결제액의 5%를 상품권으로 돌려주는 2억 원 규모 페이백도 올해 처음 함께 열린다. 돌려받는 금액은 결제한 다음 달 20일에 앱으로 들어온다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "동작구",
+  "region": { "sido": "서울", "sigungu": "동작구" },
+  "targetGroup": "personal",
+  "target": "서울페이+ 앱 이용자 (1인당 월 50만 원 구매 한도)",
+  "amount": "5% 할인 구매 (1인당 월 50만 원 한도), 결제금액의 5% 페이백",
+  "applyStart": "2026-11-16",
+  "applyEnd": null,
+  "applyMethod": "서울페이+ 앱을 통해 구매",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [{ "source": 0, "quote": "동작구 ( 구청장 류삼영 ) 는 연말 가계 부담을 덜고 주민들의 알뜰한 소비를 지원" }],
+    "target": [{ "source": 0, "quote": "1 인당 구매 한도는 월 50 만 원 , 보유 한도는 150 만 원이며 , 서울페이 + 앱을 통해 구매할 수 있다" }],
+    "amount": [{ "source": 0, "quote": "1 인당 월 50 만 원까지 5% 할인 혜택" }],
+    "applyStart": [{ "source": 0, "quote": "오는 11 월 16 일 오후 2 시부터 40 억 원 규모의 ‘ 제 3 차 동작사랑상품권 ’ 을 발행" }],
+    "applyMethod": [{ "source": 0, "quote": "서울페이 + 앱을 통해 구매할 수 있다" }]
+  },
+  "req": { "clauses": [], "income": [] },
+  "sources": [
+    { "url": "https://www.dongjak.go.kr/portal/bbs/B0000171/view.do?nttId=10758069&menuNo=200647&pageIndex=1", "title": "연말 지출 부담 낮춘다… 동작사랑상품권 40억 원 발행", "publisher": "동작구" },
+    { "url": "https://www.cnbizm.com/news/articleView.html?idxno=321158", "title": "동작구, 16일 오후 2시부터 40억 원 규모의 '제3차 동작사랑상품권' 발행", "publisher": "문화경제 CNB저널" },
+    { "url": "https://www.seoul.co.kr/news/publicnews/2026/11/11/20261111500217", "title": "“연말 지출 아끼세요” 동작구, 동작사랑상품권 40억원 발행", "publisher": "서울신문" },
+    { "url": "https://www.asiatime.co.kr/article/20261111500351", "title": "[11일 서울 동작구] 동작사랑상품권 40억 원 발행 등", "publisher": "아시아타임즈" }
+  ],
+  "createdAt": "2026-11-12T07:10:00Z",
+  "updatedAt": "2026-11-12T07:10:00Z"
+}
