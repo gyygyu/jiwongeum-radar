@@ -1,0 +1,36 @@
+{
+  "key": "보험설계사에육성지원금",
+  "detectedAt": "2026-11-13T02:38:34.349Z",
+  "hosts": [
+    "socialvalue.kr",
+    "cstimes.com",
+    "ftoday.co.kr",
+    "g-enews.com"
+  ],
+  "articles": [
+    {
+      "title": "토스인슈어런스, 신입 보험설계사에 육성지원금 500만원 지급",
+      "link": "https://www.socialvalue.kr/news/view/1065570751305950",
+      "host": "socialvalue.kr",
+      "pubDate": "2026-11-12T23:54:00.000Z"
+    },
+    {
+      "title": "토스인슈어런스, 무경력 신입 설계사에 육성지원금 500만원 지급",
+      "link": "https://www.cstimes.com/news/articleView.html?idxno=727828",
+      "host": "cstimes.com",
+      "pubDate": "2026-11-13T02:20:00.000Z"
+    },
+    {
+      "title": "토스인슈어런스, 신입 설계사에 육성지원금 500만원 지급",
+      "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=369617",
+      "host": "ftoday.co.kr",
+      "pubDate": "2026-11-13T00:20:00.000Z"
+    },
+    {
+      "title": "토스인슈어런스, 신입→직영 위촉 설계사에 육성지원금 500만원",
+      "link": "https://www.g-enews.com/view.php?ud=202611130901398713a6e8311f64_1",
+      "host": "g-enews.com",
+      "pubDate": "2026-11-13T00:16:00.000Z"
+    }
+  ]
+}
