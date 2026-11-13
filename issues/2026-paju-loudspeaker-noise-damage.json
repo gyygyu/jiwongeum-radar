@@ -1,0 +1,83 @@
+{
+  "slug": "2026-paju-loudspeaker-noise-damage",
+  "name": "파주시 대남 소음방송 피해 지원금",
+  "aliases": [
+    "대남 소음방송 피해 지원금",
+    "대남소음방송 피해지원금",
+    "대남 소음방송 피해지원금",
+    "대남방송 피해지원금"
+  ],
+  "summary": "경기 파주시가 북한 대남 소음방송으로 피해를 본 접경 마을 주민 가운데 앞선 1·2차 접수를 놓친 사람을 위해 3차 신청을 받는다. 2024년 7월 19일부터 2025년 6월 11일 사이 탄현면 10개 리와 장단면 조산리에 주민등록을 두고 실제로 살았던 주민이 대상이다. 지원금은 피해 정도와 거주 기간에 따라 정해지며 1인당 최대 2종 83만원, 3종 55만원이다. 11월 16일부터 면 행정복지센터나 시청 안전총괄과에서 방문 접수하며, 접수처마다 마감일이 다르다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "파주시",
+  "region": {
+    "sido": "경기",
+    "sigungu": "파주시"
+  },
+  "targetGroup": "personal",
+  "target": "대남 소음방송 피해 지역에 주민등록을 두고 실제 거주한 주민 중 1~2차 미신청자 (탄현면 10개 리·장단면 조산리, 2024.7.19.~2025.6.11. 거주)",
+  "amount": "1인당 최대 2종 83만원, 3종 55만원 (피해 정도·거주 기간에 따라 산정)",
+  "applyStart": "2026-11-16",
+  "applyEnd": null,
+  "applyMethod": "신분증·본인 명의 계좌 사본을 지참해 해당 행정복지센터 또는 시청 안전총괄과 방문",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": "https://www.paju.go.kr/user/board/BD_board.view.do?bbsCd=1022&seq=20261113090114167",
+  "evidence": {
+    "agency": [
+      {
+        "source": 0,
+        "quote": "파주시 내 대남 소음 방송 피해 주민에게 피해 지원금을 지급하고자 합니다"
+      }
+    ],
+    "target": [
+      {
+        "source": 1,
+        "quote": "대남 소음방송 피해 지역에 주민등록을 두고 실제 거주한 주민 중, 기존 신청 기간에 신청하지 못한 주민이다"
+      }
+    ],
+    "amount": [
+      {
+        "source": 1,
+        "quote": "1인당 최대 지급액은 2종 83만원, 3종 55만원이다"
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 2,
+        "quote": "대남 소음방송 피해지원금을 신청하지 못한 주민을 위해 11월 16일부터 추가 접수를 진행한다"
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 1,
+        "quote": "지원 대상 주민은 신분증과 본인 명의 계좌 사본을 지참해 해당 행정복지센터 또는 시 안전총괄과를 방문하면 된다"
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "https://www.paju.go.kr/user/board/BD_board.view.do?bbsCd=1022&seq=20261113090114167",
+      "title": "대남 소음방송 피해 지원금 신청 3차 공고",
+      "publisher": "파주시"
+    },
+    {
+      "url": "https://www.pressian.com/pages/articles/2026111309112849942",
+      "title": "파주시, 대남 소음방송 피해지원금 추가 신청 받아",
+      "publisher": "프레시안"
+    },
+    {
+      "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2492145",
+      "title": "파주시, 대남소음방송 피해지원금 추가 신청…접수처별 일정 확인",
+      "publisher": "이뉴스투데이"
+    }
+  ],
+  "createdAt": "2026-11-13T03:10:00Z",
+  "updatedAt": "2026-11-13T03:10:00Z"
+}
