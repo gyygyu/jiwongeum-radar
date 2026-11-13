@@ -293,7 +293,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 214947,
+  "views": 215329,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 163043,
+  "views": 163362,
   "deadline": "세부사업별 상이"
  },
  {
@@ -518,7 +518,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 128848,
+  "views": 129103,
   "deadline": "추후 공지"
  },
  {
@@ -770,7 +770,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 83569,
+  "views": 83839,
   "deadline": "추후 공지"
  },
  {
@@ -1044,6 +1044,15 @@
   "deadline": "공고 시 별도 안내"
  },
  {
+  "id": "BIZ-PBLN_000000000115994",
+  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 기술",
+  "supportType": "기술",
+  "views": 59748,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "142000000014",
   "name": "중소기업장기근속자주택우선공급",
   "agency": "중소벤처기업부",
@@ -1053,21 +1062,12 @@
   "deadline": "개별공고에 따라 신청"
  },
  {
-  "id": "BIZ-PBLN_000000000115994",
-  "name": "2026년 스마트 제조혁신 지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 기술",
-  "supportType": "기술",
-  "views": 59609,
-  "deadline": "세부사업별 상이"
- },
- {
   "id": "BIZ-PBLN_000000000117022",
   "name": "2026년 소상공인 고용보험료 지원사업 공고",
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 58588,
+  "views": 58797,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1211,7 +1211,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 50959,
+  "views": 51120,
   "deadline": "2026-12-31"
  },
  {
@@ -1310,7 +1310,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 47367,
+  "views": 47486,
   "deadline": "추후 공지"
  },
  {
