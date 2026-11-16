@@ -1,0 +1,29 @@
+{
+  "key": "함평군민생회복지원금",
+  "detectedAt": "2026-11-16T07:57:52.561Z",
+  "hosts": [
+    "mhns.co.kr",
+    "m-i.kr",
+    "pressian.com"
+  ],
+  "articles": [
+    {
+      "title": "함평군, 민생회복지원금 정책 '전국 인정'…지방시대위원장상 수상",
+      "link": "https://www.mhns.co.kr/news/articleView.html?idxno=769308",
+      "host": "mhns.co.kr",
+      "pubDate": "2026-11-16T07:30:00.000Z"
+    },
+    {
+      "title": "함평군, 민생회복지원금 정책으로 지방시대위원장상 수상",
+      "link": "https://www.m-i.kr/news/articleView.html?idxno=2019170",
+      "host": "m-i.kr",
+      "pubDate": "2026-11-16T06:44:00.000Z"
+    },
+    {
+      "title": "함평군 민생회복지원금 지급 한 달 만에 56% 소진…우수사례 선정",
+      "link": "https://www.pressian.com/pages/articles/2026111611010159863?utm_source=naver&utm_medium=search",
+      "host": "pressian.com",
+      "pubDate": "2026-11-16T02:08:00.000Z"
+    }
+  ]
+}
