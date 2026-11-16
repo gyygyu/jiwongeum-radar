@@ -1,0 +1,104 @@
+{
+  "slug": "2026-hampyeong-livelihood-recovery",
+  "name": "함평군 민생회복지원금",
+  "aliases": [
+    "함평군민생회복지원금",
+    "함평 민생회복지원금",
+    "함평군 민생지원금",
+    "함평 민생지원금"
+  ],
+  "summary": "전남광주 함평군이 경기 침체로 힘든 군민의 생활을 돕고 지역 상권에 돈이 돌게 하려고 제2회 추가경정예산으로 마련한 지원금이다. 7월 1일부터 신청일까지 함평군에 주민등록이나 체류지를 둔 사람이면 1인당 50만원을 선불카드로 받았고, 결혼이민자와 영주권자도 대상에 들었다. 신청은 9월 7일부터 10월 8일까지 주소지 읍면사무소에서 받았으며 첫 주에는 출생 연도 끝자리 5부제로 운영됐다. 받은 카드는 함평사랑상품권 가맹점에서 12월 31일까지 써야 한다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "함평군",
+  "region": {
+    "sido": "전남광주",
+    "sigungu": "함평군"
+  },
+  "targetGroup": "personal",
+  "target": "2026년 7월 1일부터 신청일까지 계속 함평군에 주민등록 또는 체류지를 둔 사람 (결혼이민자·영주권자 포함)",
+  "amount": "1인당 50만 원 (선불카드)",
+  "applyStart": "2026-09-07",
+  "applyEnd": "2026-10-08",
+  "applyMethod": "주소지 또는 체류지 관할 읍면사무소 방문 신청 (평일 오전 9시~오후 6시), 거동이 불편한 주민은 마을별 찾아가는 신청",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [
+      {
+        "source": 0,
+        "quote": "군민 1인당 50만 원의 ‘함평군 민생회복지원금’을 9월 7일부터 10월 8일까지 지급한다"
+      }
+    ],
+    "target": [
+      {
+        "source": 0,
+        "quote": "지원 대상은 2026년 7월 1일부터 신청일까지 계속해서 함평군에 주민등록 또는 체류지를 두고 있는 사람이다."
+      }
+    ],
+    "amount": [
+      {
+        "source": 0,
+        "quote": "지원금은 1인당 50만 원의 선불카드로 지급된다."
+      }
+    ],
+    "applyStart": [
+      {
+        "source": 0,
+        "quote": "신청 기간은 9월 7일부터 10월 8일까지다."
+      }
+    ],
+    "applyEnd": [
+      {
+        "source": 0,
+        "quote": "신청 기간은 9월 7일부터 10월 8일까지다."
+      }
+    ],
+    "applyMethod": [
+      {
+        "source": 0,
+        "quote": "평일 오전 9시부터 오후 6시까지 주소지 또는 체류지 관할 읍면사무소에서 신청할 수 있다."
+      }
+    ]
+  },
+  "req": {
+    "clauses": [],
+    "income": []
+  },
+  "sources": [
+    {
+      "url": "https://www.hampyeong.go.kr/boardView.do?pageId=www0&boardId=NEWS&seq=6239788",
+      "title": "함평군, 군민 1인당 50만 원 민생회복지원금 추석 전 지급",
+      "publisher": "함평군"
+    },
+    {
+      "url": "https://www.hampyeong.go.kr/boardView.do?pageId=www0&boardId=NEWS&seq=8140340",
+      "title": "함평군, 민생회복지원금 “추석 전 꼭 받으시고 풍성한 명절 보내세요”",
+      "publisher": "함평군"
+    },
+    {
+      "url": "https://www.hampyeong.go.kr/boardView.do?pageId=www0&boardId=NEWS&seq=2635602",
+      "title": "함평군, 민생회복지원금 지원사업 성과 호평…‘2026 참좋은 지방자치 정책대회’ 지방시대위원회 위원장상 영예",
+      "publisher": "함평군"
+    },
+    {
+      "url": "https://m.go.seoul.co.kr/news/2026/07/30/20260730500075",
+      "title": "함평군, 민생회복지원금 50만원 추석 전 지급",
+      "publisher": "서울Pn"
+    },
+    {
+      "url": "https://www.segye.com/newsView/20260820506590",
+      "title": "의령·함평 1인당 50만원...지역별 최대 40만원 차이",
+      "publisher": "세계일보"
+    },
+    {
+      "url": "https://www.pressian.com/pages/articles/2026111611010159863",
+      "title": "함평군 민생회복지원금 지급 한 달 만에 56% 소진…우수사례 선정",
+      "publisher": "프레시안"
+    }
+  ],
+  "createdAt": "2026-11-16T08:02:00Z",
+  "updatedAt": "2026-11-16T08:02:00Z"
+}
