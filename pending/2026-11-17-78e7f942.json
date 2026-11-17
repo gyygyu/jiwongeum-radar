@@ -1,0 +1,29 @@
+{
+  "key": "소부장투자지원금",
+  "detectedAt": "2026-11-17T11:47:28.125Z",
+  "hosts": [
+    "chungnamilbo.co.kr",
+    "newsis.com",
+    "daily.hankooki.com"
+  ],
+  "articles": [
+    {
+      "title": "천안시, 국가첨단전략산업 소부장 투자지원금 2개사 선정",
+      "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921346",
+      "host": "chungnamilbo.co.kr",
+      "pubDate": "2026-11-17T08:12:00.000Z"
+    },
+    {
+      "title": "천안시, 국가첨단전략산업 소부장 투자지원금 2개사 선정",
+      "link": "https://www.newsis.com/view/NISX20261117_0003871897",
+      "host": "newsis.com",
+      "pubDate": "2026-11-17T07:26:00.000Z"
+    },
+    {
+      "title": "천안시, 국가첨단전략산업 소부장 투자지원금 2개사 선정",
+      "link": "https://daily.hankooki.com/news/articleView.html?idxno=1426063",
+      "host": "daily.hankooki.com",
+      "pubDate": "2026-11-17T07:18:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "key": "화천군출산장려금",
+  "detectedAt": "2026-11-17T11:47:28.125Z",
+  "hosts": [
+    "nocutnews.co.kr",
+    "newstnt.com",
+    "newsis.com"
+  ],
+  "articles": [
+    {
+      "title": "화천군, 출산장려금 지원 재개…1명당 최대 300만 원 지급",
+      "link": "https://www.nocutnews.co.kr/news/6607933?utm_source=naver&utm_medium=article&utm_campaign=20261117103436",
+      "host": "nocutnews.co.kr",
+      "pubDate": "2026-11-17T01:35:00.000Z"
+    },
+    {
+      "title": "화천군, 출산장려금 지원 재개…아동 1명당 최대 300만 원 지급",
+      "link": "https://www.newstnt.com/news/articleView.html?idxno=728947",
+      "host": "newstnt.com",
+      "pubDate": "2026-11-17T08:40:00.000Z"
+    },
+    {
+      "title": "화천군, 출산장려금 300만원 지원 재개",
+      "link": "https://www.newsis.com/view/NISX20261117_0003871658",
+      "host": "newsis.com",
+      "pubDate": "2026-11-17T06:45:00.000Z"
+    }
+  ]
+}
