@@ -1,0 +1,29 @@
+{
+  "key": "영동군입영지원금",
+  "detectedAt": "2026-11-17T02:28:12.555Z",
+  "hosts": [
+    "ggilbo.com",
+    "newsis.com",
+    "chungnamilbo.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "영동군, 입영지원금 20만 원 지원 ··· 연중 신청 접수",
+      "link": "https://www.ggilbo.com/news/articleView.html?idxno=1193616",
+      "host": "ggilbo.com",
+      "pubDate": "2026-11-17T01:44:00.000Z"
+    },
+    {
+      "title": "영동군, 입영지원금 20만원 지급…2년째 140명 혜택",
+      "link": "https://www.newsis.com/view/NISX20261117_0003870945",
+      "host": "newsis.com",
+      "pubDate": "2026-11-17T01:31:00.000Z"
+    },
+    {
+      "title": "영동군, 입영지원금 20만 원 지원… 연중 신청 접수",
+      "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921166",
+      "host": "chungnamilbo.co.kr",
+      "pubDate": "2026-11-17T01:22:00.000Z"
+    }
+  ]
+}
