@@ -5,7 +5,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "서비스(일자리)",
-  "views": 5185415,
+  "views": 5183968,
   "deadline": "상시"
  },
  {
@@ -14,7 +14,7 @@
   "agency": "국세청",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 2442481,
+  "views": 2442153,
   "deadline": "○ 정기신청 : 5.1.~5.31.○ 반기신청 - 상반기분 신청 : 9.1.~9.15. - 하반기분 신청 : 3.1.~3.15."
  },
  {
@@ -23,7 +23,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 1317241,
+  "views": 1316182,
   "deadline": "상시"
  },
  {
@@ -32,7 +32,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금(융자)",
-  "views": 1082836,
+  "views": 1079343,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -41,7 +41,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 817410,
+  "views": 816410,
   "deadline": "이직 후 지체없이 신청(이직일 다음 날부터 12개월 내 본인의 소정급여일수 한도로 지급)"
  },
  {
@@ -50,7 +50,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 731639,
+  "views": 724891,
   "deadline": "상시"
  },
  {
@@ -59,7 +59,7 @@
   "agency": "보건복지부",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 691571,
+  "views": 685652,
   "deadline": "상시"
  },
  {
@@ -68,7 +68,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "기타",
-  "views": 674386,
+  "views": 673195,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -77,7 +77,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금(융자)",
-  "views": 639760,
+  "views": 637382,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -86,7 +86,7 @@
   "agency": "보건복지부",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 612266,
+  "views": 610402,
   "deadline": "2026-05-20"
  },
  {
@@ -95,7 +95,7 @@
   "agency": "고용노동부",
   "category": "보육·교육",
   "supportType": "현금",
-  "views": 576525,
+  "views": 576084,
   "deadline": "육아휴직을 시작한 날 이후 1개월부터 육아휴직이 끝난 날 이후 12개월 이내에 신청(고용보험법 제70조제2항)"
  },
  {
@@ -104,7 +104,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금·현금(감면)",
-  "views": 574910,
+  "views": 572411,
   "deadline": "상시"
  },
  {
@@ -113,17 +113,8 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 554790,
+  "views": 554758,
   "deadline": "-"
- },
- {
-  "id": "135200000115",
-  "name": "인플루엔자 국가예방접종 지원",
-  "agency": "질병관리청",
-  "category": "보건·의료",
-  "supportType": "서비스(의료)·의료지원",
-  "views": 551966,
-  "deadline": "접종 대상자 및 연령별 지원 기간 상이"
  },
  {
   "id": "WII000000310",
@@ -131,8 +122,17 @@
   "agency": "보건복지부",
   "category": "보육·교육",
   "supportType": "기타(교육)",
-  "views": 551404,
+  "views": 550615,
   "deadline": "상시"
+ },
+ {
+  "id": "135200000115",
+  "name": "인플루엔자 국가예방접종 지원",
+  "agency": "질병관리청",
+  "category": "보건·의료",
+  "supportType": "서비스(의료)·의료지원",
+  "views": 549297,
+  "deadline": "접종 대상자 및 연령별 지원 기간 상이"
  },
  {
   "id": "WII000001410",
@@ -140,7 +140,7 @@
   "agency": "보건복지부",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 491578,
+  "views": 490260,
   "deadline": "자세한 날짜는 읍면동 주민센터에 따라 다를 수 있음"
  },
  {
@@ -149,7 +149,7 @@
   "agency": "경기도",
   "category": "보육·교육",
   "supportType": "현금",
-  "views": 439877,
+  "views": 439801,
   "deadline": "수시 접수"
  },
  {
@@ -158,7 +158,7 @@
   "agency": "기후에너지환경부",
   "category": "주거·자립",
   "supportType": "현물",
-  "views": 429897,
+  "views": 429874,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -167,7 +167,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금(융자)",
-  "views": 427780,
+  "views": 427641,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -176,7 +176,7 @@
   "agency": "과학기술정보통신부",
   "category": "생활안정",
   "supportType": "현금(보험)",
-  "views": 420898,
+  "views": 420635,
   "deadline": "자세한 날짜는 우체국에 따라 다를 수 있음"
  },
  {
@@ -185,7 +185,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 369792,
+  "views": 367976,
   "deadline": "상시"
  },
  {
@@ -194,7 +194,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 332740,
+  "views": 332458,
   "deadline": "2026-12-31"
  },
  {
@@ -203,7 +203,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금(융자)",
-  "views": 329493,
+  "views": 328857,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -212,7 +212,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "이용권",
-  "views": 304104,
+  "views": 303540,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -221,7 +221,7 @@
   "agency": "중소벤처기업부",
   "category": "생활안정",
   "supportType": "기타",
-  "views": 281184,
+  "views": 280725,
   "deadline": "2025-12-31"
  },
  {
@@ -230,7 +230,7 @@
   "agency": "보건복지부",
   "category": "고용·창업",
   "supportType": "기타",
-  "views": 258067,
+  "views": 258051,
   "deadline": "구직급여종료일이 속하는 달의 다음달 15일 이내 신청 가능"
  },
  {
@@ -239,7 +239,7 @@
   "agency": "산림청",
   "category": "문화·환경",
   "supportType": "문화/여가지원·이용권",
-  "views": 243038,
+  "views": 242631,
   "deadline": "매년 12월 신청시기 알림"
  },
  {
@@ -248,7 +248,7 @@
   "agency": "기후에너지환경부",
   "category": "생활안정",
   "supportType": "이용권",
-  "views": 232530,
+  "views": 232458,
   "deadline": "2026-12-31"
  },
  {
@@ -257,7 +257,7 @@
   "agency": "경찰청",
   "category": "행정·안전",
   "supportType": "현금(감면)",
-  "views": 225676,
+  "views": 225662,
   "deadline": "적성검사(갱신) 기간 내"
  },
  {
@@ -266,7 +266,7 @@
   "agency": "고용노동부",
   "category": "임신·출산",
   "supportType": "현금",
-  "views": 222110,
+  "views": 221973,
   "deadline": "휴가를 시작한 날 이후 1개월부터 휴가가 끝난 날 이후 12개월 이내"
  },
  {
@@ -275,7 +275,7 @@
   "agency": "고용노동부",
   "category": "생활안정",
   "supportType": "현금(융자)",
-  "views": 219521,
+  "views": 219463,
   "deadline": "상시"
  },
  {
@@ -284,7 +284,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 218630,
+  "views": 219074,
   "deadline": "예산 소진시까지"
  },
  {
@@ -293,7 +293,7 @@
   "agency": "교육부",
   "category": "보육·교육",
   "supportType": "이용권",
-  "views": 217094,
+  "views": 216455,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -302,7 +302,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "상담/법률지원·서비스(일자리)",
-  "views": 209810,
+  "views": 209801,
   "deadline": "채용행사와 프로그램의 종류 및 일정 등은 고용센터마다 상이하므로 고용24에서 일정 및 신청시기 등 직접 확인"
  },
  {
@@ -311,7 +311,7 @@
   "agency": "교육부",
   "category": "보육·교육",
   "supportType": "현금(장학금)",
-  "views": 198380,
+  "views": 198063,
   "deadline": "2026-09-09"
  },
  {
@@ -320,7 +320,7 @@
   "agency": "서울특별시",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 197720,
+  "views": 196841,
   "deadline": "2025-06-24"
  },
  {
@@ -329,7 +329,7 @@
   "agency": "국토교통부",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 196967,
+  "views": 193933,
   "deadline": "2026년 상반기"
  },
  {
@@ -338,7 +338,7 @@
   "agency": "보건복지부",
   "category": "행정·안전",
   "supportType": "현금",
-  "views": 189739,
+  "views": 186931,
   "deadline": "만 65세 생일이 속하는 달의 1개월 전부터 신청 가능"
  },
  {
@@ -347,7 +347,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "기타",
-  "views": 186489,
+  "views": 186343,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -356,7 +356,7 @@
   "agency": "보건복지부",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 185159,
+  "views": 184248,
   "deadline": "상시"
  },
  {
@@ -365,7 +365,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금(융자)",
-  "views": 182659,
+  "views": 181992,
   "deadline": "입주자요건에 따름"
  },
  {
@@ -374,17 +374,8 @@
   "agency": "보건복지부",
   "category": "생활안정",
   "supportType": "현금(융자)",
-  "views": 171957,
+  "views": 171942,
   "deadline": "○ 용도별 신청기한 - 전월세보조금 : (신규)임차개시일로부터 전후 3개월 이내, (갱신)갱신계약일로부터 3개월 / - 의료비 : 진료일로부터 6개월 이내 / - 배우자장제비 : 사망일로부터 3개월 이내 / - 재해복구비 : 재해발생일 또는 재난지역선포일로부터 6개월 이내"
- },
- {
-  "id": "B41000200003",
-  "name": "전기 요금 복지할인",
-  "agency": "한국전력공사",
-  "category": "생활안정",
-  "supportType": "현금(감면)",
-  "views": 167913,
-  "deadline": "상시"
  },
  {
   "id": "BIZ-PBLN_000000000117016",
@@ -392,8 +383,17 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 166212,
+  "views": 166493,
   "deadline": "세부사업별 상이"
+ },
+ {
+  "id": "B41000200003",
+  "name": "전기 요금 복지할인",
+  "agency": "한국전력공사",
+  "category": "생활안정",
+  "supportType": "현금(감면)",
+  "views": 163949,
+  "deadline": "상시"
  },
  {
   "id": "174000000029",
@@ -401,17 +401,8 @@
   "agency": "행정안전부",
   "category": "행정·안전",
   "supportType": "민원·현금",
-  "views": 160820,
+  "views": 159627,
   "deadline": "출생신고 시 또는 출생신고 이후(※ 개별 서비스별 신청 기간은 \"지원대상\" 참조)"
- },
- {
-  "id": "135200000120",
-  "name": "아동수당",
-  "agency": "보건복지부",
-  "category": "보육·교육",
-  "supportType": "현금",
-  "views": 159208,
-  "deadline": "상시"
  },
  {
   "id": "GMO000000010",
@@ -419,8 +410,17 @@
   "agency": "과학기술정보통신부",
   "category": "생활안정",
   "supportType": "현물",
-  "views": 157922,
+  "views": 157853,
   "deadline": "매년 수혜자 선정을 위해 5월초~6월중 약 1.5개월간 지정된 접수처에서 신청접수 실시(※ 자세한 내용은 홈페이지(www.at4u.or.kr) 참조)"
+ },
+ {
+  "id": "135200000120",
+  "name": "아동수당",
+  "agency": "보건복지부",
+  "category": "보육·교육",
+  "supportType": "현금",
+  "views": 157701,
+  "deadline": "상시"
  },
  {
   "id": "628000000735",
@@ -428,7 +428,7 @@
   "agency": "인천광역시",
   "category": "임신·출산",
   "supportType": "현금",
-  "views": 156477,
+  "views": 156396,
   "deadline": "상시"
  },
  {
@@ -437,7 +437,7 @@
   "agency": "인천광역시",
   "category": "보호·돌봄",
   "supportType": "기타",
-  "views": 151194,
+  "views": 151177,
   "deadline": "상시"
  },
  {
@@ -446,7 +446,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "서비스(일자리)",
-  "views": 149553,
+  "views": 149433,
   "deadline": "중장년내일센터 서비스담당자 확인필요"
  },
  {
@@ -455,7 +455,7 @@
   "agency": "보건복지부",
   "category": "보호·돌봄",
   "supportType": "이용권",
-  "views": 148807,
+  "views": 148501,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -464,7 +464,7 @@
   "agency": "기후에너지환경부",
   "category": "문화·환경",
   "supportType": "기타·현금",
-  "views": 143445,
+  "views": 143443,
   "deadline": "상시"
  },
  {
@@ -473,7 +473,7 @@
   "agency": "경기도 용인시",
   "category": "보육·교육",
   "supportType": "기타",
-  "views": 141707,
+  "views": 141449,
   "deadline": "2026-10-02"
  },
  {
@@ -482,7 +482,7 @@
   "agency": "세종특별자치시",
   "category": "보호·돌봄",
   "supportType": "현금",
-  "views": 137851,
+  "views": 137847,
   "deadline": "명절기간"
  },
  {
@@ -491,7 +491,7 @@
   "agency": "질병관리청",
   "category": "보건·의료",
   "supportType": "서비스(의료)·의료지원",
-  "views": 137776,
+  "views": 137663,
   "deadline": "상시"
  },
  {
@@ -500,7 +500,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "기타(상담)·상담/법률지원",
-  "views": 137642,
+  "views": 137571,
   "deadline": "상시"
  },
  {
@@ -509,7 +509,7 @@
   "agency": "인천광역시",
   "category": "행정·안전",
   "supportType": "이용권",
-  "views": 136452,
+  "views": 136150,
   "deadline": "상시"
  },
  {
@@ -518,7 +518,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 130958,
+  "views": 131104,
   "deadline": "추후 공지"
  },
  {
@@ -527,7 +527,7 @@
   "agency": "기후에너지환경부",
   "category": "생활안정",
   "supportType": "현물",
-  "views": 128341,
+  "views": 128339,
   "deadline": "자세한 날짜는 시군구청에 따라 다를 수 있음"
  },
  {
@@ -536,7 +536,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "현금",
-  "views": 123400,
+  "views": 123334,
   "deadline": "임신·유산(사산)·출산 사실이 확인이 된 날 ~ 분만예정일·출산(유·사산)일로부터 2년까지  ※ 신청 당시 분만예정일이 지난 경우 ‘임신’으로 신청 불가하며, ‘출산 등’으로 확인받아 신청하여야 함"
  },
  {
@@ -545,7 +545,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "의료지원·현금",
-  "views": 117983,
+  "views": 116904,
   "deadline": "상시"
  },
  {
@@ -554,7 +554,7 @@
   "agency": "경기도 화성시",
   "category": "보호·돌봄",
   "supportType": "현금",
-  "views": 114503,
+  "views": 114417,
   "deadline": "신청 불필요"
  },
  {
@@ -563,7 +563,7 @@
   "agency": "경기도",
   "category": "생활안정",
   "supportType": "이용권",
-  "views": 112472,
+  "views": 112463,
   "deadline": "(26년 1분기) 3.3. ~ 4.1. (2분기) 6.1. ~ 6.30. (3분기) 9.1. ~ 10.2. (4분기) 11.2. ~ 12.01."
  },
  {
@@ -572,7 +572,7 @@
   "agency": "성평등가족부",
   "category": "보육·교육",
   "supportType": "현금",
-  "views": 108520,
+  "views": 108107,
   "deadline": "자세한 날짜는 읍면동 주민센터에 따라 다를 수 있음"
  },
  {
@@ -581,7 +581,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "서비스(의료)",
-  "views": 106374,
+  "views": 105497,
   "deadline": "상시"
  },
  {
@@ -590,7 +590,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "기타",
-  "views": 105015,
+  "views": 104962,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -599,17 +599,8 @@
   "agency": "보건복지부",
   "category": "임신·출산",
   "supportType": "서비스(의료)·의료지원",
-  "views": 102568,
+  "views": 101989,
   "deadline": "상시"
- },
- {
-  "id": "131200000008",
-  "name": "다자녀가구 자동차취득세 감면",
-  "agency": "행정안전부",
-  "category": "행정·안전",
-  "supportType": "현금(감면)",
-  "views": 101991,
-  "deadline": "자세한 날짜는 시군구청에 따라 다를 수 있음"
  },
  {
   "id": "999000000004",
@@ -617,7 +608,7 @@
   "agency": "고용노동부",
   "category": "임신·출산",
   "supportType": "현금",
-  "views": 101504,
+  "views": 101439,
   "deadline": "휴가가 끝난 날 이후 12개월 이내에 신청"
  },
  {
@@ -626,8 +617,17 @@
   "agency": "문화체육관광부",
   "category": "문화·환경",
   "supportType": "기타(교육)·문화/여가지원",
-  "views": 101398,
+  "views": 101379,
   "deadline": "접수기관 별 상이"
+ },
+ {
+  "id": "131200000008",
+  "name": "다자녀가구 자동차취득세 감면",
+  "agency": "행정안전부",
+  "category": "행정·안전",
+  "supportType": "현금(감면)",
+  "views": 101120,
+  "deadline": "자세한 날짜는 시군구청에 따라 다를 수 있음"
  },
  {
   "id": "PTR000051706",
@@ -635,7 +635,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "현금(융자)",
-  "views": 100636,
+  "views": 100436,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -644,7 +644,7 @@
   "agency": "성평등가족부",
   "category": "주거·자립",
   "supportType": "기타·상담/법률지원",
-  "views": 96954,
+  "views": 96841,
   "deadline": "LH공사 서비스담당자 확인필요"
  },
  {
@@ -653,7 +653,7 @@
   "agency": "농림축산식품부",
   "category": "농림축산어업",
   "supportType": "현물",
-  "views": 96479,
+  "views": 96452,
   "deadline": "매월 1일부터 10일까지"
  },
  {
@@ -662,17 +662,8 @@
   "agency": "보건복지부",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 95073,
+  "views": 94728,
   "deadline": "상시"
- },
- {
-  "id": "611000000126",
-  "name": "서울 청년수당 지원",
-  "agency": "서울특별시",
-  "category": "고용·창업",
-  "supportType": "현금",
-  "views": 90982,
-  "deadline": "매년 공고문 참고"
  },
  {
   "id": "149200000020",
@@ -684,12 +675,21 @@
   "deadline": "예산의 범위에서 수시 모집"
  },
  {
+  "id": "611000000126",
+  "name": "서울 청년수당 지원",
+  "agency": "서울특별시",
+  "category": "고용·창업",
+  "supportType": "현금",
+  "views": 88763,
+  "deadline": "매년 공고문 참고"
+ },
+ {
   "id": "GFO000000030",
   "name": "산림서비스도우미(산림복지일자리)",
   "agency": "산림청",
   "category": "고용·창업",
   "supportType": "서비스(일자리)",
-  "views": 88560,
+  "views": 88496,
   "deadline": "수행기관 공고일에 따름"
  },
  {
@@ -698,8 +698,17 @@
   "agency": "서민금융진흥원",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 88505,
+  "views": 88492,
   "deadline": "'26.6월 출시"
+ },
+ {
+  "id": "171000000009",
+  "name": "의료급여 수급권자 우체국 실손 의료보험료 할인",
+  "agency": "과학기술정보통신부",
+  "category": "행정·안전",
+  "supportType": "의료지원·현금(보험)",
+  "views": 87662,
+  "deadline": "보험계약기간 중(신청일 이전소급적용가능)"
  },
  {
   "id": "SD0000008743",
@@ -707,7 +716,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "서비스(의료)·의료지원",
-  "views": 88296,
+  "views": 87267,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -716,25 +725,7 @@
   "agency": "과학기술정보통신부",
   "category": "생활안정",
   "supportType": "현금(감면)",
-  "views": 88235,
-  "deadline": "상시"
- },
- {
-  "id": "171000000009",
-  "name": "의료급여 수급권자 우체국 실손 의료보험료 할인",
-  "agency": "과학기술정보통신부",
-  "category": "행정·안전",
-  "supportType": "의료지원·현금(보험)",
-  "views": 87750,
-  "deadline": "보험계약기간 중(신청일 이전소급적용가능)"
- },
- {
-  "id": "628000000744",
-  "name": "맘편한 산후조리비 지원",
-  "agency": "인천광역시",
-  "category": "임신·출산",
-  "supportType": "이용권",
-  "views": 86807,
+  "views": 86115,
   "deadline": "상시"
  },
  {
@@ -743,17 +734,17 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 85875,
+  "views": 86067,
   "deadline": "추후 공지"
  },
  {
-  "id": "999000000026",
-  "name": "행복주택 공급",
-  "agency": "국토교통부",
-  "category": "주거·자립",
-  "supportType": "기타",
-  "views": 85631,
-  "deadline": "접수기관 별 상이"
+  "id": "628000000744",
+  "name": "맘편한 산후조리비 지원",
+  "agency": "인천광역시",
+  "category": "임신·출산",
+  "supportType": "이용권",
+  "views": 85775,
+  "deadline": "상시"
  },
  {
   "id": "149200005002",
@@ -761,8 +752,17 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 85008,
+  "views": 85005,
   "deadline": "광역구직활동을 종료한 날부터 14일 이내 가능"
+ },
+ {
+  "id": "999000000026",
+  "name": "행복주택 공급",
+  "agency": "국토교통부",
+  "category": "주거·자립",
+  "supportType": "기타",
+  "views": 84875,
+  "deadline": "접수기관 별 상이"
  },
  {
   "id": "337000000013",
@@ -779,7 +779,7 @@
   "agency": "보건복지부",
   "category": "고용·창업",
   "supportType": "서비스(일자리)",
-  "views": 82142,
+  "views": 81856,
   "deadline": "상시"
  },
  {
@@ -788,7 +788,7 @@
   "agency": "교육부",
   "category": "보육·교육",
   "supportType": "현금(장학금)",
-  "views": 81157,
+  "views": 80604,
   "deadline": "2026-09-09"
  },
  {
@@ -797,7 +797,7 @@
   "agency": "교육부",
   "category": "보육·교육",
   "supportType": "이용권",
-  "views": 80987,
+  "views": 80444,
   "deadline": "상시"
  },
  {
@@ -806,7 +806,7 @@
   "agency": "교육부",
   "category": "보육·교육",
   "supportType": "현금(장학금)",
-  "views": 79353,
+  "views": 79152,
   "deadline": "2026-09-09"
  },
  {
@@ -815,7 +815,7 @@
   "agency": "제주특별자치도",
   "category": "농림축산어업",
   "supportType": "이용권",
-  "views": 76141,
+  "views": 76129,
   "deadline": "2026-03-31"
  },
  {
@@ -824,7 +824,7 @@
   "agency": "중소벤처기업부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 73729,
+  "views": 73484,
   "deadline": "자금별 상이"
  },
  {
@@ -833,7 +833,7 @@
   "agency": "전북특별자치도",
   "category": "행정·안전",
   "supportType": "현금(보험)",
-  "views": 73449,
+  "views": 73447,
   "deadline": "상시"
  },
  {
@@ -842,17 +842,8 @@
   "agency": "기후에너지환경부",
   "category": "문화·환경",
   "supportType": "현금",
-  "views": 73448,
+  "views": 73446,
   "deadline": "각 지자체 공고 참조"
- },
- {
-  "id": "B55121000003",
-  "name": "사회적 배려대상자 도시가스요금 경감",
-  "agency": "한국가스공사",
-  "category": "생활안정",
-  "supportType": "현금(감면)",
-  "views": 71546,
-  "deadline": "상시"
  },
  {
   "id": "628000000176",
@@ -864,21 +855,21 @@
   "deadline": "상시"
  },
  {
+  "id": "B55121000003",
+  "name": "사회적 배려대상자 도시가스요금 경감",
+  "agency": "한국가스공사",
+  "category": "생활안정",
+  "supportType": "현금(감면)",
+  "views": 70324,
+  "deadline": "상시"
+ },
+ {
   "id": "135200000015",
   "name": "노인실명예방사업",
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "서비스(의료)·의료지원",
-  "views": 70325,
-  "deadline": "상시"
- },
- {
-  "id": "135200005015",
-  "name": "첫만남이용권 지원",
-  "agency": "보건복지부",
-  "category": "임신·출산",
-  "supportType": "이용권·현금",
-  "views": 69415,
+  "views": 69956,
   "deadline": "상시"
  },
  {
@@ -887,7 +878,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 69097,
+  "views": 69085,
   "deadline": "조기 재취업하여 12개월 이상 고용(또는 사업 개시)된 날 다음 날부터 3년 이내 신청 가능"
  },
  {
@@ -896,7 +887,7 @@
   "agency": "성평등가족부",
   "category": "보육·교육",
   "supportType": "서비스(돌봄)",
-  "views": 67509,
+  "views": 67426,
   "deadline": "상시"
  },
  {
@@ -905,7 +896,7 @@
   "agency": "금융위원회",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 67422,
+  "views": 67313,
   "deadline": "상시"
  },
  {
@@ -914,8 +905,17 @@
   "agency": "고용노동부",
   "category": "보육·교육",
   "supportType": "현금",
-  "views": 66609,
+  "views": 66574,
   "deadline": "육아기 근로시간 단축을 시작한 날 이후 1개월부터 끝난 날 이후 12개월 이내에 신청"
+ },
+ {
+  "id": "135200005015",
+  "name": "첫만남이용권 지원",
+  "agency": "보건복지부",
+  "category": "임신·출산",
+  "supportType": "이용권·현금",
+  "views": 66238,
+  "deadline": "상시"
  },
  {
   "id": "SSE000000100",
@@ -923,7 +923,7 @@
   "agency": "보건복지부",
   "category": "고용·창업",
   "supportType": "봉사/기부·서비스(일자리)",
-  "views": 66029,
+  "views": 65982,
   "deadline": "상시"
  },
  {
@@ -932,7 +932,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "서비스(의료)",
-  "views": 65847,
+  "views": 65767,
   "deadline": "검진대상자로 통보받은 당해 연도 내"
  },
  {
@@ -941,17 +941,8 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금",
-  "views": 65179,
+  "views": 65177,
   "deadline": "정확한 날짜는 개인별 수급기간 등에 따라 달라짐"
- },
- {
-  "id": "137100000236",
-  "name": "통합문화이용권(문화누리카드)",
-  "agency": "문화체육관광부",
-  "category": "문화·환경",
-  "supportType": "문화/여가지원·이용권",
-  "views": 65166,
-  "deadline": "2026-11-30"
  },
  {
   "id": "630000000660",
@@ -959,8 +950,17 @@
   "agency": "대전광역시",
   "category": "보육·교육",
   "supportType": "현금(감면)",
-  "views": 64802,
+  "views": 64790,
   "deadline": "상시"
+ },
+ {
+  "id": "137100000236",
+  "name": "통합문화이용권(문화누리카드)",
+  "agency": "문화체육관광부",
+  "category": "문화·환경",
+  "supportType": "문화/여가지원·이용권",
+  "views": 64770,
+  "deadline": "2026-11-30"
  },
  {
   "id": "SSE000000050",
@@ -968,7 +968,7 @@
   "agency": "보건복지부",
   "category": "보호·돌봄",
   "supportType": "서비스(돌봄)",
-  "views": 64415,
+  "views": 64391,
   "deadline": "상시"
  },
  {
@@ -977,7 +977,7 @@
   "agency": "충청북도",
   "category": "행정·안전",
   "supportType": "현금(보험)",
-  "views": 64375,
+  "views": 64373,
   "deadline": "상시"
  },
  {
@@ -986,7 +986,7 @@
   "agency": "전북특별자치도 임실군",
   "category": "생활안정",
   "supportType": "현물",
-  "views": 63932,
+  "views": 63929,
   "deadline": "설,추석 명절기간"
  },
  {
@@ -995,7 +995,7 @@
   "agency": "고용노동부",
   "category": "임신·출산",
   "supportType": "현금",
-  "views": 63749,
+  "views": 63702,
   "deadline": "출산전후휴가, 유산·사산휴가, 육아휴직, 육아기 근로시간 단축, 배우자 출산휴가의 종료일로부터 12개월 이내 신청"
  },
  {
@@ -1004,7 +1004,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "기타",
-  "views": 63158,
+  "views": 62659,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -1013,7 +1013,7 @@
   "agency": "문화체육관광부",
   "category": "문화·환경",
   "supportType": "이용권",
-  "views": 62965,
+  "views": 62307,
   "deadline": "자세한 날짜는 읍면동 주민센터에 따라 다를 수 있음"
  },
  {
@@ -1022,7 +1022,7 @@
   "agency": "보건복지부",
   "category": "생활안정",
   "supportType": "서비스(의료)",
-  "views": 62835,
+  "views": 62152,
   "deadline": "상시"
  },
  {
@@ -1031,7 +1031,7 @@
   "agency": "경기도",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 61636,
+  "views": 61602,
   "deadline": "공고 시 별도 안내"
  },
  {
@@ -1040,7 +1040,7 @@
   "agency": "한국과학창의재단",
   "category": "문화·환경",
   "supportType": "이용권",
-  "views": 61211,
+  "views": 61174,
   "deadline": "2025-05-08"
  },
  {
@@ -1049,7 +1049,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 60654,
+  "views": 60762,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1058,7 +1058,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 60481,
+  "views": 60759,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1067,7 +1067,7 @@
   "agency": "중소벤처기업부",
   "category": "주거·자립",
   "supportType": "기타",
-  "views": 59742,
+  "views": 59739,
   "deadline": "개별공고에 따라 신청"
  },
  {
@@ -1076,7 +1076,7 @@
   "agency": "한국자산관리공사",
   "category": "생활안정",
   "supportType": "현금(융자)",
-  "views": 58853,
+  "views": 58773,
   "deadline": "상시"
  },
  {
@@ -1085,16 +1085,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "의료지원·현금(감면)",
-  "views": 58304,
-  "deadline": "상시"
- },
- {
-  "id": "B27000100005",
-  "name": "무료 법률상담 서비스(국민)",
-  "agency": "대한법률구조공단",
-  "category": "행정·안전",
-  "supportType": "기타(상담)",
-  "views": 57717,
+  "views": 58101,
   "deadline": "상시"
  },
  {
@@ -1103,7 +1094,16 @@
   "agency": "보건복지부",
   "category": "보호·돌봄",
   "supportType": "이용권",
-  "views": 57617,
+  "views": 57615,
+  "deadline": "상시"
+ },
+ {
+  "id": "B27000100005",
+  "name": "무료 법률상담 서비스(국민)",
+  "agency": "대한법률구조공단",
+  "category": "행정·안전",
+  "supportType": "기타(상담)",
+  "views": 57432,
   "deadline": "상시"
  },
  {
@@ -1112,16 +1112,7 @@
   "agency": "한국사회복지협의회",
   "category": "보호·돌봄",
   "supportType": "현물",
-  "views": 57509,
-  "deadline": "상시"
- },
- {
-  "id": "B55201500202",
-  "name": "4대사회보험 가입자 가입내역 확인서",
-  "agency": "국민연금공단",
-  "category": "생활안정",
-  "supportType": "기타",
-  "views": 57287,
+  "views": 57383,
   "deadline": "상시"
  },
  {
@@ -1130,7 +1121,7 @@
   "agency": "한국철도공사",
   "category": "임신·출산",
   "supportType": "현금(감면)",
-  "views": 57101,
+  "views": 57056,
   "deadline": "상시"
  },
  {
@@ -1139,7 +1130,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "현물",
-  "views": 56171,
+  "views": 55687,
   "deadline": "자세한 날짜는 보건소에 따라 다를 수 있음"
  },
  {
@@ -1148,7 +1139,7 @@
   "agency": "보건복지부",
   "category": "주거·자립",
   "supportType": "현금(융자)",
-  "views": 55753,
+  "views": 55649,
   "deadline": "자세한 날짜는 읍면동 주민센터에 따라 다를 수 있음"
  },
  {
@@ -1157,7 +1148,7 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "현금(감면)",
-  "views": 54963,
+  "views": 54959,
   "deadline": "상시"
  },
  {
@@ -1166,7 +1157,7 @@
   "agency": "국토교통부",
   "category": "주거·자립",
   "supportType": "기타",
-  "views": 54518,
+  "views": 54402,
   "deadline": "접수기관 별 상이"
  },
  {
@@ -1184,26 +1175,17 @@
   "agency": "국가보훈부",
   "category": "생활안정",
   "supportType": "서비스(일자리)·의료지원",
-  "views": 52979,
+  "views": 52863,
   "deadline": "상시"
  },
  {
-  "id": "135200005010",
-  "name": "자산형성지원사업(희망저축Ⅰ)",
-  "agency": "보건복지부",
-  "category": "주거·자립",
-  "supportType": "현금",
-  "views": 52498,
-  "deadline": "24년 3월, 4월, 6월, 8월, 10월 모집 예정  *세부 모집일정은 주민센터 통해 문의"
- },
- {
-  "id": "135200000114",
-  "name": "고위험 임산부 의료비 지원",
-  "agency": "보건복지부",
-  "category": "임신·출산",
-  "supportType": "의료지원·현금",
-  "views": 52436,
-  "deadline": "분만일로부터 6개월 이내"
+  "id": "B55201500202",
+  "name": "4대사회보험 가입자 가입내역 확인서",
+  "agency": "국민연금공단",
+  "category": "생활안정",
+  "supportType": "기타",
+  "views": 52608,
+  "deadline": "상시"
  },
  {
   "id": "BIZ-PBLN_000000000117059",
@@ -1211,7 +1193,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 52162,
+  "views": 52277,
   "deadline": "2026-12-31"
  },
  {
@@ -1220,8 +1202,17 @@
   "agency": "보건복지부",
   "category": "보건·의료",
   "supportType": "의료지원·현금",
-  "views": 52018,
+  "views": 52011,
   "deadline": "접수기관 별 상이"
+ },
+ {
+  "id": "135200000114",
+  "name": "고위험 임산부 의료비 지원",
+  "agency": "보건복지부",
+  "category": "임신·출산",
+  "supportType": "의료지원·현금",
+  "views": 52010,
+  "deadline": "분만일로부터 6개월 이내"
  },
  {
   "id": "646000000122",
@@ -1229,7 +1220,7 @@
   "agency": "전남광주통합특별시",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 51110,
+  "views": 51070,
   "deadline": "상시"
  },
  {
@@ -1238,8 +1229,17 @@
   "agency": "전남광주통합특별시",
   "category": "행정·안전",
   "supportType": "기타",
-  "views": 51049,
+  "views": 51047,
   "deadline": "상시"
+ },
+ {
+  "id": "135200005010",
+  "name": "자산형성지원사업(희망저축Ⅰ)",
+  "agency": "보건복지부",
+  "category": "주거·자립",
+  "supportType": "현금",
+  "views": 50953,
+  "deadline": "24년 3월, 4월, 6월, 8월, 10월 모집 예정  *세부 모집일정은 주민센터 통해 문의"
  },
  {
   "id": "641000000137",
@@ -1247,7 +1247,7 @@
   "agency": "경기도",
   "category": "임신·출산",
   "supportType": "현물",
-  "views": 50518,
+  "views": 50466,
   "deadline": "상시"
  },
  {
@@ -1256,7 +1256,7 @@
   "agency": "서울특별시 강남구",
   "category": "행정·안전",
   "supportType": "이용권",
-  "views": 49913,
+  "views": 49905,
   "deadline": "상시"
  },
  {
@@ -1265,7 +1265,7 @@
   "agency": "건설근로자공제회",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 49640,
+  "views": 49344,
   "deadline": "상시"
  },
  {
@@ -1274,17 +1274,8 @@
   "agency": "보건복지부",
   "category": "주거·자립",
   "supportType": "현금",
-  "views": 48869,
+  "views": 48688,
   "deadline": "상시"
- },
- {
-  "id": "B41000200041",
-  "name": "복지할인 고효율가전 구매비용 지원사업",
-  "agency": "한국전력공사",
-  "category": "생활안정",
-  "supportType": "현금",
-  "views": 48786,
-  "deadline": "2026-12-31"
  },
  {
   "id": "SD0000016119",
@@ -1292,7 +1283,7 @@
   "agency": "보건복지부",
   "category": "생활안정",
   "supportType": "현금",
-  "views": 48755,
+  "views": 48389,
   "deadline": "상시"
  },
  {
@@ -1301,8 +1292,17 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 48226,
+  "views": 48342,
   "deadline": "추후 공지"
+ },
+ {
+  "id": "B41000200041",
+  "name": "복지할인 고효율가전 구매비용 지원사업",
+  "agency": "한국전력공사",
+  "category": "생활안정",
+  "supportType": "현금",
+  "views": 48229,
+  "deadline": "2026-12-31"
  },
  {
   "id": "507000000642",
@@ -1310,7 +1310,7 @@
   "agency": "농림축산식품부",
   "category": "농림축산어업",
   "supportType": "현금(보험)",
-  "views": 48192,
+  "views": 48184,
   "deadline": "상시"
  },
  {
@@ -1319,7 +1319,7 @@
   "agency": "고용노동부",
   "category": "고용·창업",
   "supportType": "현금(융자)",
-  "views": 47231,
+  "views": 47227,
   "deadline": "상시"
  },
  {
@@ -1328,7 +1328,7 @@
   "agency": "고용노동부",
   "category": "임신·출산",
   "supportType": "현금",
-  "views": 46647,
+  "views": 46632,
   "deadline": "출산일로부터 1년 이내(기간내 미신청시 소멸)"
  },
  {
@@ -1337,7 +1337,7 @@
   "agency": "경기도",
   "category": "생활안정",
   "supportType": "기타",
-  "views": 46466,
+  "views": 46428,
   "deadline": "6~7월, 10~12월"
  },
  {
@@ -1346,7 +1346,7 @@
   "agency": "한국지역난방공사",
   "category": "보호·돌봄",
   "supportType": "현금",
-  "views": 45849,
+  "views": 45584,
   "deadline": "상시"
  }
 ]
