@@ -1,0 +1,36 @@
+{
+  "slug": "2026-jindo-travel-support",
+  "name": "진도군 1박 2일 여행지원금",
+  "aliases": ["진도나,가게", "진도나 가게", "1박 2일 진도 빼기", "진도 여행지원금", "진도나가게"],
+  "summary": "전남광주 진도군이 겨울방학과 연말 연휴에 외지 여행객이 진도에 묵으며 지역에서 소비하도록 생활인구 늘리기 사업으로 마련한 여행 지원이다. 진도군 밖에 살면서 SNS 활동을 하는 사람이 혼자 또는 4명까지 조를 짜서 12월 23일까지 신청하면 서류와 SNS 활동을 심사해 뽑는다. 뽑히면 인원에 따라 20만~55만원을 진도아리랑상품권으로 받는데, 절반은 미리, 나머지는 1박 2일 이상 여행과 영상 과제를 마친 뒤 받는다. 접수 순서로 심사하고 일찍 마감될 수 있으니 진도군청 공지사항을 먼저 확인하는 것이 좋다.",
+  "stage": "confirmed",
+  "hidden": false,
+  "agency": "진도군",
+  "region": { "sido": "전남광주", "sigungu": "진도군" },
+  "targetGroup": "personal",
+  "target": "진도군 외 지역에 거주하며 SNS 활동이 가능한 여행자 (1~4명 조 신청)",
+  "amount": "조 인원에 따라 1명 20만 원, 2명 35만 원, 3명 45만 원, 4명 55만 원 (진도아리랑상품권)",
+  "applyStart": null,
+  "applyEnd": "2026-12-23",
+  "applyMethod": "진도군청 누리집 공지사항에서 신청 방법 확인 후 신청",
+  "ageMin": null,
+  "ageMax": null,
+  "gov24Id": null,
+  "applyUrl": null,
+  "evidence": {
+    "agency": [{ "source": 0, "quote": "진도군은 1차로 신청서와 거주지 등 참가 자격을 확인하고" }],
+    "target": [{ "source": 0, "quote": "모집 대상은 진도군 외 지역에 거주하며 사회관계망서비스(SNS) 활동이 가능한 여행자로, 1인부터 최대 4명까지 조를 이뤄 신청할 수 있다." }],
+    "amount": [{ "source": 0, "quote": "여행지원금은 조 인원에 따라 1명 20만 원, 2명 35만 원, 3명 45만 원, 4명 55만 원을 지급하며" }],
+    "applyEnd": [{ "source": 0, "quote": "참가자를 오는 12월 23일까지 모집한다" }],
+    "applyMethod": [{ "source": 0, "quote": "참가 신청 방법과 자세한 사항은 진도군청 누리집 ‘공지사항’에서 확인할 수 있다." }]
+  },
+  "req": { "clauses": [], "income": [] },
+  "sources": [
+    { "url": "https://www.jindo.go.kr/home/board/B0016.cs?act=read&articleId=199014&categoryId=0&m=12&searchCondition=&searchKeyword=&pageIndex=1", "title": "진도군, 1박 2일 여행지원금 최대 55만 원… ‘진도나,가게’ 참가자 모집", "publisher": "진도군" },
+    { "url": "https://www.news1.kr/local/gwangju-jeonnam/6358458", "title": "진도군, 1박2일 여행지원금 최대 55만원… '진도나,가게' 참가자 모집", "publisher": "뉴스1" },
+    { "url": "https://www.getnews.co.kr/news/articleView.html?idxno=887622", "title": "진도군, 1박 2일 여행객 모집…최대 55만원 여행지원금 지급", "publisher": "글로벌경제신문" },
+    { "url": "http://www.srtimes.kr/news/articleView.html?idxno=217991", "title": "진도군, 겨울 여행객 유치 나선다…여행지원금 최대 55만원", "publisher": "SR타임스" }
+  ],
+  "createdAt": "2026-11-18T12:00:00Z",
+  "updatedAt": "2026-11-18T12:00:00Z"
+}
