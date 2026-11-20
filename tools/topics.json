@@ -275,7 +275,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 220250,
+  "views": 220695,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 167533,
+  "views": 167908,
   "deadline": "세부사업별 상이"
  },
  {
@@ -518,7 +518,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 131526,
+  "views": 131725,
   "deadline": "추후 공지"
  },
  {
@@ -743,7 +743,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 86570,
+  "views": 86861,
   "deadline": "추후 공지"
  },
  {
@@ -1017,6 +1017,15 @@
   "deadline": "상시"
  },
  {
+  "id": "BIZ-PBLN_000000000117022",
+  "name": "2026년 소상공인 고용보험료 지원사업 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 61778,
+  "deadline": "예산 소진시까지"
+ },
+ {
   "id": "641000000192",
   "name": "경기도 청년 노동자 통장",
   "agency": "경기도",
@@ -1024,15 +1033,6 @@
   "supportType": "현금",
   "views": 61763,
   "deadline": "공고 시 별도 안내"
- },
- {
-  "id": "BIZ-PBLN_000000000117022",
-  "name": "2026년 소상공인 고용보험료 지원사업 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 61520,
-  "deadline": "예산 소진시까지"
  },
  {
   "id": "B55211100001",
@@ -1049,7 +1049,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 61053,
+  "views": 61197,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1184,7 +1184,7 @@
   "agency": "고용노동부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 52611,
+  "views": 52744,
   "deadline": "2026-12-31"
  },
  {
@@ -1292,7 +1292,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 48625,
+  "views": 48745,
   "deadline": "추후 공지"
  },
  {
@@ -1346,7 +1346,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 수출",
   "supportType": "수출",
-  "views": 45511,
+  "views": 45650,
   "deadline": "세부사업별 상이"
  }
 ]
