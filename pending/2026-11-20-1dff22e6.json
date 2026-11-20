@@ -1,0 +1,29 @@
+{
+  "key": "꿈키움바우처",
+  "detectedAt": "2026-11-20T11:32:05.406Z",
+  "hosts": [
+    "queen.co.kr",
+    "newsgn.com",
+    "polinews.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "고성군, '청소년 꿈키움 바우처 신규대상자 사전발급 신청하세요!'",
+      "link": "http://www.queen.co.kr/news/articleView.html?idxno=466635",
+      "host": "queen.co.kr",
+      "pubDate": "2026-11-19T08:46:00.000Z"
+    },
+    {
+      "title": "고성군, 청소년 꿈키움 바우처카드 신규 대상자 사전 발급 신청기간 운...",
+      "link": "https://www.newsgn.com/news/articleView.html?idxno=586807",
+      "host": "newsgn.com",
+      "pubDate": "2026-11-19T07:34:00.000Z"
+    },
+    {
+      "title": "고성군, 2014년생에 월 5만 원 꿈키움 바우처",
+      "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748843",
+      "host": "polinews.co.kr",
+      "pubDate": "2026-11-20T03:49:00.000Z"
+    }
+  ]
+}
