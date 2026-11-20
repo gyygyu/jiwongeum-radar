@@ -1,0 +1,29 @@
+{
+  "key": "편성경제회복지원금",
+  "detectedAt": "2026-11-20T02:18:13.873Z",
+  "hosts": [
+    "news.lghellovision.net",
+    "goodmorningcc.com",
+    "news1.kr"
+  ],
+  "articles": [
+    {
+      "title": "당진시, 내년 예산안 1조 5천억 원 편성…경제회복지원금 포함",
+      "link": "http://news.lghellovision.net/news/articleView.html?idxno=563121",
+      "host": "news.lghellovision.net",
+      "pubDate": "2026-11-20T01:46:00.000Z"
+    },
+    {
+      "title": "당진시 내년 예산 1조5795억 편성…경제회복지원금 530억 반영",
+      "link": "https://www.goodmorningcc.com/news/articleView.html?idxno=456205",
+      "host": "goodmorningcc.com",
+      "pubDate": "2026-11-20T00:36:00.000Z"
+    },
+    {
+      "title": "당진시, 내년 예산안 1조5795억 편성…경제회복지원금 530억 반영",
+      "link": "https://www.news1.kr/local/daejeon-chungnam/6360399",
+      "host": "news1.kr",
+      "pubDate": "2026-11-19T23:40:00.000Z"
+    }
+  ]
+}
