@@ -16,7 +16,7 @@
   "ageMin": null,
   "ageMax": null,
   "gov24Id": null,
-  "applyUrl": null,
+  "applyUrl": "https://www.dongjak.go.kr/portal/bbs/B0000171/view.do?nttId=10758069&menuNo=200647&pageIndex=1",
   "evidence": {
     "agency": [{ "source": 0, "quote": "동작구 ( 구청장 류삼영 ) 는 연말 가계 부담을 덜고 주민들의 알뜰한 소비를 지원" }],
     "target": [{ "source": 0, "quote": "1 인당 구매 한도는 월 50 만 원 , 보유 한도는 150 만 원이며 , 서울페이 + 앱을 통해 구매할 수 있다" }],
@@ -32,5 +32,5 @@
     { "url": "https://www.asiatime.co.kr/article/20261111500351", "title": "[11일 서울 동작구] 동작사랑상품권 40억 원 발행 등", "publisher": "아시아타임즈" }
   ],
   "createdAt": "2026-11-12T07:10:00Z",
-  "updatedAt": "2026-11-12T07:10:00Z"
+  "updatedAt": "2026-11-22T21:23:00Z"
 }

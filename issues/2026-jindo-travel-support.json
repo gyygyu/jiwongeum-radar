@@ -16,7 +16,7 @@
   "ageMin": null,
   "ageMax": null,
   "gov24Id": null,
-  "applyUrl": null,
+  "applyUrl": "https://www.jindo.go.kr/home/board/B0016.cs?act=read&articleId=199014&categoryId=0&m=12&searchCondition=&searchKeyword=&pageIndex=1",
   "evidence": {
     "agency": [{ "source": 0, "quote": "진도군은 1차로 신청서와 거주지 등 참가 자격을 확인하고" }],
     "target": [{ "source": 0, "quote": "모집 대상은 진도군 외 지역에 거주하며 사회관계망서비스(SNS) 활동이 가능한 여행자로, 1인부터 최대 4명까지 조를 이뤄 신청할 수 있다." }],
@@ -32,5 +32,5 @@
     { "url": "http://www.srtimes.kr/news/articleView.html?idxno=217991", "title": "진도군, 겨울 여행객 유치 나선다…여행지원금 최대 55만원", "publisher": "SR타임스" }
   ],
   "createdAt": "2026-11-18T12:00:00Z",
-  "updatedAt": "2026-11-18T12:00:00Z"
+  "updatedAt": "2026-11-22T21:23:00Z"
 }
