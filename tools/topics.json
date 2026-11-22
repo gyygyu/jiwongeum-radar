@@ -275,7 +275,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 221489,
+  "views": 221849,
   "deadline": "예산 소진시까지"
  },
  {
@@ -392,7 +392,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 경영",
   "supportType": "경영",
-  "views": 168447,
+  "views": 168701,
   "deadline": "세부사업별 상이"
  },
  {
@@ -518,7 +518,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 132049,
+  "views": 132205,
   "deadline": "추후 공지"
  },
  {
@@ -734,7 +734,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 창업",
   "supportType": "창업",
-  "views": 87390,
+  "views": 87658,
   "deadline": "추후 공지"
  },
  {
@@ -1022,7 +1022,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 인력",
   "supportType": "인력",
-  "views": 62354,
+  "views": 62636,
   "deadline": "예산 소진시까지"
  },
  {
@@ -1040,7 +1040,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 기술",
   "supportType": "기술",
-  "views": 61461,
+  "views": 61591,
   "deadline": "세부사업별 상이"
  },
  {
@@ -1170,6 +1170,15 @@
   "deadline": "접수기관 별 상이"
  },
  {
+  "id": "BIZ-PBLN_000000000117059",
+  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
+  "agency": "고용노동부",
+  "category": "기업 인력",
+  "supportType": "인력",
+  "views": 53205,
+  "deadline": "2026-12-31"
+ },
+ {
   "id": "WII000001320",
   "name": "국가보훈대상자 취업지원",
   "agency": "국가보훈부",
@@ -1177,15 +1186,6 @@
   "supportType": "서비스(일자리)·의료지원",
   "views": 53043,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000117059",
-  "name": "2026년 고용창출장려금 및 고용안정장려금 사업 공고",
-  "agency": "고용노동부",
-  "category": "기업 인력",
-  "supportType": "인력",
-  "views": 52987,
-  "deadline": "2026-12-31"
  },
  {
   "id": "135200005010",
@@ -1265,7 +1265,7 @@
   "agency": "중소벤처기업부",
   "category": "기업 내수",
   "supportType": "내수",
-  "views": 48959,
+  "views": 49066,
   "deadline": "추후 공지"
  },
  {
@@ -1332,6 +1332,15 @@
   "deadline": "6~7월, 10~12월"
  },
  {
+  "id": "BIZ-PBLN_000000000116741",
+  "name": "2026년 중소기업 수출지원사업 통합 공고",
+  "agency": "중소벤처기업부",
+  "category": "기업 수출",
+  "supportType": "수출",
+  "views": 45986,
+  "deadline": "세부사업별 상이"
+ },
+ {
   "id": "B55037300001",
   "name": "에너지복지요금 지원",
   "agency": "한국지역난방공사",
@@ -1339,14 +1348,5 @@
   "supportType": "현금",
   "views": 45966,
   "deadline": "상시"
- },
- {
-  "id": "BIZ-PBLN_000000000116741",
-  "name": "2026년 중소기업 수출지원사업 통합 공고",
-  "agency": "중소벤처기업부",
-  "category": "기업 수출",
-  "supportType": "수출",
-  "views": 45869,
-  "deadline": "세부사업별 상이"
  }
 ]
