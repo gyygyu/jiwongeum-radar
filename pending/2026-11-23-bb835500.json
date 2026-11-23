@@ -1,0 +1,29 @@
+{
+  "key": "감척폐업지원금",
+  "detectedAt": "2026-11-23T00:17:44.992Z",
+  "hosts": [
+    "news1.kr",
+    "jnilbo.com",
+    "hansbiz.co.kr"
+  ],
+  "articles": [
+    {
+      "title": "전남광주 근해어선 17척 추가 감척…폐업지원금 지원 확대",
+      "link": "https://www.news1.kr/local/gwangju-jeonnam/6361879",
+      "host": "news1.kr",
+      "pubDate": "2026-11-22T01:44:00.000Z"
+    },
+    {
+      "title": "전남광주 근해어선 17척 추가 감척…폐업지원금 등 지원",
+      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085297",
+      "host": "jnilbo.com",
+      "pubDate": "2026-11-22T05:06:00.000Z"
+    },
+    {
+      "title": "전남광주 근해어선 17척 추가 감척…폐업지원금 차액 보전",
+      "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=885967",
+      "host": "hansbiz.co.kr",
+      "pubDate": "2026-11-22T23:40:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "key": "생리용품바우처",
+  "detectedAt": "2026-11-23T00:17:44.992Z",
+  "hosts": [
+    "edaily.co.kr",
+    "etoday.co.kr",
+    "slist.kr",
+    "news1.kr",
+    "ajunews.com",
+    "kpenews.com"
+  ],
+  "articles": [
+    {
+      "title": "\"생리용품 바우처 잊지 말고 쓰세요\"…연말 지나면 ‘0원’",
+      "link": "https://www.edaily.co.kr/News/Read?newsId=01525206645648344&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "host": "edaily.co.kr",
+      "pubDate": "2026-11-22T03:02:00.000Z"
+    },
+    {
+      "title": "“생리용품 바우처 연말까지 쓰세요”⋯다이소·올리브영서도 가능",
+      "link": "https://www.etoday.co.kr/news/view/2651290",
+      "host": "etoday.co.kr",
+      "pubDate": "2026-11-22T03:00:00.000Z"
+    },
+    {
+      "title": "올리브영, 전국 매장서 '생리용품 바우처' 결제 서비스",
+      "link": "https://www.slist.kr/news/articleView.html?idxno=783945",
+      "host": "slist.kr",
+      "pubDate": "2026-11-23T00:04:00.000Z"
+    },
+    {
+      "title": "CJ올리브영, 생리용품 바우처 결제 서비스 도입한다",
+      "link": "https://www.news1.kr/industry/distribution/6362359",
+      "host": "news1.kr",
+      "pubDate": "2026-11-23T00:01:00.000Z"
+    },
+    {
+      "title": "CJ올리브영, 전국 오프라인 매장서 생리용품 바우처 결제 서비스 도입",
+      "link": "https://www.ajunews.com/view/20261123084037748",
+      "host": "ajunews.com",
+      "pubDate": "2026-11-22T23:54:00.000Z"
+    },
+    {
+      "title": "CJ올리브영, 생리용품 바우처 이용 편의 확대..전국 1300여개 매장서 결...",
+      "link": "https://kpenews.com/View.aspx?No=4324243",
+      "host": "kpenews.com",
+      "pubDate": "2026-11-22T23:48:00.000Z"
+    }
+  ]
+}
