@@ -16,7 +16,7 @@
   "ageMin": null,
   "ageMax": null,
   "gov24Id": null,
-  "applyUrl": null,
+  "applyUrl": "https://housing.gg.go.kr/board/24010300000001/SYS261109-14618393/view",
   "evidence": {
     "agency": [{ "source": 0, "quote": "국토교통부가 13일부터 전세사기피해자의 최소한의 피해회복을 지원하는 '최소보장제'를 시행한다." }],
     "target": [{ "source": 2, "quote": "최소지원금은 특별법에 따라 결정된 전세사기피해자와 특별법 제2조제4호다목에 해당하는 임차인 가운데 피해회복금이 보증금의 3분의 1보다 적은 경우 지급한다." }],
@@ -36,5 +36,5 @@
     { "url": "https://www.newsis.com/view/NISX20261109_0003859831", "title": "'보증금 3분의1 보장'…전세사기 최소지원금 10일부터 접수", "publisher": "뉴시스" }
   ],
   "createdAt": "2026-11-09T07:42:05Z",
-  "updatedAt": "2026-11-09T07:42:05Z"
+  "updatedAt": "2026-11-27T21:17:26Z"
 }
